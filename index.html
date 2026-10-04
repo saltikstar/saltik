@@ -1909,6 +1909,124 @@ details p{
   .audience-detail{min-height:0;padding:24px}
 }
 
+
+/* v19 — lightweight Taplink-style homepage */
+.linkhub-hero{
+  min-height:calc(100svh - 92px);
+  padding:42px 0 54px!important;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid rgba(0,0,0,.07);
+}
+.linkhub-wrap{
+  width:min(calc(100% - 40px),860px)!important;
+}
+.linkhub-inner{
+  text-align:center;
+  margin:0 auto;
+}
+.linkhub-kicker{
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+.linkhub-inner h1{
+  font-size:clamp(54px,8vw,92px)!important;
+  line-height:.95!important;
+  letter-spacing:-.06em!important;
+  margin-bottom:14px!important;
+}
+.linkhub-sub{
+  margin:0;
+  font-size:clamp(18px,2vw,24px);
+  color:#3f3b35;
+}
+.linkhub-note{
+  margin:24px 0 18px;
+  font-size:15px;
+  color:var(--muted);
+}
+.linkhub-links{
+  width:min(100%,650px);
+  margin:0 auto;
+  display:grid;
+  gap:12px;
+}
+.linkhub-btn{
+  min-height:88px;
+  border-radius:24px;
+  padding:18px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  text-align:left;
+  border:1px solid var(--line);
+  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.linkhub-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 32px rgba(0,0,0,.08);
+}
+.linkhub-btn span{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.linkhub-btn b{
+  font-size:20px;
+  letter-spacing:-.025em;
+}
+.linkhub-btn small{
+  font-size:14px;
+  color:#5c5953;
+}
+.linkhub-btn i{
+  font-style:normal;
+  font-size:28px;
+  line-height:1;
+}
+.linkhub-business{
+  background:#dfeeff;
+  border-color:#c9ddf5;
+}
+.linkhub-marketing{
+  background:var(--lime);
+  border-color:var(--lime);
+}
+.linkhub-marketing small{
+  color:#3d421f;
+}
+.linkhub-works{
+  min-height:62px;
+  background:var(--paper);
+}
+.linkhub-works b{
+  font-size:16px;
+}
+@media(max-width:620px){
+  .linkhub-hero{
+    min-height:auto;
+    padding:42px 0 48px!important;
+  }
+  .linkhub-wrap{
+    width:min(calc(100% - 22px),860px)!important;
+  }
+  .linkhub-inner h1{
+    font-size:52px!important;
+  }
+  .linkhub-btn{
+    min-height:82px;
+    border-radius:20px;
+    padding:16px 18px;
+  }
+  .linkhub-btn b{font-size:18px}
+  .linkhub-btn small{font-size:13px}
+}
+
 </style>
   
 </head>
@@ -1949,78 +2067,42 @@ details p{
 </a>
 </div>
 </nav>
-<section class="hero home-hub-hero">
-<div class="wrap home-hub-grid">
-  <div class="home-hub-copy reveal">
-    <div class="section-kicker">Сайты для бизнеса · Салтанат Жарова</div>
-    <h1>Сайт должен не просто нравиться.<br><span class="hero-highlight">Он должен вести к заявке.</span></h1>
-    <p class="lead">Продумываю структуру и подачу, собираю сайт, подключаю формы, WhatsApp и аналитику — чтобы после запуска было понятно, куда идёт трафик и что делает клиент.</p>
-    <div class="hub-proof">
-      <div><strong>12,35%</strong><span>визитов → WhatsApp<br>Aisha Bibi</span></div>
-      <div><strong>12,85%</strong><span>рекламного трафика → WhatsApp<br>Spectehnika911</span></div>
+<section class="hero linkhub-hero">
+<div class="wrap linkhub-wrap">
+  <div class="linkhub-inner reveal">
+    <div class="linkhub-kicker">Салтанат Жарова</div>
+    <h1>Сайты для бизнеса</h1>
+    <p class="linkhub-sub">Разработка · ведение · продвижение</p>
+    <p class="linkhub-note">Выберите, с какой задачей вы пришли.</p>
+
+    <div class="linkhub-links">
+      <a class="linkhub-btn linkhub-business" href="/business/">
+        <span>
+          <b>Я предприниматель</b>
+          <small>Нужен сайт для бизнеса</small>
+        </span>
+        <i>→</i>
+      </a>
+
+      <a class="linkhub-btn linkhub-marketing" href="/marketing/">
+        <span>
+          <b>Я маркетолог / агентство</b>
+          <small>Нужен технический партнёр</small>
+        </span>
+        <i>→</i>
+      </a>
+
+      <a class="linkhub-btn linkhub-works" href="#work">
+        <span><b>Посмотреть работы</b></span>
+        <i>↓</i>
+      </a>
     </div>
-  </div>
-
-  <div class="audience-chooser reveal">
-    <a class="audience-card business-card" href="/business/">
-      <div class="audience-label">Предпринимателю</div>
-      <h2>Нужен сайт, который приводит к обращению</h2>
-      <ul>
-        <li>Сайт есть, но заявок мало или непонятно, что не работает</li>
-        <li>Нужно запускать рекламу и подготовить страницу</li>
-        <li>Нужен новый сайт: визуал, заявки, аналитика и запуск</li>
-      </ul>
-      <span class="audience-cta">Решения для бизнеса <b>→</b></span>
-    </a>
-
-    <a class="audience-card marketing-card" href="/marketing/">
-      <div class="audience-label">Маркетологу / агентству</div>
-      <h2>Нужен технический партнёр для клиентских проектов</h2>
-      <ul>
-        <li>Оффер и трафик готовы, а сайт тормозит запуск</li>
-        <li>Нужно собрать лендинг, формы, цели и адаптив</li>
-        <li>Не хочется искать разработчика на каждую правку</li>
-      </ul>
-      <span class="audience-cta">Страница для маркетологов <b>→</b></span>
-    </a>
   </div>
 </div>
 </section>
-<section id="how" class="audience-pains"><div class="wrap">
-  <div class="reveal audience-pains-head">
-    <div class="section-kicker">С чего начинается задача</div>
-    <h2>У каждого свой запрос. Результат нужен один — сайт должен работать на бизнес.</h2>
-    <p class="lead">Поэтому на главной — только главное. Подробности, примеры и сценарии работы собраны на отдельных страницах под вашу задачу.</p>
-  </div>
 
-  <div class="audience-detail-grid">
-    <article class="audience-detail business-detail reveal">
-      <div class="detail-top"><span>Для предпринимателя</span><strong>01</strong></div>
-      <h3>«Мне нужен сайт, который помогает получать обращения»</h3>
-      <div class="pain-lines">
-        <p>Есть сайт, но посетители не доходят до заявки.</p>
-        <p>Нужно запустить рекламу и не потерять трафик после клика.</p>
-        <p>Нужны понятный оффер, мобильная версия, формы и аналитика.</p>
-      </div>
-      <div class="detail-result">Что получает бизнес: <b>понятный путь клиента → целевое действие → измеримая заявка.</b></div>
-      <a class="btn lime" href="/business/">Посмотреть страницу для бизнеса</a>
-    </article>
-
-    <article class="audience-detail marketing-detail reveal">
-      <div class="detail-top"><span>Для маркетолога / агентства</span><strong>02</strong></div>
-      <h3>«Мне нужен человек, которому можно отдать техническую часть»</h3>
-      <div class="pain-lines">
-        <p>Стратегия и реклама готовы, но сайт задерживает запуск.</p>
-        <p>Нужно, чтобы формы, WhatsApp, Метрика и цели работали корректно.</p>
-        <p>Правки должны делаться быстро, без поиска нового исполнителя.</p>
-      </div>
-      <div class="detail-result">Что получает маркетолог: <b>готовая техническая часть проекта без лишней коммуникации.</b></div>
-      <a class="btn primary" href="/marketing/">Посмотреть страницу для маркетологов</a>
-    </article>
-  </div>
-</div></section>
 <section id="services"><div class="wrap"><div class="service-band reveal">
-<div><div class="service-kicker">Что я делаю с сайтом</div><h2>Соединяю визуал, техническую часть и путь до заявки</h2><p class="lead">Не просто собираю страницы. Смотрю, что должен понять человек, куда он должен нажать и как вы потом увидите результат в аналитике.</p><div class="actions"><a class="btn lime" href="/business/">Посмотреть решения для бизнеса</a></div><div class="soft-note">Можно подключиться на любом этапе: новый сайт, доработка существующего, подготовка к рекламе или отдельная техническая задача.</div></div>
+<div><div class="service-kicker">Что могу взять на себя</div><h2>От структуры до запуска</h2><p class="lead">Можно прийти с новой задачей или с уже готовым сайтом. Подключусь там, где сейчас нужен результат.</p><div class="actions"><a class="btn lime" href="/business/">Посмотреть решения для бизнеса</a></div><div class="soft-note">Можно подключиться на любом этапе: новый сайт, доработка существующего, подготовка к рекламе или отдельная техническая задача.</div></div>
 <div class="service-list"><div class="service-item"><strong>Оффер и структура</strong><span>Чтобы человек быстро понял предложение и следующий шаг.</span></div><div class="service-item"><strong>Дизайн и разработка</strong><span>Собираю понятную страницу и адаптирую её под мобильные устройства.</span></div><div class="service-item"><strong>Заявки и аналитика</strong><span>Формы, WhatsApp, Метрика и цели — чтобы действия посетителей можно было измерить.</span></div><div class="service-item"><strong>Проверка и запуск</strong><span>Проверяю ключевые сценарии и довожу страницу до рабочего состояния.</span></div></div>
 </div></div></section>
 <section id="why">
@@ -2220,29 +2302,10 @@ details p{
 </div>
 </div>
 </section>
-<section class="route-section"><div class="wrap">
-      <div class="route-head reveal">
-        <div class="section-kicker">Выберите свой сценарий</div>
-        <h2>Дальше — только то, что относится к вашей задаче.</h2>
-      </div>
-      <div class="route-grid">
-        <a class="route-card route-business reveal" href="/business/">
-          <span>Предпринимателю</span>
-          <h3>Сайт, который ведёт к обращению</h3>
-          <p>Боли, решения, кейсы и цифры — без технического перегруза.</p>
-          <b>Перейти →</b>
-        </a>
-        <a class="route-card route-marketing reveal" href="/marketing/">
-          <span>Маркетологу / агентству</span>
-          <h3>Лендинги под рекламу и техническое партнёрство</h3>
-          <p>Формы, цели, аналитика, запуск и реальные показатели проектов.</p>
-          <b>Перейти →</b>
-        </a>
-      </div>
-    </div></section>
+
 <section id="prices">
 <div class="wrap">
-<h2 class="reveal">Стоимость</h2>
+<h2 id="price" class="reveal">Стоимость</h2>
 <p class="lead reveal">Если задача небольшая, можно начать с отдельной услуги. Для сайта с нуля стоимость считаю после короткого обсуждения проекта.</p>
 <div class="price-list">
 <div class="price-item reveal">
