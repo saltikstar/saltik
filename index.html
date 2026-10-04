@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Салтанат Жарова — сайты от идеи до запуска</title>
-<meta content="Салтанат Жарова — сайты для бизнеса: от идеи и концепции до готового запуска. Доработка существующих сайтов, подготовка к рекламе, аналитика, SEO и техническое партнёрство для маркетологов." name="description"/>
+<title>Салтанат Жарова — сайты для бизнеса и маркетологов</title>
+<meta content="Салтанат Жарова — сайты для бизнеса: структура, дизайн, разработка, формы, аналитика и запуск. Отдельные решения для предпринимателей и маркетологов." name="description"/>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="/favicon.ico">
   <style>
@@ -1843,6 +1843,202 @@ details p{
   .device-shot.scroll-shot img.scroll-media{transition:none !important;}
 }
 
+
+/* home audience hub v18 */
+.home-hub-hero{min-height:calc(100svh - 92px);padding:36px 0 44px!important;display:flex;align-items:center}
+.home-hub-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:54px;align-items:center;width:min(calc(100% - 64px),var(--max))!important}
+.home-hub-copy{max-width:660px}
+.home-hub-copy h1{font-size:clamp(54px,5vw,82px)!important;line-height:.96!important;letter-spacing:-.058em!important;margin-bottom:20px!important}
+.home-hub-copy .lead{font-size:clamp(18px,1.55vw,23px)!important;max-width:640px;line-height:1.42}
+.hub-proof{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;max-width:620px}
+.hub-proof>div{border-top:1px solid var(--line);padding:16px 0 0}
+.hub-proof strong{display:block;font-size:30px;letter-spacing:-.05em;margin-bottom:4px}
+.hub-proof span{font-size:14px;line-height:1.4;color:var(--muted)}
+.audience-chooser{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.audience-card{min-height:500px;border-radius:30px;padding:30px;display:flex;flex-direction:column;border:1px solid var(--line);transition:.25s ease;overflow:hidden;position:relative}
+.audience-card:hover{transform:translateY(-5px)}
+.business-card{background:var(--lime2)}
+.marketing-card{background:#111;color:#fff;border-color:#111}
+.audience-label{font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;opacity:.65;margin-bottom:28px}
+.audience-card h2{font-size:clamp(34px,3.2vw,50px);line-height:1;letter-spacing:-.05em;margin-bottom:24px}
+.audience-card ul{list-style:none;padding:0;margin:0;display:grid;gap:14px;font-size:16px;line-height:1.4}
+.audience-card li{padding-top:14px;border-top:1px solid rgba(0,0,0,.13)}
+.marketing-card li{border-color:rgba(255,255,255,.15);color:#d4d4d4}
+.audience-cta{margin-top:auto;padding-top:34px;font-size:17px;font-weight:850;display:flex;justify-content:space-between;gap:20px}
+.audience-cta b{font-size:24px}
+.audience-pains-head{max-width:1000px}
+.audience-pains-head h2{max-width:1050px}
+.audience-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+.audience-detail{border:1px solid var(--line);border-radius:30px;padding:30px;background:var(--paper);display:flex;flex-direction:column;min-height:520px}
+.marketing-detail{background:#171717;color:#fff;border-color:#171717}
+.detail-top{display:flex;justify-content:space-between;gap:20px;text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:800;color:var(--muted);margin-bottom:36px}
+.marketing-detail .detail-top{color:#aaa}
+.audience-detail h3{font-size:clamp(30px,3.5vw,48px);line-height:1.02;letter-spacing:-.045em;max-width:650px}
+.pain-lines{margin-top:16px;display:grid;gap:0}
+.pain-lines p{margin:0;padding:15px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.45;color:var(--muted)}
+.marketing-detail .pain-lines p{border-color:rgba(255,255,255,.12);color:#c9c9c9}
+.detail-result{margin:20px 0 26px;font-size:16px;line-height:1.5}
+.audience-detail .btn{margin-top:auto;align-self:flex-start}
+.marketing-detail .btn.primary{background:var(--lime);color:#111;border-color:var(--lime)}
+.case-metric{font-size:20px;letter-spacing:-.035em}
+.route-section{padding-top:80px}
+.route-head{max-width:940px}
+.route-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.route-card{border-radius:30px;padding:32px;min-height:330px;border:1px solid var(--line);display:flex;flex-direction:column;transition:.25s ease}
+.route-card:hover{transform:translateY(-4px)}
+.route-business{background:var(--lime2)}
+.route-marketing{background:#111;color:#fff;border-color:#111}
+.route-card>span{font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;opacity:.65}
+.route-card h3{font-size:clamp(30px,3vw,46px);margin:22px 0 16px}
+.route-card p{font-size:16px;line-height:1.5;color:var(--muted);max-width:520px}
+.route-marketing p{color:#bbb}
+.route-card b{margin-top:auto;font-size:17px}
+@media(max-width:1050px){
+  .home-hub-grid{grid-template-columns:1fr;width:min(calc(100% - 40px),var(--max))!important}
+  .home-hub-copy{max-width:850px}
+  .audience-card{min-height:420px}
+}
+@media(max-width:760px){
+  .home-hub-hero{min-height:auto;padding:28px 0 34px!important}
+  .home-hub-grid{width:min(calc(100% - 22px),var(--max))!important;gap:28px}
+  .home-hub-copy h1{font-size:clamp(44px,12vw,58px)!important}
+  .hub-proof,.audience-chooser,.audience-detail-grid,.route-grid{grid-template-columns:1fr}
+  .audience-card{min-height:0;padding:24px}
+  .audience-card h2{font-size:34px}
+  .audience-cta{margin-top:28px;padding-top:18px}
+  .audience-detail{min-height:0;padding:24px}
+}
+
+
+/* v19 — lightweight Taplink-style homepage */
+.linkhub-hero{
+  min-height:calc(100svh - 92px);
+  padding:42px 0 54px!important;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid rgba(0,0,0,.07);
+}
+.linkhub-wrap{
+  width:min(calc(100% - 40px),860px)!important;
+}
+.linkhub-inner{
+  text-align:center;
+  margin:0 auto;
+}
+.linkhub-kicker{
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+.linkhub-inner h1{
+  font-size:clamp(54px,8vw,92px)!important;
+  line-height:.95!important;
+  letter-spacing:-.06em!important;
+  margin-bottom:14px!important;
+}
+.linkhub-sub{
+  margin:0;
+  font-size:clamp(18px,2vw,24px);
+  color:#3f3b35;
+}
+.linkhub-note{
+  margin:24px 0 18px;
+  font-size:15px;
+  color:var(--muted);
+}
+.linkhub-links{
+  width:min(100%,650px);
+  margin:0 auto;
+  display:grid;
+  gap:12px;
+}
+.linkhub-btn{
+  min-height:88px;
+  border-radius:24px;
+  padding:18px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  text-align:left;
+  border:1px solid var(--line);
+  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.linkhub-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 32px rgba(0,0,0,.08);
+}
+.linkhub-btn span{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.linkhub-btn b{
+  font-size:20px;
+  letter-spacing:-.025em;
+}
+.linkhub-btn small{
+  font-size:14px;
+  color:#5c5953;
+}
+.linkhub-btn i{
+  font-style:normal;
+  font-size:28px;
+  line-height:1;
+}
+.linkhub-business{
+  background:#dfeeff;
+  border-color:#c9ddf5;
+}
+.linkhub-marketing{
+  background:var(--lime);
+  border-color:var(--lime);
+}
+.linkhub-marketing small{
+  color:#3d421f;
+}
+.linkhub-works{
+  min-height:62px;
+  background:var(--paper);
+}
+.linkhub-works b{
+  font-size:16px;
+}
+@media(max-width:620px){
+  .linkhub-hero{
+    min-height:auto;
+    padding:42px 0 48px!important;
+  }
+  .linkhub-wrap{
+    width:min(calc(100% - 22px),860px)!important;
+  }
+  .linkhub-inner h1{
+    font-size:52px!important;
+  }
+  .linkhub-btn{
+    min-height:82px;
+    border-radius:20px;
+    padding:16px 18px;
+  }
+  .linkhub-btn b{font-size:18px}
+  .linkhub-btn small{font-size:13px}
+}
+
+
+/* v20 — simplified logical homepage flow */
+.service-cards-lite{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px}
+.service-card-lite{border:1px solid var(--line);border-radius:24px;background:var(--paper);padding:24px;min-height:240px}
+.service-card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:var(--lime2);margin-bottom:22px}
+.service-card-icon svg{width:26px;height:26px;fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.service-card-lite h3{font-size:24px;margin-bottom:10px}
+.service-card-lite p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+.compact-only{margin-top:18px}
+#work,#services{padding-top:82px}
+@media(max-width:900px){.service-cards-lite{grid-template-columns:1fr}.service-card-lite{min-height:0}}
+
 </style>
   
 </head>
@@ -1883,103 +2079,145 @@ details p{
 </a>
 </div>
 </nav>
-<section class="hero">
-<div class="wrap hero-grid">
-<div class="reveal">
-<h1><span class="hero-highlight">От идеи до сайта</span><br/><span class="hero-rest">который готов принимать клиентов</span></h1>
-<p class="lead">Продумываю структуру и подачу, разрабатываю сайт, подключаю всё необходимое и довожу его до запуска.</p>
-<div class="recognition">
-<div class="tag-card"><svg class="icon" viewbox="0 0 24 24"><path d="M9 18h6M10 22h4M8 14c-1.6-1.2-2.5-3-2.5-5A6.5 6.5 0 0 1 18 7c0 3-1.4 4.8-3.3 6.2-.5.4-.7.9-.7 1.5V16h-4v-1.3c0-.6-.3-1.2-.8-1.6Z"></path></svg><strong>Есть только идея</strong><span>Нужно понять, как превратить её в понятный сайт.</span></div>
-<div class="tag-card"><svg class="icon" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M3 9h18M7 7h.01M10 7h.01"></path></svg><strong>Сайт уже собран</strong><span>Нужно проверить, что получилось, и довести до запуска.</span></div>
-<div class="tag-card"><svg class="icon" viewbox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path></svg><strong>Сайт уже работает</strong><span>Нужно подготовить его к заявкам и рекламе.</span></div>
-</div>
-<div class="actions hero-actions">
-<a class="btn lime" href="https://wa.me/77475550174?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%3A%20%D1%81%D0%B0%D0%B9%D1%82%20%D1%81%20%D0%BD%D1%83%D0%BB%D1%8F%2C%20%D0%B4%D0%BE%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D1%83%20%D0%B8%D0%BB%D0%B8%20%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA." target="_blank">
-        Обсудить проект
-        <svg aria-hidden="true" class="btn-icon" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-</a>
-<a class="btn" href="#work">
-        Посмотреть работы
-        <svg aria-hidden="true" class="btn-icon" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg>
-</a>
-</div>
-</div>
-<div class="mockup-stage reveal">
-<div class="glow"></div>
-<div class="browser">
-<div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-<div class="browser-body">
-<div class="fake-hero"><span class="pill">готов к запуску</span><h4>Сайт готов к работе</h4><p>Заявки подключены. Можно запускать.</p></div>
-<div class="fake-grid clean-grid">
-<div class="fake-card"><div class="fake-line"></div><div class="fake-line sm"></div><div class="fake-line xs"></div></div>
-<div class="fake-card dark"><div class="fake-line" style="background:#3a3a3a"></div><div class="fake-line sm" style="background:#3a3a3a"></div><div class="fake-line xs" style="background:#3a3a3a"></div></div>
-</div>
-</div>
-</div>
-<div class="hero-phone">
-<div class="hero-phone-notch"></div>
-<div class="hero-phone-screen">
+<section class="hero linkhub-hero">
+<div class="wrap linkhub-wrap">
+  <div class="linkhub-inner reveal">
+    <div class="linkhub-kicker">Салтанат Жарова</div>
+    <h1>Сайты для бизнеса</h1>
+    <p class="linkhub-sub">Разработка · ведение · продвижение</p>
+    <p class="linkhub-note">Выберите, с какой задачей вы пришли.</p>
 
-<div class="hero-phone-card hero-phone-card-dark">
-<div class="hero-phone-line lg"></div>
-<div class="hero-phone-line sm"></div>
-<div class="hero-phone-cta">Оставить заявку</div>
-</div>
-<div class="hero-phone-grid">
-<div class="hero-phone-card"><div class="hero-phone-line"></div><div class="hero-phone-line sm"></div></div>
-<div class="hero-phone-card"><div class="hero-phone-line"></div><div class="hero-phone-line sm"></div></div>
-</div>
-</div>
-</div>
-<div class="status s1"><span class="status-icon"><svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Заявка отправляется</span></div>
-<div class="status s2"><span class="status-icon"><svg viewbox="0 0 24 24"><path d="M4 18h16M7 14V8M12 14V5M17 14v-3"></path></svg></span><span>Аналитика считает обращения</span></div>
-<div class="status s3"><span class="status-icon"><svg viewbox="0 0 24 24"><path d="M9 16h6M12 16v4M5 6h14a1 1 0 0 1 1 1v7H4V7a1 1 0 0 1 1-1Z"></path></svg></span><span>Можно вести рекламу</span></div>
-</div>
+    <div class="linkhub-links">
+      <a class="linkhub-btn linkhub-business" href="/business/">
+        <span>
+          <b>Я предприниматель</b>
+          <small>Нужен сайт для бизнеса</small>
+        </span>
+        <i>→</i>
+      </a>
+
+      <a class="linkhub-btn linkhub-marketing" href="/marketing/">
+        <span>
+          <b>Я маркетолог / агентство</b>
+          <small>Нужен технический партнёр</small>
+        </span>
+        <i>→</i>
+      </a>
+
+      <a class="linkhub-btn linkhub-works" href="#work">
+        <span><b>Посмотреть работы</b></span>
+        <i>↓</i>
+      </a>
+    </div>
+  </div>
 </div>
 </section>
-<section id="how"><div class="wrap">
-<div class="reveal"><h2>Можно начать с того, что есть сейчас</h2><p class="lead">Не обязательно приходить с техническим заданием. Если есть идея — начнём с неё. Если сайт уже существует — сначала посмотрю, что можно оставить.</p></div>
-<div class="stage-flow">
-<div class="flow-card reveal"><div class="iconwrap"><svg viewbox="0 0 24 24"><path d="M9 18h6M10 22h4M8 14c-1.6-1.2-2.5-3-2.5-5A6.5 6.5 0 0 1 18 7c0 3-1.4 4.8-3.3 6.2-.5.4-.7.9-.7 1.5V16h-4v-1.3c0-.6-.3-1.2-.8-1.6Z"></path></svg></div><h3>Есть идея</h3><p>Вы рассказываете, что хотите сделать. Я помогаю понять, каким должен быть сайт и как лучше подать продукт.</p><div class="flow-note"><span class="flow-note-dot">✓</span><span>Начинаем с задачи</span></div></div>
-<div class="flow-card reveal"><div class="iconwrap"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M3 9h18"></path></svg></div><h3>Есть сайт</h3><p>Смотрю, что уже сделано, что можно оставить и чего не хватает до полноценного запуска.</p><div class="flow-note"><span class="flow-note-dot">✓</span><span>Сохраняем то, что уже работает</span></div></div>
-<div class="flow-card reveal"><div class="iconwrap"><svg viewbox="0 0 24 24"><path d="M4 12h4l2-5 4 10 2-5h4"></path><path d="M4 20h16"></path></svg></div><h3>Нужно, чтобы сайт работал</h3><p>Подключаю заявки, аналитику и то, что нужно именно вашему проекту перед рекламой и запуском.</p><div class="flow-note"><span class="flow-note-dot">✓</span><span>Доводим до полноценного запуска</span></div></div>
-</div>
-</div></section>
-<section id="services"><div class="wrap"><div class="service-band reveal">
-<div><div class="service-kicker">Главный формат работы</div><h2>От идеи до готового запущенного сайта</h2><p class="lead">Можно прийти просто с задачей. Я разберусь, что лучше сделать, предложу структуру и подачу, соберу сайт и доведу его до запуска.</p><div class="actions"><a class="btn lime" href="https://wa.me/77475550174?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%BE%D1%82%20%D0%B8%D0%B4%D0%B5%D0%B8%20%D0%B4%D0%BE%20%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0" target="_blank">Рассказать о задаче</a></div><div class="soft-note">Стоимость — после короткого обсуждения задачи, объёма и функциональности.</div></div>
-<div class="service-list"><div class="service-item"><strong>Разбираюсь в задаче</strong><span>Чтобы сайт решал конкретную бизнес-задачу, а не просто выглядел красиво.</span></div><div class="service-item"><strong>Предлагаю структуру и подачу</strong><span>Сначала направление, потом разработка.</span></div><div class="service-item"><strong>Собираю и подключаю всё нужное</strong><span>Формы, заявки, аналитику, домен и другие необходимые вещи.</span></div><div class="service-item"><strong>Проверяю и запускаю</strong><span>Чтобы после публикации сайт можно было использовать в работе.</span></div></div>
-</div></div></section>
-<section id="why">
+
+<section id="work">
 <div class="wrap">
-<h2 class="reveal"><span class="why-title-mark">Не просто сделать сайт.</span><br/><span class="why-title-rest">Сделать так, чтобы им было удобно пользоваться <em>и вам, и вашим клиентам.</em></span></h2>
-<div class="value-grid">
-<div class="value-big reveal">
-<div class="value-icon">
-<svg viewbox="0 0 24 24"><path d="M4 12h16M12 4v16"></path></svg>
+<div class="portfolio-intro">
+<h2 class="reveal">Некоторые проекты из портфолио</h2>
+<p class="lead reveal">Четыре проекта, которые показывают разные типы задач и подход к работе.</p>
 </div>
-<h3>Смотрю на задачу целиком</h3>
-<p class="lead">Можно прийти без технических терминов. Достаточно объяснить, что вы продаёте, кому и что должен сделать человек на сайте.</p>
-<p>Я уже переведу это в структуру, страницы, формы, аналитику и всё, что понадобится дальше.</p>
+<div class="case-grid balanced-row"><article class="case-card reveal">
+<div class="case-visual real">
+<div class="device-shot desktop scroll-shot"><img alt="Sito — B2B-каталог, десктопная версия" class="scroll-media" src="assets_v12/sito-desktop.jpg"/></div>
+<div class="device-shot phone scroll-shot"><img alt="Sito — мобильная версия каталога" class="scroll-media" src="assets_v12/sito-mobile.jpg"/></div>
 </div>
-<div class="value-side">
-<div class="value-small reveal">
-<div class="value-icon">
-<svg viewbox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"></path></svg>
+<div class="case-copy">
+<div class="meta">01 · Собственный продукт</div>
+<h3>Sito</h3>
+<div class="case-subtitle">Готовый каталог для вашего ассортимента</div>
+<div class="case-tags"><span>Product</span><span>UX/UI</span><span>Development</span><span>AI-assisted development</span></div>
+<p class="case-desc">Собственный B2B-продукт для компаний с большим ассортиментом: поиск, категории, фильтры, характеристики, документы и формирование заявки.</p>
+<div class="case-focus"><b>Что показывает кейс</b>Веду собственный продукт целиком: от исследования задачи и UX-сценариев до продуктовых решений и разработки.</div>
+<a class="case-link" href="https://sito.kz" target="_blank">sito.kz ↗</a>
 </div>
-<h3>Работаю с разными платформами</h3>
-<p>WordPress, Tilda, другие CMS, код и AI-инструменты — выбираю под задачу, а не наоборот.</p>
+</article><article class="case-card dark reveal">
+<div class="case-visual real dark-stage">
+<div class="device-shot phone solo scroll-shot"><img alt="SAQ Delivery — мобильный каталог" class="scroll-media" src="assets_v12/saq-mobile.png"/></div>
 </div>
-<div class="value-small reveal">
-<div class="value-icon">
-<svg viewbox="0 0 24 24"><path d="M4 18h16M6 15l4-4 3 3 5-6"></path></svg>
+<div class="case-copy">
+<div class="meta">02 · Каталог доставки</div>
+<h3>SAQ Delivery</h3>
+<div class="case-subtitle">Сайт-каталог доставки еды</div>
+<div class="case-tags"><span>UX/UI</span><span>Web Design</span><span>Development</span><span>Catalog</span><span>Basic SEO</span></div>
+<p class="case-desc">Продумала структуру, разработала дизайн, реализовала каталог и мобильную версию, подготовила техническую основу для поиска.</p>
+<div class="case-focus"><b>По данным Метрики</b><strong class="case-metric">9,18%</strong> визитов → мессенджер · <strong class="case-metric">6,27%</strong> → отправка формы.</div>
+<a class="case-link" href="https://saq-delivery.kz" target="_blank">saq-delivery.kz ↗</a>
 </div>
-<h3>Могу остаться после запуска</h3>
-<p>Ведение сайта, доработки, SEO и развитие проекта можно продолжать со мной дальше.</p>
+</article></div>
+<div class="case-grid balanced-row second-row"><article class="case-card reveal">
+<div class="case-visual real warm-stage">
+<div class="device-shot desktop scroll-shot"><img alt="Aisha Bibi — сайт гостиничного комплекса" class="scroll-media" src="assets_v12/aisha-desktop.jpg"/></div>
+<div class="device-shot phone scroll-shot"><img alt="Aisha Bibi — мобильная версия" class="scroll-media" src="assets_v12/aisha-mobile.jpg"/></div>
 </div>
+<div class="case-copy">
+<div class="meta">03 · Развитие проекта</div>
+<h3>Aisha Bibi</h3>
+<div class="case-subtitle">Развитие трёхъязычного сайта гостиничного комплекса</div>
+<div class="case-tags"><span>Project Management</span><span>Web Design</span><span>Website Evolution</span></div>
+<p class="case-desc">Разработала дизайн, вела проект и организовала перенос на WordPress силами подрядчика. Продолжаю проектировать новые страницы и развивать сайт.</p>
+<div class="case-focus"><b>По данным Метрики</b><strong class="case-metric">12,35%</strong> визитов → WhatsApp · из органического поиска — <strong class="case-metric">15,01%</strong>.</div>
+<a class="case-link" href="https://aisha-bibi.com" target="_blank">aisha-bibi.com ↗</a>
+</div>
+</article><article class="case-card reveal">
+<div class="case-visual real dark-stage">
+<div class="device-shot desktop scroll-shot"><img alt="CAPS LOCK — сайт сети капсульных отелей" class="scroll-media" src="assets_v12/capslock-desktop.jpg"/></div>
+<div class="device-shot phone scroll-shot"><img alt="CAPS LOCK — мобильная версия" class="scroll-media" src="assets_v12/capslock-mobile.jpg"/></div>
+</div>
+<div class="case-copy">
+<div class="meta">04 · Сеть отелей</div>
+<h3>CAPS LOCK</h3>
+<div class="case-subtitle">Сайт сети капсульных отелей</div>
+<div class="case-tags"><span>Web Design</span><span>Development</span><span>Responsive</span></div>
+<p class="case-desc">Спроектировала и реализовала единую систему сайта для нескольких филиалов, разных локаций и английской версии.</p>
+<div class="case-focus"><b>По данным Метрики</b><strong class="case-metric">17,4%</strong> визитов → отправка формы на странице CAPS LOCK Airport.</div>
+<div class="case-credit">Тексты — маркетолог.</div>
+<a class="case-link" href="https://capslock.kz" target="_blank">capslock.kz ↗</a>
+</div>
+</article></div><div class="other-projects reveal compact-only">
+<div>
+<div class="section-kicker">Ещё проекты</div>
+<h3>Ещё несколько работ</h3>
+<p>Компактно — без ещё одной длинной ленты карточек.</p>
+</div>
+<div class="other-list">
+<a class="other-item" href="https://ngc.kz" target="_blank"><strong>NGC</strong><span>Web Design · UI · Motion ↗</span></a>
+<a class="other-item" href="https://dacha-astana.kz/" target="_blank"><strong>Dacha Astana</strong><span>Design · Development · SEO ↗</span></a>
+<div class="other-item"><strong>Q-event</strong><span>Web Design · UX/UI · Development</span></div>
+<div class="other-item"><strong>Стекловитрина</strong><span>Web Design · разработка — подрядчик</span></div>
+<div class="other-item"><strong>Global Apostille</strong><span>Implementation · Tilda · Responsive</span></div>
 </div>
 </div>
 </div>
 </section>
+
+<section id="services">
+<div class="wrap">
+<div class="section-kicker reveal">Что могу взять на себя</div>
+<h2 class="reveal">Можно подключиться на любом этапе</h2>
+<p class="lead reveal">Новый сайт, доработка существующего или развитие после запуска.</p>
+<div class="service-cards-lite">
+  <article class="service-card-lite reveal">
+    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 19V7l8-4 8 4v12H4Z"/><path d="M8 19v-6h8v6"/></svg></div>
+    <h3>Новый сайт</h3>
+    <p>Структура, визуальная подача, разработка, формы, аналитика и запуск.</p>
+  </article>
+  <article class="service-card-lite reveal">
+    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M4 9h16"/><path d="m9 15 2 2 4-4"/></svg></div>
+    <h3>Доработка сайта</h3>
+    <p>Исправить мобильную версию, формы, аналитику, сценарии или подготовить сайт к рекламе.</p>
+  </article>
+  <article class="service-card-lite reveal">
+    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 18h16"/><path d="m6 14 4-4 3 3 5-6"/><path d="M18 7h-4"/></svg></div>
+    <h3>Развитие после запуска</h3>
+    <p>Новые страницы, изменения, ведение, SEO и дальнейшее развитие проекта.</p>
+  </article>
+</div>
+</div>
+</section>
+
 <section id="about">
 <div class="wrap about-me">
 <div class="about-photo reveal">
@@ -2012,10 +2250,11 @@ details p{
 </div>
 </div>
 </section>
+
 <section id="process">
 <div class="wrap">
 <h2 class="reveal">Как проходит работа</h2>
-<p class="lead reveal">Вы рассказываете, что хотите получить от сайта. Дальше я беру на себя структуру, разработку, подключение нужных функций и запуск.</p>
+<p class="lead reveal">Задача → направление → разработка → запуск.</p>
 <div class="process-line">
 <div class="process-row reveal">
 <div class="pnum">01</div>
@@ -2040,146 +2279,11 @@ details p{
 </div>
 </div>
 </section>
-<section id="work">
-<div class="wrap">
-<div class="portfolio-intro">
-<h2 class="reveal">Некоторые проекты из портфолио</h2>
-<p class="lead reveal">Разные задачи — от каталога и собственного продукта до гостиничных проектов, мультиязычных сайтов и motion-интерфейсов.</p>
-<div class="proof-strip reveal">
-  <div class="proof-item"><strong>С 2014 года</strong><span>работаю с сайтами</span></div>
-  <div class="proof-item"><strong>Sito</strong><span>собственный B2B-продукт</span></div>
-  <div class="proof-item"><strong>Разные задачи</strong><span>CMS, код, каталоги, SEO и развитие</span></div>
-</div>
-</div>
-<div class="case-grid balanced-row"><article class="case-card reveal">
-<div class="case-visual real">
-<div class="device-shot desktop scroll-shot"><img alt="Sito — B2B-каталог, десктопная версия" class="scroll-media" src="assets_v12/sito-desktop.jpg"/></div>
-<div class="device-shot phone scroll-shot"><img alt="Sito — мобильная версия каталога" class="scroll-media" src="assets_v12/sito-mobile.jpg"/></div>
-</div>
-<div class="case-copy">
-<div class="meta">01 · Собственный продукт</div>
-<h3>Sito</h3>
-<div class="case-subtitle">Готовый каталог для вашего ассортимента</div>
-<div class="case-tags"><span>Product</span><span>UX/UI</span><span>Development</span><span>AI-assisted development</span></div>
-<p class="case-desc">Собственный B2B-продукт для компаний с большим ассортиментом: поиск, категории, фильтры, характеристики, документы и формирование заявки.</p>
-<div class="case-focus"><b>Что показывает кейс</b>Веду собственный продукт целиком: от исследования задачи и UX-сценариев до продуктовых решений и разработки.</div>
-<a class="case-link" href="https://sito.kz" target="_blank">sito.kz ↗</a>
-</div>
-</article><article class="case-card dark reveal">
-<div class="case-visual real dark-stage">
-<div class="device-shot phone solo scroll-shot"><img alt="SAQ Delivery — мобильный каталог" class="scroll-media" src="assets_v12/saq-mobile.png"/></div>
-</div>
-<div class="case-copy">
-<div class="meta">02 · Каталог доставки</div>
-<h3>SAQ Delivery</h3>
-<div class="case-subtitle">Сайт-каталог доставки еды</div>
-<div class="case-tags"><span>UX/UI</span><span>Web Design</span><span>Development</span><span>Catalog</span><span>Basic SEO</span></div>
-<p class="case-desc">Продумала структуру, разработала дизайн, реализовала каталог и мобильную версию, подготовила техническую основу для поиска.</p>
-<div class="case-focus"><b>Результат</b>Сайт выходил на верхние позиции органической выдачи по целевым запросам и продолжает получать обращения из поиска.</div>
-<a class="case-link" href="https://saq-delivery.kz" target="_blank">saq-delivery.kz ↗</a>
-</div>
-</article></div>
-<div class="case-grid balanced-row second-row"><article class="case-card reveal">
-<div class="case-visual real warm-stage">
-<div class="device-shot desktop scroll-shot"><img alt="Aisha Bibi — сайт гостиничного комплекса" class="scroll-media" src="assets_v12/aisha-desktop.jpg"/></div>
-<div class="device-shot phone scroll-shot"><img alt="Aisha Bibi — мобильная версия" class="scroll-media" src="assets_v12/aisha-mobile.jpg"/></div>
-</div>
-<div class="case-copy">
-<div class="meta">03 · Развитие проекта</div>
-<h3>Aisha Bibi</h3>
-<div class="case-subtitle">Развитие трёхъязычного сайта гостиничного комплекса</div>
-<div class="case-tags"><span>Project Management</span><span>Web Design</span><span>Website Evolution</span></div>
-<p class="case-desc">Разработала дизайн, вела проект и организовала перенос на WordPress силами подрядчика. Продолжаю проектировать новые страницы и развивать сайт.</p>
-<div class="case-focus"><b>Что показывает кейс</b>Проект не закончился запуском: сайт развивается, появляются новые страницы и направления, при этом сохраняется единая визуальная система.</div>
-<a class="case-link" href="https://aisha-bibi.com" target="_blank">aisha-bibi.com ↗</a>
-</div>
-</article><article class="case-card reveal">
-<div class="case-visual real dark-stage">
-<div class="device-shot desktop scroll-shot"><img alt="CAPS LOCK — сайт сети капсульных отелей" class="scroll-media" src="assets_v12/capslock-desktop.jpg"/></div>
-<div class="device-shot phone scroll-shot"><img alt="CAPS LOCK — мобильная версия" class="scroll-media" src="assets_v12/capslock-mobile.jpg"/></div>
-</div>
-<div class="case-copy">
-<div class="meta">04 · Сеть отелей</div>
-<h3>CAPS LOCK</h3>
-<div class="case-subtitle">Сайт сети капсульных отелей</div>
-<div class="case-tags"><span>Web Design</span><span>Development</span><span>Responsive</span></div>
-<p class="case-desc">Спроектировала и реализовала единую систему сайта для нескольких филиалов, разных локаций и английской версии.</p>
-<div class="case-focus"><b>Что показывает кейс</b>Единая структура сайта работает для нескольких филиалов, разных локаций и английской версии.</div>
-<div class="case-credit">Тексты — маркетолог.</div>
-<a class="case-link" href="https://capslock.kz" target="_blank">capslock.kz ↗</a>
-</div>
-</article></div><div class="case-grid balanced-row third-row"><article class="case-card dark reveal">
-<div class="case-visual real cream-stage">
-<div class="device-shot desktop scroll-shot"><img alt="NGC — веб-дизайн и motion" class="scroll-media" src="assets_v12/ngc-desktop.jpg"/></div>
-<div class="device-shot phone scroll-shot"><img alt="NGC — мобильная версия" class="scroll-media" src="assets_v12/ngc-mobile.jpg"/></div>
-</div>
-<div class="case-copy">
-<div class="meta">05 · Визуальная концепция</div>
-<h3>NGC</h3>
-<div class="case-subtitle">Визуальная концепция и motion</div>
-<div class="case-tags"><span>Web Design</span><span>UI</span><span>Motion Design</span></div>
-<p class="case-desc">Разработала композицию, типографику, интерфейс и анимации. Этот проект показывает мой визуальный и motion-уровень.</p>
-<div class="case-focus"><b>Что показывает кейс</b>Композиция, типографика, интерфейс и motion работают как часть реального взаимодействия с сайтом, а не как отдельный декоративный эффект.</div>
-<a class="case-link" href="https://ngc.kz" target="_blank">ngc.kz ↗</a>
-</div>
-</article><div class="other-projects reveal">
-<div>
-<div class="section-kicker">Ещё проекты</div>
-<h3>Другие задачи, та же точность.</h3>
-<p>Часть работ оставляю компактно, чтобы портфолио не превращалось в бесконечную ленту.</p>
-</div>
-<div class="other-list">
-<a class="other-item" href="https://dacha-astana.kz/" target="_blank"><strong>Dacha Astana</strong><span>Design · Development · SEO ↗</span></a>
-<div class="other-item"><strong>Q-event</strong><span>Web Design · UX/UI · Development</span></div>
-<div class="other-item"><strong>Стекловитрина</strong><span>Web Design · разработка — подрядчик</span></div>
-<div class="other-item"><strong>Global Apostille</strong><span>Implementation · Tilda · Responsive</span></div>
-</div>
-</div></div>
 
-<div class="case-cta reveal">
-<div>
-<div class="case-cta-label">Есть похожая задача?</div>
-<h3>Покажите, что у вас сейчас.</h3>
-<p>Сайт, прототип, идея или проект, который нужно довести дальше. Посмотрю и скажу, какой следующий шаг имеет смысл.</p>
-</div>
-<a class="btn primary" href="https://wa.me/77475550174?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B2%D0%B0%D0%BC%20%D0%BC%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82" target="_blank">Обсудить проект</a>
-</div>
-</div>
-</section>
-<section>
-<div class="wrap">
-<div class="marketer reveal">
-<div>
-<h2>Вы ведёте маркетинг. Я могу взять сайт на себя.</h2>
-<p class="lead">Вы остаётесь на стороне стратегии, рекламы и клиента. Я подключаюсь там, где начинается сайт: собираю, дорабатываю, настраиваю заявки и аналитику и довожу проект до запуска.</p><div class="marketer-note">Можно работать разово или передавать мне клиентские проекты регулярно.</div>
-<div class="actions">
-<a class="btn lime" href="https://wa.me/77475550174?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%20%2F%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%20%D0%BF%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%D0%BC." target="_blank">Обсудить сотрудничество</a>
-</div>
-</div>
-<div class="marketer-flow">
-<div class="marketer-box">
-<div class="role-icon">
-<svg viewbox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path></svg>
-</div>
-<strong>Вы</strong>
-<span>Оффер<br/>Контент<br/>Реклама<br/>Работа с клиентом</span>
-</div>
-<div class="plus">+</div>
-<div class="marketer-box">
-<div class="role-icon">
-<svg viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M3 9h18"></path></svg>
-</div>
-<strong>Я</strong>
-<span>Сайт<br/>Формы<br/>Аналитика<br/>Запуск</span>
-</div>
-</div>
-</div>
-</div>
-</section>
 <section id="prices">
 <div class="wrap">
-<h2 class="reveal">Стоимость</h2>
-<p class="lead reveal">Если задача небольшая, можно начать с отдельной услуги. Для сайта с нуля стоимость считаю после короткого обсуждения проекта.</p>
+<h2 id="price" class="reveal">Стоимость</h2>
+<p class="lead reveal">Можно начать с одной задачи или передать сайт целиком.</p>
 <div class="price-list">
 <div class="price-item reveal">
 <strong>Сайт с нуля — от идеи до запуска</strong>
@@ -2202,13 +2306,10 @@ details p{
 <span class="price-muted">индивидуально</span>
 </div>
 </div>
-<div class="price-explain reveal">
-  <strong>От чего зависит итоговая стоимость</strong>
-  <span>От задачи, функциональности, готовности материалов, интеграций и сложности реализации. Я не считаю сайт просто по количеству страниц.</span>
-</div>
-<div class="price-note reveal">Если часть работы уже сделана, не обязательно начинать заново. Сначала посмотрю, что можно оставить и что действительно нужно доработать.</div>
+<div class="price-note reveal">Точная стоимость зависит от задачи, готовности материалов и функциональности.</div>
 </div>
 </section>
+
 <section>
 <div class="wrap">
 <h2 class="reveal">Частые вопросы</h2>
@@ -2240,6 +2341,7 @@ details p{
 </div>
 </div>
 </section>
+
 <section>
 <div class="wrap">
 <div class="final-cta reveal">
