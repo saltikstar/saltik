@@ -2058,6 +2058,39 @@ details p{
   text-underline-offset:4px;
 }
 
+
+/* v22 — benefit-first homepage, clear routes and problem recognition */
+.linkhub-hero{min-height:auto;padding:70px 0 78px!important}
+.linkhub-wrap{width:min(calc(100% - 40px),960px)!important}
+.linkhub-inner h1{font-size:clamp(44px,5.8vw,76px)!important;line-height:1.02!important;max-width:880px;margin:0 auto 18px!important}
+.linkhub-sub{max-width:740px;margin:0 auto;font-size:clamp(17px,1.8vw,21px);line-height:1.5}
+.linkhub-note{margin:26px 0 16px}
+.linkhub-links{width:min(100%,760px);grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.linkhub-btn{min-height:112px}
+.linkhub-btn b{font-size:19px}
+.linkhub-seo{grid-column:1/-1;min-height:72px}
+.hero-actions{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:22px}
+.hero-actions .btn{min-width:min(100%,330px);background:var(--ink);color:#fff}
+.hero-actions .btn:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.hero-works-link{font-size:15px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.need-section{padding:82px 0}
+.need-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.need-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px;min-height:205px}
+.need-card h3{font-size:clamp(22px,2.2vw,28px);line-height:1.15;margin:0 0 16px;letter-spacing:-.03em}
+.need-card p{font-size:16px;line-height:1.5;color:var(--muted);margin:0}
+@media(max-width:900px){.need-grid{grid-template-columns:1fr}.need-card{min-height:0}}
+@media(max-width:620px){
+  .linkhub-hero{padding:38px 0 52px!important}
+  .linkhub-wrap{width:min(calc(100% - 24px),960px)!important}
+  .linkhub-inner h1{font-size:clamp(40px,10vw,50px)!important}
+  .linkhub-links{grid-template-columns:1fr}
+  .linkhub-seo{grid-column:auto}
+  .linkhub-btn{min-height:82px}
+  .linkhub-seo{min-height:82px}
+  .need-section{padding:58px 0}
+  .need-card{padding:22px}
+}
+
 </style>
   
 </head>
@@ -2085,7 +2118,7 @@ details p{
 </div>
 </div>
 <div class="navlinks">
-<a href="#how">Как работаю</a>
+<a href="#process">Как работаю</a>
 <a href="#services">Услуги</a>
 <a href="/seo/">SEO-продвижение</a>
 <a href="#work">Работы</a>
@@ -2102,50 +2135,85 @@ details p{
 <section class="hero linkhub-hero">
 <div class="wrap linkhub-wrap">
   <div class="linkhub-inner reveal">
-    <div class="linkhub-kicker">Салтанат Жарова</div>
-    <h1>Сайты для бизнеса</h1>
-    <p class="linkhub-sub">Разработка · ведение · продвижение</p>
-    <p class="linkhub-note">Выберите, с какой задачей вы пришли.</p>
-
+    <div class="linkhub-kicker">Салтанат Жарова · разработка и продвижение</div>
+    <h1>Сайты для бизнеса — от идеи до запуска</h1>
+    <p class="linkhub-sub">Продумываю структуру, разрабатываю страницы, подключаю формы и аналитику — чтобы посетителю было понятно, что вы предлагаете и как с вами связаться.</p>
+    <p class="linkhub-note">Выберите, с чем нужна помощь:</p>
     <div class="linkhub-links">
       <a class="linkhub-btn linkhub-business" href="/business/">
-        <span>
-          <b>Я предприниматель</b>
-          <small>Нужен сайт для бизнеса</small>
-        </span>
-        <i>→</i>
+        <span><b>Я предприниматель</b><small>Новый сайт, доработка или развитие</small></span>
+        <i aria-hidden="true">→</i>
       </a>
-
       <a class="linkhub-btn linkhub-marketing" href="/marketing/">
-        <span>
-          <b>Я маркетолог / агентство</b>
-          <small>Нужен технический партнёр</small>
-        </span>
-        <i>→</i>
+        <span><b>Я маркетолог / агентство</b><small>Разработка, запуск и технические задачи</small></span>
+        <i aria-hidden="true">→</i>
       </a>
-
       <a class="linkhub-btn linkhub-seo" href="/seo/">
-        <span>
-          <b>SEO-продвижение</b>
-          <small>150 000 ₸ / месяц</small>
-        </span>
-        <i>→</i>
-      </a>
-
-      <a class="linkhub-btn linkhub-works" href="#work">
-        <span><b>Посмотреть работы</b></span>
-        <i>↓</i>
+        <span><b>SEO-продвижение</b><small>Поисковые запросы, страницы и аналитика · 150 000 ₸/мес.</small></span>
+        <i aria-hidden="true">→</i>
       </a>
     </div>
+    <div class="hero-actions">
+      <a class="btn primary" href="https://wa.me/77475550174?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%83%20%D0%BF%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D1%83.%20%D0%A0%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B6%D1%83%2C%20%D1%87%D1%82%D0%BE%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%81%D0%B5%D0%B9%D1%87%D0%B0%D1%81." target="_blank" rel="noopener">Обсудить задачу в WhatsApp</a>
+      <a class="hero-works-link" href="#work">Посмотреть проекты ↓</a>
+    </div>
   </div>
+</div>
+</section>
+
+<section id="need" class="need-section">
+<div class="wrap">
+  <div class="section-kicker reveal">Когда ко мне обращаются</div>
+  <h2 class="reveal">Есть задача с сайтом, но непонятно, с чего начать?</h2>
+  <p class="lead reveal">Можно прийти с идеей, действующим сайтом или конкретной проблемой.</p>
+  <div class="need-grid">
+    <article class="need-card reveal">
+      <h3>Нужен сайт с нуля</h3>
+      <p>Есть услуга или продукт, но ещё нет страницы, которая понятно объясняет предложение и помогает обратиться.</p>
+    </article>
+    <article class="need-card reveal">
+      <h3>Сайт есть, а обращаться неудобно</h3>
+      <p>С телефона трудно найти нужное, форма не работает или непонятно, какие действия совершают посетители.</p>
+    </article>
+    <article class="need-card reveal">
+      <h3>Реклама готова, сайт — нет</h3>
+      <p>Нужно быстро довести страницу до запуска: проверить мобильную версию, заявки и аналитику.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="section-kicker reveal">Что могу взять на себя</div>
+<h2 class="reveal">Как могу помочь</h2>
+<p class="lead reveal">Создать сайт, улучшить существующий или развивать его после запуска.</p>
+<div class="service-cards-lite">
+  <article class="service-card-lite reveal">
+    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 19V7l8-4 8 4v12H4Z"/><path d="M8 19v-6h8v6"/></svg></div>
+    <h3>Новый сайт</h3>
+    <p>Покажу ваше предложение понятным языком, соберу страницы, подключу заявки и проверю сайт перед запуском.</p>
+  </article>
+  <article class="service-card-lite reveal">
+    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M4 9h16"/><path d="m9 15 2 2 4-4"/></svg></div>
+    <h3>Доработка сайта</h3>
+    <p>Исправлю проблемы с мобильной версией, формами и аналитикой или подготовлю сайт к рекламе.</p>
+  </article>
+  <article class="service-card-lite reveal">
+    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 18h16"/><path d="m6 14 4-4 3 3 5-6"/><path d="M18 7h-4"/></svg></div>
+    <h3>Развитие после запуска</h3>
+    <p>Добавлю страницы и функции, внесу изменения и помогу сайту решать новые задачи.</p>
+    <a class="service-card-link" href="/seo/">SEO-продвижение — 150 000 ₸/мес →</a>
+  </article>
+</div>
 </div>
 </section>
 
 <section id="work">
 <div class="wrap">
 <div class="portfolio-intro">
-<h2 class="reveal">Некоторые проекты из портфолио</h2>
-<p class="lead reveal">Четыре проекта, которые показывают разные типы задач и подход к работе.</p>
+<h2 class="reveal">Проекты и результаты</h2>
+<p class="lead reveal">Разные задачи — от каталога до гостиничного комплекса. Где есть данные, показываю измеримые действия пользователей.</p>
 </div>
 <div class="case-grid balanced-row"><article class="case-card reveal">
 <div class="case-visual real">
@@ -2217,32 +2285,6 @@ details p{
 <div class="other-item"><strong>Стекловитрина</strong><span>Web Design · разработка — подрядчик</span></div>
 <div class="other-item"><strong>Global Apostille</strong><span>Implementation · Tilda · Responsive</span></div>
 </div>
-</div>
-</div>
-</section>
-
-<section id="services">
-<div class="wrap">
-<div class="section-kicker reveal">Что могу взять на себя</div>
-<h2 class="reveal">Можно подключиться на любом этапе</h2>
-<p class="lead reveal">Новый сайт, доработка существующего или развитие после запуска.</p>
-<div class="service-cards-lite">
-  <article class="service-card-lite reveal">
-    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 19V7l8-4 8 4v12H4Z"/><path d="M8 19v-6h8v6"/></svg></div>
-    <h3>Новый сайт</h3>
-    <p>Структура, визуальная подача, разработка, формы, аналитика и запуск.</p>
-  </article>
-  <article class="service-card-lite reveal">
-    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M4 9h16"/><path d="m9 15 2 2 4-4"/></svg></div>
-    <h3>Доработка сайта</h3>
-    <p>Исправить мобильную версию, формы, аналитику, сценарии или подготовить сайт к рекламе.</p>
-  </article>
-  <article class="service-card-lite reveal">
-    <div class="service-card-icon"><svg viewBox="0 0 24 24"><path d="M4 18h16"/><path d="m6 14 4-4 3 3 5-6"/><path d="M18 7h-4"/></svg></div>
-    <h3>Развитие после запуска</h3>
-    <p>Новые страницы, изменения, ведение и дальнейшее развитие проекта.</p>
-    <a class="service-card-link" href="/seo/">SEO-продвижение — 150 000 ₸/мес →</a>
-  </article>
 </div>
 </div>
 </section>
