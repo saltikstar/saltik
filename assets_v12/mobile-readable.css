@@ -1,0 +1,94 @@
+/* Mobile clarity: readable full-width cards; only repeated short content uses a carousel. */
+.readable-carousel-toolbar{display:none}
+.seo-case-photo{display:none}
+@media(max-width:720px){
+  /* Guarantee ONE wide column for long text on small screens. */
+  :is(.need-grid,.service-cards-lite,.pain-grid,.role-grid,.service-grid,.stage-grid,.scope-grid,.steps-grid,.grid-3,.steps,.reviews-grid,.review-grid,.case-grid,.faq-grid){
+    grid-template-columns:minmax(0,1fr)!important;
+    min-width:0!important;
+  }
+  :is(.role-grid,.service-grid,.stage-grid,.scope-grid,.steps-grid,.reviews-grid,.review-grid,.case-grid)>*{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  .role-grid>.role{width:100%!important}
+  #work .case-card,#cases .case,.case-list>.case{grid-template-columns:minmax(0,1fr)!important;max-width:100%!important}
+  #work .case-copy,#cases .case-copy,.case-list .case-copy{min-width:0!important;max-width:100%!important}
+  /* Carousels are full-width, not narrow two-column tiles. */
+  [data-compact-carousel]{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    flex-direction:row!important;
+    justify-content:flex-start!important;
+    align-items:stretch!important;
+    gap:14px!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding:2px 0 12px!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+  }
+  [data-compact-carousel]::-webkit-scrollbar{display:none}
+  [data-compact-carousel]>*{
+    flex:0 0 100%!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+    align-self:stretch!important;
+    scroll-snap-align:start;
+    height:auto!important;
+    overflow-wrap:break-word;
+  }
+  [data-compact-carousel]>.reveal,[data-compact-carousel]>.scroll-reveal{
+    opacity:1!important;visibility:visible!important;transform:none!important;
+  }
+  /* Calm, accessible controls: one full card per screen. */
+  .readable-carousel-toolbar{
+    display:flex!important;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin:15px 0 10px;
+    min-height:42px;
+  }
+  .readable-carousel-hint{font-size:13px;color:#65685f;font-weight:650}
+  .readable-carousel-actions{display:flex;align-items:center;gap:9px}
+  .readable-carousel-count{min-width:42px;text-align:center;font-size:13px;font-weight:700;color:#474d42;font-variant-numeric:tabular-nums}
+  .readable-carousel-button{
+    border:1px solid #c9cfbb!important;
+    color:#172018!important;
+    background:#fffefb!important;
+    width:39px!important;height:39px!important;min-width:39px!important;min-height:39px!important;
+    border-radius:50%!important;padding:0!important;
+    display:grid!important;place-items:center!important;cursor:pointer;
+    box-shadow:none!important;font-size:20px!important;line-height:1!important;
+  }
+  .readable-carousel-button:disabled{opacity:.4;cursor:default}
+  .readable-carousel-button:focus-visible{outline:3px solid #638b22;outline-offset:3px}
+  /* Avoid tiny type and tight two-column roles, especially business/marketing. */
+  .role-grid .role,.service-grid .service,.stage-grid .stage,
+  .reviews-grid .review-card,.review-grid .review-card{box-sizing:border-box;min-width:0}
+  .role-grid ul,.service-grid p,.scope-grid p{overflow-wrap:break-word}
+  section h2{font-size:clamp(28px,7.2vw,38px);line-height:1.12}
+  /* A project screenshot belongs directly to its SEO case, never as a random promo badge. */
+  .seo-case-photo{
+    display:flex;align-items:center;gap:14px;
+    margin:16px 0 18px;max-width:100%;
+    padding:12px;border:1px solid #42473d;border-radius:17px;
+    background:#292f29;color:#e8efe0
+  }
+  .seo-case-photo img{
+    display:block;width:96px;height:130px;flex:0 0 96px;object-fit:cover;object-position:center top;border-radius:10px;background:white
+  }
+  .seo-case-photo figcaption{font-size:14px;line-height:1.4;color:#e8efe0}
+}
+@media(prefers-reduced-motion:reduce){[data-compact-carousel]{scroll-behavior:auto}}
