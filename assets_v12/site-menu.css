@@ -41,3 +41,7 @@ header .nav-person{min-width:0!important}
 }
 @media(max-width:380px){.site-menu-drawer{width:100%}.nav .nav-person-copy span{display:none!important}}
 @media(prefers-reduced-motion:reduce){.site-menu-drawer,.site-menu-backdrop{animation:none}.site-burger,.site-menu-link{transition:none}}
+
+/* Короткие заголовки и свободная шапка мобильного меню */
+.site-menu-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.site-menu-head{justify-content:flex-end}
