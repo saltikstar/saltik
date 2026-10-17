@@ -64,6 +64,16 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:14px;color:var(
 @media(max-width:800px){.review-grid{grid-template-columns:1fr}.review-person{margin-bottom:14px}.review-card{padding:23px}}
 @media(max-width:650px){.nav-avatar{width:39px;height:39px}.nav-person{gap:8px}.nav-copy strong{font-size:13px}.nav-copy small{font-size:10px}.nav-social{width:34px;height:34px}.nav-social svg{width:16px;height:16px}.nav-contacts{gap:5px}.nav-wa{min-height:38px;padding:9px;border-radius:50%;height:38px;width:38px}.nav-wa span{display:none}.nav-wa svg{width:18px}.bonus-card,.about-card{grid-template-columns:1fr;gap:18px;padding:25px;border-radius:23px}.bonus-section{padding-top:28px;padding-bottom:28px}.proof{gap:12px;align-items:flex-start}.proof strong{font-size:22px;min-width:0;white-space:normal}.proof p{font-size:12px}.review-card blockquote{font-size:15px}}
 @media(max-width:390px){.nav-social{display:none}.nav-copy small{font-size:9px}}
+
+/* Иллюстрация в блоке бонуса: плавная карточка по сетке сайта */
+#bonus .bonus-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:26px;align-items:center;padding:38px 32px;overflow:hidden}
+#bonus .bonus-copy{min-width:0}
+#bonus .bonus-copy h2{font-size:clamp(28px,3.1vw,43px);line-height:1.1}
+#bonus .bonus-copy p{font-size:16px;line-height:1.58}
+#bonus .bonus-visual{min-width:0;align-self:center}
+#bonus .bonus-visual img{display:block;width:100%;height:auto;max-width:650px;margin:auto;filter:drop-shadow(0 20px 28px rgba(15,22,7,.11))}
+@media(max-width:880px){#bonus .bonus-card{grid-template-columns:1fr;padding:30px;gap:14px}#bonus .bonus-visual{width:100%;max-width:590px;margin:0 auto}}
+@media(max-width:650px){#bonus .bonus-card{padding:24px 20px;gap:15px}#bonus .bonus-copy h2{font-size:clamp(26px,7vw,34px)}#bonus .bonus-copy p{font-size:15px}#bonus .bonus-visual img{filter:none}}
 </style>
 </head>
 <body>
@@ -111,7 +121,11 @@ footer{padding:28px 0;border-top:1px solid var(--line);font-size:14px;color:var(
 <article class="card"><h3>Источники переходов</h3><p>Проверка сбора данных об источниках и рекомендации по меткам рекламных ссылок.</p></article>
 <article class="card"><h3>Передача и инструкция</h3><p>Права доступа и короткая инструкция: где искать посещения, источники и ключевые события.</p></article>
 </div></div></section>
-<section id="bonus" class="bonus-section"><div class="wrap"><div class="bonus-card"><span class="bonus-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></span><div><div class="kicker">Бонус к настройке аналитики</div><h2>Проверю, работают ли формы и доходят ли заявки</h2><p>Сделаю тестовые отправки форм, проверю кнопки связи и путь заявки до получателя. Если найду простую ошибку в форме или обработчике — исправлю в рамках настройки. Сложные ошибки и интеграции сначала оценю и согласую отдельно.</p><p class="bonus-note">Проверка согласованных форм и каналов связи. Вы получите не только отчёты, но и понимание, работает ли путь обращения.</p></div></div></div></section>
+<section id="bonus" class="bonus-section"><div class="wrap"><div class="bonus-card">
+<div class="bonus-copy"><div class="kicker">Бонус к настройке аналитики</div><h2>Проверю, работают ли формы и доходят ли заявки</h2>
+<p>Сделаю тестовые отправки форм, проверю кнопки связи и путь заявки до получателя. Если найду простую ошибку в форме или обработчике — исправлю в рамках настройки. Сложные ошибки и интеграции сначала оценю и согласую отдельно.</p><p class="bonus-note">Проверка согласованных форм и каналов связи. Вы получите не только отчёты, но и понимание, работает ли путь обращения.</p></div>
+<div class="bonus-visual"><img src="/google-analytics/bonus-form-check.svg" alt="Схема проверки: форма на сайте отправлена, заявка получена, отслеживание работает" width="650" height="420" loading="lazy" decoding="async"></div>
+</div></div></section>
 <section id="how"><div class="wrap">
 <div class="section-head"><div class="kicker">Как проходит настройка</div><h2>От проверки сайта до готовых отчётов</h2><p class="section-intro">Работаю с тем, что уже есть на сайте. Не ставлю второй счётчик поверх первого без проверки.</p></div>
 <div class="steps"><article class="step"><span class="num">01</span><div><h3>Проверю сайт</h3><p>Посмотрю, какие счётчики уже установлены, как работают формы и кнопки. Это поможет избежать лишних тегов и двойного учёта.</p></div></article>
