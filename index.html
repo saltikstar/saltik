@@ -2120,6 +2120,20 @@ nav.site-top-nav .site-top-inner{height:88px!important;min-height:88px;display:f
 @media(max-width:1100px){.site-top-links{display:none}.site-top-contacts{margin-left:auto}}
 @media(max-width:650px){nav.site-top-nav .site-top-inner{height:74px!important;min-height:74px;gap:8px}.site-top-person{gap:8px}.site-top-avatar{width:42px;height:42px;flex-basis:42px}.site-top-copy strong{font-size:14px}.site-top-copy>span{font-size:10px;white-space:normal}.site-top-contacts{gap:5px}.site-top-social{width:33px;height:33px}.site-top-social svg{width:17px;height:17px}.site-top-wa{padding:0;width:38px;height:38px;min-height:38px;border-radius:50%}.site-top-wa span{display:none}.site-top-wa svg{width:20px;height:20px}}
 @media(max-width:375px){.site-top-social{width:30px;height:30px}.site-top-copy strong{font-size:12px}.site-top-copy>span{font-size:9px}}
+
+/* Отзыв Амины на главной */
+.amina-home-section{background:#e9eee0}
+.amina-home-layout{display:grid;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);gap:36px;align-items:center}
+.amina-home-kicker{font-size:13px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#50673b}
+.amina-home-intro h2{font-size:clamp(32px,4.3vw,58px);line-height:1.08;letter-spacing:-.048em;margin:15px 0}
+.amina-home-intro p{font-size:17px;color:var(--muted);line-height:1.55}
+.amina-home-more{display:inline-flex;margin-top:12px;text-decoration:underline;text-underline-offset:5px;font-weight:800}
+.amina-home-review{border-radius:27px;padding:32px;background:var(--paper);border:1px solid var(--line);box-shadow:0 15px 40px rgba(0,0,0,.04)}
+.amina-home-person{display:flex;align-items:center;gap:15px;margin-bottom:20px}.amina-home-avatar{display:grid;place-items:center;width:60px;height:60px;flex:0 0 60px;background:var(--lime);border-radius:50%;font-size:28px;font-weight:850}
+.amina-home-person strong{display:block;font-size:20px}.amina-home-person span:not(.amina-home-avatar){color:var(--muted);font-size:13px}.amina-home-person a{text-decoration:underline;text-underline-offset:4px}
+.amina-home-review blockquote{margin:0;line-height:1.65;font-size:clamp(16px,1.4vw,19px)}
+@media(max-width:900px){.amina-home-layout{grid-template-columns:1fr;gap:24px}}
+@media(max-width:650px){.amina-home-review{padding:24px}.amina-home-avatar{width:48px;height:48px;flex-basis:48px;font-size:22px}.amina-home-intro h2{font-size:clamp(30px,8vw,42px)}}
 </style>
   
 </head>
@@ -2337,6 +2351,12 @@ nav.site-top-nav .site-top-inner{height:88px!important;min-height:88px;display:f
 </div>
 </section>
 
+<section id="reviews" class="amina-home-section">
+<div class="wrap"><div class="amina-home-layout">
+<div class="amina-home-intro"><span class="amina-home-kicker">Отзывы партнёров</span><h2>«Всегда получается именно то, что я представляла, а иногда даже лучше»</h2><p>Что говорят о совместной работе над сайтами.</p><a href="/marketing/#reviews" class="amina-home-more">Другие отзывы маркетологов →</a></div>
+<article class="amina-home-review"><div class="amina-home-person"><span class="amina-home-avatar" aria-hidden="true">А</span><div><strong>Амина</strong><span>Маркетолог · <a href="https://www.instagram.com/mj_amina/" target="_blank" rel="noopener noreferrer">@mj_amina ↗</a></span></div></div>
+<blockquote>«Хочу поделиться своим впечатлением о работе с Салтанат. Мы работаем вместе уже около 4 лет, и за это время она стала человеком, к которому я всегда могу обратиться со своими идеями.»<br><br>«Самое главное для меня — она действительно понимает, что я хочу, даже когда я не могу нормально объяснить задумку 😁 Всегда получается именно то, что я представляла, а иногда даже лучше.»<br><br>«Сайты получаются красивыми, удобными и, самое главное, всё работает так, как нужно. Очень ценю её подход к работе, внимательность и то, что всегда можно спокойно обсудить любые идеи и найти лучшее решение.»</blockquote>
+</article></div></div></section>
 <section id="process">
 <div class="wrap">
 <h2 class="reveal">Как проходит работа</h2>

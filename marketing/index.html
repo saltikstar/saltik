@@ -1655,7 +1655,12 @@
                 grid-template-columns: 1fr !important
             }
         }
-    </style>
+    
+/* Четыре отзыва: 2 колонки на широком экране */
+#reviews .reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#reviews .review-letter{width:72px;height:72px;flex:0 0 72px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-weight:850;font-size:31px;color:var(--ink);border:1px solid rgba(0,0,0,.08)}
+@media(max-width:700px){#reviews .reviews-grid{grid-template-columns:1fr}#reviews .review-letter{width:54px;height:54px;flex-basis:54px;font-size:25px}}
+</style>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -1947,6 +1952,15 @@
                     </div>
                     <p>«Работаю с тобой уже более 6 лет и полностью доверяю: всё делаешь на высоком уровне и понимаешь меня с полуслова.»</p>
                     <p>«С тобой приятно работать, и планирую продолжать наше сотрудничество в новых проектах.»</p>
+                </article>
+                <article class="review-card reveal delay1">
+                    <div class="review-head">
+                        <span class="review-letter" aria-hidden="true">А</span>
+                        <div><strong>Амина</strong><span>Маркетолог · <a class="review-link" href="https://www.instagram.com/mj_amina/" target="_blank" rel="noopener noreferrer">@mj_amina ↗</a></span></div>
+                    </div>
+                    <p>«Хочу поделиться своим впечатлением о работе с Салтанат. Мы работаем вместе уже около 4 лет, и за это время она стала человеком, к которому я всегда могу обратиться со своими идеями.»</p>
+                    <p>«Самое главное для меня — она действительно понимает, что я хочу, даже когда я не могу нормально объяснить задумку 😁 Всегда получается именно то, что я представляла, а иногда даже лучше.»</p>
+                    <p>«Сайты получаются красивыми, удобными и, самое главное, всё работает так, как нужно. Очень ценю её подход к работе, внимательность и то, что всегда можно спокойно обсудить любые идеи и найти лучшее решение.»</p>
                 </article>
             </div>
         </div>
