@@ -1,0 +1,85 @@
+/* Мобильная подача: горизонтальные карточки, управление и реальные изображения проектов. */
+.mobile-slider-toolbar{display:none}
+.mobile-work-preview{display:none}
+.seo-real-example{display:none}
+@media(max-width:700px){
+/* Оставляем весь контент в документе и доступным поиску. Меняем только раскладку. */
+[data-mobile-slider]{
+display:grid!important;
+grid-template-columns:none!important;
+grid-auto-flow:column!important;
+grid-auto-columns:minmax(0,86%)!important;
+gap:12px!important;
+align-items:stretch!important;
+overflow-x:auto!important;
+overflow-y:hidden!important;
+scroll-snap-type:x mandatory;
+scroll-padding-inline:2px;
+overscroll-behavior-x:contain;
+-webkit-overflow-scrolling:touch;
+scrollbar-width:none;
+max-width:100%!important;
+min-width:0!important;
+width:100%!important;
+padding:4px 2px 14px!important;
+margin-left:0!important;
+margin-right:0!important;
+}
+[data-mobile-slider]::-webkit-scrollbar{display:none}
+[data-mobile-slider]>*{
+min-width:0!important;
+max-width:none!important;
+width:auto!important;
+height:auto;
+scroll-snap-align:start;
+scroll-snap-stop:normal;
+align-self:stretch!important;
+}
+[data-mobile-slider]>.reveal,
+[data-mobile-slider]>.scroll-reveal{
+opacity:1!important;
+transform:none!important;
+visibility:visible!important;
+}
+.mobile-slider-toolbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:9px;
+margin:15px 0 7px;
+min-height:38px;
+width:100%;
+font-family:Inter,ui-sans-serif,system-ui,sans-serif;
+}
+.mobile-slider-hint{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:650;color:#666a60;line-height:1.2}
+.mobile-slider-hint svg{width:16px;height:16px}
+.mobile-slider-controls{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.mobile-slider-count{font-size:12px;color:#55594f;min-width:43px;text-align:center;font-variant-numeric:tabular-nums;font-weight:700}
+.mobile-slider-button{display:grid!important;place-items:center;border:1px solid #c3c8b8!important;background:#fffefb!important;color:#1b2117!important;border-radius:50%!important;width:34px!important;height:34px!important;min-width:34px!important;min-height:34px!important;padding:0!important;box-shadow:none!important;cursor:pointer}
+.mobile-slider-button svg{width:15px;height:15px;display:block}
+.mobile-slider-button[disabled]{opacity:.35;cursor:default}
+.mobile-slider-button:focus-visible{outline:3px solid #668f29;outline-offset:3px}
+.mobile-slider-button:not([disabled]):hover{background:#c9ff4a!important}
+.mobile-work-preview{display:flex;align-items:center;gap:14px;padding:10px 12px;margin:18px 0 9px;background:#e8eddf;border:1px solid #d4ddc9;border-radius:19px;min-height:126px;overflow:hidden}
+.mobile-work-preview>img{display:block;width:108px;height:105px;flex:0 0 108px;object-fit:cover;object-position:center top;border-radius:13px;background:white;border:1px solid #e6e7df}
+.mobile-work-preview figcaption{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;line-height:1.28}
+.mobile-work-preview figcaption strong{font-size:15px;letter-spacing:-.02em;line-height:1.2}
+.mobile-work-preview figcaption span{font-size:12px;color:#5b6153}
+.mobile-work-preview figcaption a{font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.seo-real-example{display:flex;align-items:center;gap:13px;border:1px solid #41473d;border-radius:15px;background:#242a24;padding:10px;margin:12px 0 14px}
+.seo-real-example img{display:block;width:86px;height:110px;object-fit:cover;object-position:top;border-radius:10px;background:white}
+.seo-real-example figcaption{font-size:13px;line-height:1.4;color:#f5f5ed}
+.seo-real-example figcaption strong{display:block;font-size:15px;color:#c9ff4a;margin-bottom:4px}
+#work [data-mobile-slider] .case-card .case-visual{max-width:100%}
+#work [data-mobile-slider] .case-card img,
+#cases [data-mobile-slider] .case img{max-width:100%}
+/* Отзывы и слайды с картинками должны расти по содержимому, без обрезки цитат. */
+[data-mobile-slider] .review-card,[data-mobile-slider] .case-card,[data-mobile-slider] .case,
+[data-mobile-slider] .step,[data-mobile-slider] .scope{overflow-wrap:anywhere}
+/* На телефоне меньше пустоты между уже существующими разделами. */
+section:not(.hero):not(.final):not(.bonus-section){padding-top:clamp(36px,9vw,52px);padding-bottom:clamp(36px,9vw,52px)}
+section .section-head{margin-bottom:18px}
+#services [data-mobile-slider] .service,#included [data-mobile-slider] .card{min-height:0!important}
+}
+@media(max-width:380px){[data-mobile-slider]{grid-auto-columns:minmax(0,88%)!important}.mobile-work-preview{gap:10px}.mobile-work-preview>img{width:94px;height:96px;flex-basis:94px}}
+@media(prefers-reduced-motion:reduce){[data-mobile-slider]{scroll-behavior:auto!important}}
