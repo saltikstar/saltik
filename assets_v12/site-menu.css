@@ -1,0 +1,43 @@
+/* Общее бургер-меню для пяти страниц saltik.sito.kz */
+.site-burger{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:42px;min-width:42px;padding:0;margin:0;border:1px solid #c9c8bd;border-radius:13px;background:#fffefb;color:#171a16;box-shadow:0 1px 4px #1111110a;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform .2s ease;position:relative;z-index:3}
+.site-burger svg{display:block;width:23px;height:23px;flex-shrink:0}
+.site-burger:hover{background:#c9ff4a;border-color:#9abd3c;transform:translateY(-1px)}
+.site-burger:focus-visible,.site-menu-close:focus-visible,.site-menu-link:focus-visible,.site-menu-contact:focus-visible{outline:3px solid #567900;outline-offset:3px}
+.site-menu-backdrop[hidden],.site-menu-drawer[hidden]{display:none!important}
+.site-menu-backdrop{position:fixed;inset:0;z-index:11990;background:rgba(13,19,10,.55);backdrop-filter:blur(4px);animation:site-menu-fade .2s ease both}
+.site-menu-drawer{position:fixed;z-index:11991;top:0;right:0;height:100vh;height:100dvh;width:min(420px,100%);padding:0;display:flex;flex-direction:column;overflow:hidden;background:#f6f4ed;color:#181a15;border-left:1px solid #dcd9ce;box-shadow:-20px 0 60px #0002;animation:site-menu-in .22s ease both;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:left}
+.site-menu-drawer *{box-sizing:border-box}
+.site-menu-drawer a{color:inherit;text-decoration:none}
+.site-menu-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:22px 24px 19px;border-bottom:1px solid #dfdbcf;background:#f6f4ed;flex:0 0 auto}
+.site-menu-heading{font-size:20px;letter-spacing:-.03em;font-weight:800;line-height:1.2;color:#171a16}
+.site-menu-close{border:1px solid #dad5c8;border-radius:12px;width:42px;height:42px;display:grid;place-items:center;cursor:pointer;color:#171a16;background:white;padding:0}
+.site-menu-close:hover{background:#c9ff4a}
+.site-menu-close svg{width:22px;height:22px}
+.site-menu-scroll{overflow-y:auto;overscroll-behavior:contain;padding:18px 24px 30px;flex:1;min-height:0}
+.site-menu-group+.site-menu-group{border-top:1px solid #ddd9ce;margin-top:22px;padding-top:22px}
+.site-menu-label{font-size:12px;line-height:1.4;letter-spacing:.09em;text-transform:uppercase;color:#65695d;font-weight:750;margin:0 0 11px}
+.site-menu-list{display:grid;grid-template-columns:1fr;gap:3px}
+.site-menu-link{display:flex;align-items:center;justify-content:space-between;min-height:43px;border-radius:11px;padding:10px 12px;font-size:16px;line-height:1.35;font-weight:600;background:transparent;transition:background .15s}
+.site-menu-link::after{content:"›";font-size:22px;font-weight:400;color:#838777;margin-left:12px;line-height:1}
+.site-menu-link:hover,.site-menu-link:focus-visible{background:#e9f3cb}
+.site-menu-link[aria-current="page"]{background:#e2f2b2;font-weight:800}
+.site-menu-contact{display:flex;align-items:center;justify-content:center;min-height:48px;background:#c9ff4a;border-radius:13px;padding:12px 15px;font-size:15px;font-weight:800;text-align:center}
+.site-menu-contact:hover{background:#b6f12b}
+.site-menu-mini{display:flex;gap:16px;flex-wrap:wrap;margin-top:17px;font-size:14px;color:#5b6051}
+.site-menu-mini a{text-decoration:underline;text-underline-offset:3px}
+html.site-menu-open,html.site-menu-open body{overflow:hidden!important}
+section[id],div[id],article[id]{scroll-margin-top:105px}
+@keyframes site-menu-in{from{transform:translateX(18px);opacity:.6}to{transform:translateX(0);opacity:1}}
+@keyframes site-menu-fade{from{opacity:0}to{opacity:1}}
+@media(max-width:1450px){.site-top-links,nav .navlinks,header nav .links{display:none!important}}
+@media(max-width:760px){.site-burger{width:40px;height:40px;min-width:40px;border-radius:12px}.site-burger svg{width:21px;height:21px}.nav-contacts,.site-top-contacts{gap:6px!important}}
+@media(max-width:520px){
+.site-menu-head{padding:17px 18px 15px}.site-menu-scroll{padding:15px 18px 27px}.site-menu-drawer{width:min(390px,100%)}
+.site-menu-drawer .site-menu-link{font-size:15px;min-height:42px}
+.nav-icon-link,.nav-social,.site-top-social{display:none!important}
+.site-burger{flex-basis:40px;min-width:40px}
+header .nav-person .nav-copy small{display:none!important}
+header .nav-person{min-width:0!important}
+}
+@media(max-width:380px){.site-menu-drawer{width:100%}.nav .nav-person-copy span{display:none!important}}
+@media(prefers-reduced-motion:reduce){.site-menu-drawer,.site-menu-backdrop{animation:none}.site-burger,.site-menu-link{transition:none}}
