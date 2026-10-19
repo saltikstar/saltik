@@ -1670,6 +1670,20 @@
                 grid-template-columns: 1fr !important
             }
         }
+
+        @media(min-width:1101px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr) !important;
+                gap: 48px !important
+            }
+            .hero-copy,
+            .hero h1 {
+                max-width: 720px !important
+            }
+            .hero .lead {
+                max-width: 680px !important
+            }
+        }
     
 /* Четыре отзыва: 2 колонки на широком экране */
 #reviews .reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
