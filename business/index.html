@@ -1685,6 +1685,20 @@
         .hero .lead {
             max-width: 650px !important
         }
+
+        @media(min-width:1101px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr) !important;
+                gap: 48px !important
+            }
+            .hero-copy,
+            .hero h1 {
+                max-width: 720px !important
+            }
+            .hero .lead {
+                max-width: 680px !important
+            }
+        }
         
         .hero-browser {
             transform: none !important
