@@ -515,6 +515,31 @@ body.ort-popup-import-view{margin:0;background:#edf6ff}
 body.ort-popup-import-view > :not(.ort-import-popup){display:none!important}
 body.ort-popup-import-view > .ort-import-popup{display:flex!important;align-items:center;justify-content:center;min-height:100vh;padding:40px 18px}
 .ort-import-popup .modal-box{animation:none;box-shadow:0 22px 65px rgba(9,35,75,.1)}
+
+/* ORTHODONT: FAQ-only Zero Block import. Source FAQ remains unchanged. */
+.ort-import-faq{display:none;background:linear-gradient(#f9fcff,#fff);padding:75px 0 66px;font-family:Manrope,Arial,sans-serif;color:#12254b}
+.ort-import-faq *{box-sizing:border-box}
+.ort-faq-container{width:min(100% - 64px,1320px);margin:auto}
+.ort-faq-section-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:30px}
+.ort-faq-eyebrow{font-size:11px;letter-spacing:.13em;color:#1266cf;font-weight:800;margin-bottom:9px}
+.ort-faq-section-heading h2{font-size:clamp(34px,3.9vw,51px);font-weight:800;letter-spacing:-.055em;line-height:1.15;color:#08245b;margin:0}
+.ort-faq-section-heading h2 span{color:#1266cf}
+.ort-faq-section-heading>p{font-size:13px;color:#7486a1;margin:0 0 6px}
+.ort-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;align-items:start}
+.ort-faq-item{border:1px solid #e0ebf6;background:#fff;border-radius:13px;padding:0 20px;box-shadow:0 6px 18px rgba(16,57,120,.02);min-width:0;overflow:hidden}
+.ort-faq-header{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0;font-weight:800;color:#153b72;font-size:14px;line-height:1.5}
+.ort-faq-header:focus-visible{outline:2px solid #1164d4;outline-offset:4px}
+.ort-faq-arrow{flex:0 0 18px;display:flex;align-items:center;justify-content:center;color:#1164d4}
+.ort-faq-arrow svg{width:17px;height:17px;stroke:currentColor;fill:none}
+.ort-faq-content{display:block;padding-bottom:18px}
+.ort-faq-content p{margin:0;color:#7584a0;font-size:12px;line-height:1.75}
+.ort-faq-action{text-align:center;margin-top:30px}
+.ort-faq-action a{display:inline-flex;gap:12px;justify-content:center;align-items:center;background:#0860d4;color:#fff;border-radius:12px;padding:15px 22px;font-size:13px;font-weight:800;text-decoration:none}
+@media(max-width:760px){.ort-import-faq{padding:60px 0}.ort-faq-container{width:calc(100% - 32px)}.ort-faq-section-heading{display:block;margin-bottom:24px}.ort-faq-section-heading>p{margin:10px 0 0}.ort-faq-grid{grid-template-columns:1fr}.ort-faq-item{padding:0 16px}.ort-faq-header{padding:16px 0}}
+/* In the import preview answers are deliberately shown: import must capture them as editable elements. */
+body.ort-faq-import-view{background:#f9fcff}
+body.ort-faq-import-view > :not(.ort-import-faq){display:none!important}
+body.ort-faq-import-view > .ort-import-faq{display:block!important;min-height:100vh}
 </style>
 </head>
 <body>
@@ -861,5 +886,22 @@ track.closest('.photo-reviews-gallery').querySelector('.photo-next').addEventLis
 <a class="picker-map" href="https://2gis.kz/astana/firm/70000001055162331" rel="noopener noreferrer" target="_blank">2GIS</a></div>
 </article></div></div></section>
 <script>if(new URLSearchParams(location.search).get('import-popup')==='1')document.body.classList.add('ort-popup-import-view');</script>
+
+<!-- Выборочный импорт готового FAQ в Zero Block: /?import-faq=1 -->
+<section id="ort-import-faq" class="ort-import-faq" aria-label="Частые вопросы ORTHODONT.KZ">
+  <div class="ort-faq-container">
+    <div class="ort-faq-section-heading"><div><div class="ort-faq-eyebrow">06 / ОТВЕТЫ НА ВОПРОСЫ</div><h2>Частые <span>вопросы</span></h2></div><p>Ответы на популярные вопросы наших пациентов</p></div>
+    <div class="tf_accordion ort-faq-grid" data-accordion-id="orthodont-faq">
+<div class="tf_accordion-item ort-faq-item" data-ort-faq-item="1"><div class="tf_accordion-header ort-faq-header" role="button" tabindex="0" aria-expanded="false" aria-controls="ort-faq-answer-1"><span class="ort-faq-question">Будет ли больно?</span><span class="tf_accordion-arrow ort-faq-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></div><div class="tf_accordion-content ort-faq-content" id="ort-faq-answer-1"><p>Лечение проводится с обезболиванием, когда оно необходимо. Какой вариант подойдёт именно вам, врач обсуждает до начала лечения. Если вы переживаете, скажите об этом на консультации, врач учтёт это в работе.</p></div></div>
+<div class="tf_accordion-item ort-faq-item" data-ort-faq-item="2"><div class="tf_accordion-header ort-faq-header" role="button" tabindex="0" aria-expanded="false" aria-controls="ort-faq-answer-2"><span class="ort-faq-question">Сколько длится лечение?</span><span class="tf_accordion-arrow ort-faq-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></div><div class="tf_accordion-content ort-faq-content" id="ort-faq-answer-2"><p>Срок зависит от задачи и клинической ситуации: лечение зуба, имплантация и коррекция прикуса занимают разное время. Ориентировочные сроки врач называет после диагностики, когда составлен план лечения.</p></div></div>
+<div class="tf_accordion-item ort-faq-item" data-ort-faq-item="3"><div class="tf_accordion-header ort-faq-header" role="button" tabindex="0" aria-expanded="false" aria-controls="ort-faq-answer-3"><span class="ort-faq-question">Сколько стоит лечение?</span><span class="tf_accordion-arrow ort-faq-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></div><div class="tf_accordion-content ort-faq-content" id="ort-faq-answer-3"><p>Стоимость зависит от объёма работ. Актуальные цены и акции указаны на сайте. Точную сумму врач называет после диагностики и составления плана, до начала лечения.</p></div></div>
+<div class="tf_accordion-item ort-faq-item" data-ort-faq-item="4"><div class="tf_accordion-header ort-faq-header" role="button" tabindex="0" aria-expanded="false" aria-controls="ort-faq-answer-4"><span class="ort-faq-question">Можно ли оформить рассрочку?</span><span class="tf_accordion-arrow ort-faq-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></div><div class="tf_accordion-content ort-faq-content" id="ort-faq-answer-4"><p>Да, доступна рассрочка через Kaspi Bank, Halyk Bank и Freedom Bank.</p></div></div>
+<div class="tf_accordion-item ort-faq-item" data-ort-faq-item="5"><div class="tf_accordion-header ort-faq-header" role="button" tabindex="0" aria-expanded="false" aria-controls="ort-faq-answer-5"><span class="ort-faq-question">Что входит в первый приём?</span><span class="tf_accordion-arrow ort-faq-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></div><div class="tf_accordion-content ort-faq-content" id="ort-faq-answer-5"><p>Осмотр и консультация врача. При необходимости назначается диагностика (3D-снимок, ОПТГ или 3D-сканирование), после чего врач составляет план лечения и рассказывает о вариантах и стоимости.</p></div></div>
+<div class="tf_accordion-item ort-faq-item" data-ort-faq-item="6"><div class="tf_accordion-header ort-faq-header" role="button" tabindex="0" aria-expanded="false" aria-controls="ort-faq-answer-6"><span class="ort-faq-question">Как записаться и в какой филиал?</span><span class="tf_accordion-arrow ort-faq-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg></span></div><div class="tf_accordion-content ort-faq-content" id="ort-faq-answer-6"><p>Нажмите «Записаться на консультацию», выберите удобный филиал и напишите нам в WhatsApp или позвоните.</p></div></div>
+    </div>
+    <div class="ort-faq-action"><a href="#choosebranch">Записаться на консультацию <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+<script>if(new URLSearchParams(location.search).get('import-faq')==='1')document.body.classList.add('ort-faq-import-view');</script>
 </body>
 </html>
