@@ -540,6 +540,30 @@ body.ort-popup-import-view > .ort-import-popup{display:flex!important;align-item
 body.ort-faq-import-view{background:#f9fcff}
 body.ort-faq-import-view > :not(.ort-import-faq){display:none!important}
 body.ort-faq-import-view > .ort-import-faq{display:block!important;min-height:100vh}
+
+/* Видеоотзывы: отдельная секция для выборочного импорта в Tilda Zero Block.
+ * Видео вставляются затем как нативные элементы Video поверх этих 9:16 областей. */
+.ort-import-video{display:none;padding:68px 0 78px;background:linear-gradient(180deg,#f6fbff 0%,#ffffff 100%);font-family:Manrope,Arial,sans-serif;color:#08245b}
+.ort-import-video *{box-sizing:border-box}
+.ort-video-wrap{width:min(100% - 64px,1220px);margin:0 auto}
+.ort-video-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+.ort-video-eyebrow{font-size:11px;letter-spacing:.13em;color:#1266cf;font-weight:800;margin-bottom:9px}
+.ort-video-head h2{font-size:clamp(33px,4vw,51px);font-weight:800;line-height:1.16;letter-spacing:-.055em;margin:0;color:#08245b}
+.ort-video-head h2 span{color:#1266cf}
+.ort-video-head>p{margin:0 0 6px;color:#7486a1;font-size:13px}
+.ort-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:1000px;margin:0 auto;gap:20px;align-items:start}
+.ort-video-card{background:#fff;padding:9px;border:1px solid #dbe9f8;border-radius:25px;box-shadow:0 12px 30px rgba(14,65,128,.09);min-width:0;overflow:hidden}
+.ort-video-frame{position:relative;aspect-ratio:9/16;border-radius:18px;background:linear-gradient(155deg,#143970 0%,#0d2652 46%,#071a3a 100%);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ort-video-frame:before{content:"";position:absolute;width:130%;height:55%;left:-15%;top:-10%;background:radial-gradient(ellipse,#2e80d14a,transparent 68%);transform:rotate(-17deg)}
+.ort-video-frame:after{content:"";position:absolute;width:180px;height:180px;right:-95px;bottom:-70px;border:1px solid #80baff33;border-radius:50%;box-shadow:0 0 0 40px #80baff0b,0 0 0 80px #80baff09}
+.ort-video-play{position:relative;z-index:1;width:64px;height:64px;display:flex;align-items:center;justify-content:center;border:1px solid #ffffff9c;border-radius:50%;background:#ffffffeb;box-shadow:0 11px 36px #001f5177}
+.ort-video-play svg{width:24px;height:24px;stroke:none;fill:#1264d0;transform:translateX(2px)}
+.ort-video-slot-title{position:absolute;bottom:20px;left:15px;right:15px;text-align:center;color:#ffffffab;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;z-index:1}
+@media(max-width:760px){.ort-import-video{padding:54px 0 62px}.ort-video-wrap{width:calc(100% - 32px)}.ort-video-head{display:block;margin-bottom:22px}.ort-video-head>p{margin-top:10px}.ort-video-grid{grid-template-columns:repeat(3,minmax(220px,1fr));gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.ort-video-card{scroll-snap-align:start;border-radius:19px;padding:7px}.ort-video-frame{border-radius:13px}}
+/* Only this section is shown for the import URL. Normal website remains unchanged. */
+body.ort-video-import-view{background:#f6fbff}
+body.ort-video-import-view > :not(.ort-import-video){display:none!important}
+body.ort-video-import-view > .ort-import-video{display:block!important;min-height:100vh}
 </style>
 </head>
 <body>
@@ -903,5 +927,16 @@ track.closest('.photo-reviews-gallery').querySelector('.photo-next').addEventLis
   </div>
 </section>
 <script>if(new URLSearchParams(location.search).get('import-faq')==='1')document.body.classList.add('ort-faq-import-view');</script>
+
+<!-- Отдельный импортируемый Zero Block: ?import-video=1. Замените плейсхолдеры на Video (YouTube) в Tilda. -->
+<section class="ort-import-video" id="ort-import-youtube" aria-label="Видеоотзывы пациентов">
+ <div class="ort-video-wrap">
+  <div class="ort-video-head"><div><div class="ort-video-eyebrow">05 / ОТЗЫВЫ ПАЦИЕНТОВ</div><h2>Видеоотзывы <span>пациентов</span></h2></div><p>Реальные истории пациентов ORTHODONT.KZ</p></div>
+  <div class="ort-video-grid"><div class="ort-video-card" data-ort-video-card="1"><div class="ort-video-frame" data-ort-video-slot="1" data-video-provider="youtube" data-aspect-ratio="9:16"><span class="ort-video-play" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 4.8c0-.8.9-1.3 1.6-.9l11.1 7.2c.7.4.7 1.4 0 1.8l-11.1 7.2c-.7.4-1.6-.1-1.6-.9V4.8Z"/></svg></span><span class="ort-video-slot-title">Видеоотзыв 01</span></div></div>
+<div class="ort-video-card" data-ort-video-card="2"><div class="ort-video-frame" data-ort-video-slot="2" data-video-provider="youtube" data-aspect-ratio="9:16"><span class="ort-video-play" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 4.8c0-.8.9-1.3 1.6-.9l11.1 7.2c.7.4.7 1.4 0 1.8l-11.1 7.2c-.7.4-1.6-.1-1.6-.9V4.8Z"/></svg></span><span class="ort-video-slot-title">Видеоотзыв 02</span></div></div>
+<div class="ort-video-card" data-ort-video-card="3"><div class="ort-video-frame" data-ort-video-slot="3" data-video-provider="youtube" data-aspect-ratio="9:16"><span class="ort-video-play" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 4.8c0-.8.9-1.3 1.6-.9l11.1 7.2c.7.4.7 1.4 0 1.8l-11.1 7.2c-.7.4-1.6-.1-1.6-.9V4.8Z"/></svg></span><span class="ort-video-slot-title">Видеоотзыв 03</span></div></div></div>
+ </div>
+</section>
+<script>if(new URLSearchParams(location.search).get('import-video')==='1')document.body.classList.add('ort-video-import-view');</script>
 </body>
 </html>
