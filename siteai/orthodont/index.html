@@ -508,6 +508,13 @@ body.drawer-open{overflow:hidden;overscroll-behavior:none}
 .review-video-item video{display:block;aspect-ratio:9/16;width:100%;height:auto;max-height:490px;object-fit:contain}
 @media(max-width:760px){.review-video-track{grid-auto-columns:minmax(235px,78%)}.review-video-gallery{margin:28px 0}}
 
+
+/* Отдельная секция для выборочного импорта попапа в Tilda */
+.ort-import-popup{display:none}
+body.ort-popup-import-view{margin:0;background:#edf6ff}
+body.ort-popup-import-view > :not(.ort-import-popup){display:none!important}
+body.ort-popup-import-view > .ort-import-popup{display:flex!important;align-items:center;justify-content:center;min-height:100vh;padding:40px 18px}
+.ort-import-popup .modal-box{animation:none;box-shadow:0 22px 65px rgba(9,35,75,.1)}
 </style>
 </head>
 <body>
@@ -834,5 +841,25 @@ track.closest('.photo-reviews-gallery').querySelector('.photo-next').addEventLis
 })();
 </script>
 
+
+<!-- Отдельный импортируемый блок попапа: /?import-popup=1 -->
+<section id="ort-import-popup" class="ort-import-popup" aria-label="Контент выбора филиала"><div class="modal-box"><span class="modal-eyebrow">ORTHODONT.KZ / АСТАНА</span><h2>Выберите филиал</h2><p>Запишитесь на консультацию в удобном филиале Астаны.</p><div class="branch-picker-list"><article class="branch-picker-card" data-branch-index="0">
+<div class="branch-picker-title"><span aria-hidden="true" class="branch-picker-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+<div><strong>ул. Ахмет Байтурсынулы, 6</strong><span class="branch-picker-area">Район Сарайшык, Астана</span></div></div>
+<div class="branch-picker-details"><span class="branch-picker-hours"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Пн–Сб 10:00–20:00 · Вс выходной</span>
+<a class="branch-picker-phone" href="tel:+77001317286"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a16 16 0 0 0 5.5 5.5L16 13l5 2v4c0 1-.8 2-2 2C10 21 3 14 3 5c0-1.2 1-2 2-2Z"></path></svg>+7 700 131 72 86</a></div>
+<div class="branch-picker-actions"><a class="picker-whatsapp" data-modal-branch="0" href="https://wa.me/77001317286?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%B2%20ORTHODONT.KZ." rel="noopener noreferrer" target="_blank">WhatsApp <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></a>
+<a class="picker-call" href="tel:+77001317286">Позвонить</a>
+<a class="picker-map" href="https://2gis.kz/astana/firm/70000001103961165" rel="noopener noreferrer" target="_blank">2GIS</a></div>
+</article><article class="branch-picker-card" data-branch-index="1">
+<div class="branch-picker-title"><span aria-hidden="true" class="branch-picker-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+<div><strong>ул. Керей и Жанибек хандар, 2</strong><span class="branch-picker-area">Район Нура, Астана</span></div></div>
+<div class="branch-picker-details"><span class="branch-picker-hours"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>10:00–20:00 по предварительной записи</span>
+<a class="branch-picker-phone" href="tel:+77080440348"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a16 16 0 0 0 5.5 5.5L16 13l5 2v4c0 1-.8 2-2 2C10 21 3 14 3 5c0-1.2 1-2 2-2Z"></path></svg>+7 708 044 03 48</a></div>
+<div class="branch-picker-actions"><a class="picker-whatsapp" data-modal-branch="1" href="https://wa.me/77080440348?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%B2%20ORTHODONT.KZ." rel="noopener noreferrer" target="_blank">WhatsApp <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></a>
+<a class="picker-call" href="tel:+77080440348">Позвонить</a>
+<a class="picker-map" href="https://2gis.kz/astana/firm/70000001055162331" rel="noopener noreferrer" target="_blank">2GIS</a></div>
+</article></div></div></section>
+<script>if(new URLSearchParams(location.search).get('import-popup')==='1')document.body.classList.add('ort-popup-import-view');</script>
 </body>
 </html>
