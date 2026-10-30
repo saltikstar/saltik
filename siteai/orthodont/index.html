@@ -994,5 +994,47 @@ track.closest('.photo-reviews-gallery').querySelector('.photo-next').addEventLis
 </section>
 <script>if(new URLSearchParams(location.search).get('import-menu')==='1')document.body.classList.add('ort-drawer-import-view');</script>
 
+<!-- ORTHODONT: фиксированная WhatsApp-панель для двух филиалов; вставка в Tilda T123 -->
+<style>
+#ort-wa-dock{display:none}
+@media(max-width:767px){
+  body:not(.ort-drawer-import-view):not(.ort-popup-import-view):not(.ort-faq-import-view):not(.ort-video-import-view){padding-bottom:calc(101px + env(safe-area-inset-bottom,0px))}
+  #ort-wa-dock{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;
+    position:fixed;bottom:0;left:0;right:0;z-index:80;
+    padding:9px 12px calc(9px + env(safe-area-inset-bottom,0px));
+    background:rgba(255,255,255,.97);border-top:1px solid #dce9f6;
+    box-shadow:0 -8px 26px rgba(8,36,91,.12);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    font-family:Manrope,Arial,sans-serif;
+  }
+  #ort-wa-dock .ort-wa-link{
+    min-height:73px;border-radius:13px;padding:9px 6px;
+    color:#fff;text-decoration:none;min-width:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+    text-align:center;box-shadow:0 5px 13px rgba(0,105,61,.13);
+    -webkit-tap-highlight-color:transparent;
+  }
+  #ort-wa-dock .ort-wa-link:nth-child(1){background:#12aa77}
+  #ort-wa-dock .ort-wa-link:nth-child(2){background:#117c68}
+  #ort-wa-dock .ort-wa-address{display:block;font-weight:700;font-size:clamp(10px,2.9vw,12px);line-height:1.25;letter-spacing:0}
+  #ort-wa-dock .ort-wa-action{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-weight:800;font-size:14px;line-height:1.1}
+  #ort-wa-dock svg{width:20px;height:20px;flex:none}
+  #ort-wa-dock a:focus-visible{outline:3px solid #092d68;outline-offset:2px}
+  body.modal-open #ort-wa-dock,body.drawer-open #ort-wa-dock,
+  body:has(.t-popup_show) #ort-wa-dock{display:none}
+}
+@media(prefers-reduced-motion:no-preference){#ort-wa-dock a{transition:filter .2s ease,transform .2s ease}#ort-wa-dock a:active{transform:scale(.98)}}
+</style>
+<nav id="ort-wa-dock" aria-label="Запись в филиалы ORTHODONT через WhatsApp">
+  <a class="ort-wa-link" href="https://wa.me/77001317286?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20ORTHODONT.KZ%2C%20%D1%84%D0%B8%D0%BB%D0%B8%D0%B0%D0%BB%3A%20%D1%83%D0%BB.%20%D0%90%D1%85%D0%BC%D0%B5%D1%82%20%D0%91%D0%B0%D0%B9%D1%82%D1%83%D1%80%D1%81%D1%8B%D0%BD%D1%83%D0%BB%D1%8B%2C%206." target="_blank" rel="noopener noreferrer" aria-label="Написать в WhatsApp, филиал на улице Ахмет Байтурсынулы, 6">
+    <span class="ort-wa-address">Байтурсынулы, 6</span>
+    <span class="ort-wa-action"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.1 7.7L3 21l1.8-5.4a8.5 8.5 0 1 1 15.7-4.1Z"/><path d="M9.1 8.3c-.4-.2-1.1.7-1 1.4.5 2.4 3.2 5.1 5.6 5.6.7.1 1.5-.6 1.4-1l-2-1-.9.9a8.5 8.5 0 0 1-2.4-2.5l.8-.8-1.5-2.6Z"/></svg> WhatsApp</span>
+  </a>
+  <a class="ort-wa-link" href="https://wa.me/77080440348?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20ORTHODONT.KZ%2C%20%D1%84%D0%B8%D0%BB%D0%B8%D0%B0%D0%BB%3A%20%D1%83%D0%BB.%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9%20%D0%B8%20%D0%96%D0%B0%D0%BD%D0%B8%D0%B1%D0%B5%D0%BA%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%2C%202." target="_blank" rel="noopener noreferrer" aria-label="Написать в WhatsApp, филиал на улице Керей и Жанибек хандар, 2">
+    <span class="ort-wa-address">Керей и Жанибек, 2</span>
+    <span class="ort-wa-action"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.1 7.7L3 21l1.8-5.4a8.5 8.5 0 1 1 15.7-4.1Z"/><path d="M9.1 8.3c-.4-.2-1.1.7-1 1.4.5 2.4 3.2 5.1 5.6 5.6.7.1 1.5-.6 1.4-1l-2-1-.9.9a8.5 8.5 0 0 1-2.4-2.5l.8-.8-1.5-2.6Z"/></svg> WhatsApp</span>
+  </a>
+</nav>
 </body>
 </html>
