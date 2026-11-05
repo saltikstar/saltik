@@ -1,0 +1,92 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interdent Clinic — Цены на услуги</title><style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap');
+.ic-prices{box-sizing:border-box;background:#faf9f7;color:#51483f;padding:80px 0;font:400 18px/1.55 Manrope,Arial,sans-serif}
+.ic-prices *, .ic-prices *::before, .ic-prices *::after{box-sizing:border-box}
+.ic-prices a{color:inherit;text-decoration:none}
+.ic-prices .container{width:min(1328px,calc(100% - 60px));margin:0 auto}
+.ic-prices .section-top{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:0 0 46px}
+.ic-prices .overline{font:600 13px/1.4 Manrope,Arial,sans-serif;letter-spacing:.12em;color:#9d8e7d;margin:0 0 12px}
+.ic-prices h2{font:500 clamp(48px,5vw,76px)/.98 'Cormorant Garamond',Georgia,serif;margin:0}
+.ic-prices .section-lead{max-width:400px;color:#736a61;font-size:17px;margin:0}
+.ic-prices .price-layout{display:grid;grid-template-columns:minmax(230px,280px) minmax(0,1fr);gap:54px;align-items:start}
+.ic-prices .price-sidebar{position:sticky;top:28px;align-self:start;border-radius:24px;background:#eee8df;padding:30px 25px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ic-prices .price-sidebar p{font-size:13px;letter-spacing:.1em;color:#897868;margin:0}
+.ic-prices .price-sidebar strong{font-size:19px;line-height:1.3}
+.ic-prices .price-sidebar>span{font:500 43px/1.1 'Cormorant Garamond',Georgia,serif}
+.ic-prices .button{display:inline-flex;align-items:center;gap:15px;padding:14px 19px;border-radius:100px;background:#c9bdac;color:#413832;font:600 14px/1.3 Manrope,Arial,sans-serif;min-height:46px;max-width:100%}
+.ic-prices .button svg{width:19px;height:19px;stroke:currentColor;flex:none}
+.ic-prices .price-list{min-width:0;border-top:1px solid #d6cec4}
+.ic-prices .price-group{border-bottom:1px solid #d6cec4}
+.ic-prices .price-header{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;padding:17px 0;font:500 clamp(25px,2.75vw,35px)/1.08 'Cormorant Garamond',Georgia,serif}
+.ic-prices .price-header>span:first-child{display:flex;align-items:baseline;gap:18px}
+.ic-prices .price-header small{font:700 13px/1 Manrope,Arial,sans-serif;color:#a69889;flex:none}
+.ic-prices .price-header:focus-visible{outline:2px solid #9b805e;outline-offset:3px;border-radius:8px}
+.ic-prices .price-toggle{width:36px;height:36px;border:1px solid #c6bbac;border-radius:100%;display:grid;place-items:center;flex:none;font:400 24px/1 Manrope,Arial,sans-serif;transition:transform .2s ease,background-color .2s}
+.ic-prices .price-group.ic-is-open .price-toggle{transform:rotate(45deg);background:#e9e0d4}
+.ic-prices .price-rows{padding:0 0 18px 33px;min-width:0}
+.ic-prices .price-rows[hidden]{display:none!important}
+.ic-prices .price-row{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:13px 0;border-bottom:1px solid #e6e0d8;font:400 16px/1.4 Manrope,Arial,sans-serif}
+.ic-prices .price-row span{min-width:0}
+.ic-prices .price-row strong{font-weight:700;text-align:right;white-space:nowrap;flex-shrink:0}
+.ic-prices .price-note{font-size:14px;color:#796d63;line-height:1.5}
+.ic-prices .price-download{padding:28px 0 0}
+@media(max-width:960px){.ic-prices .price-layout{grid-template-columns:1fr;gap:28px}.ic-prices .price-sidebar{position:static;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between}.ic-prices .section-top{align-items:start}}
+@media(max-width:640px){.ic-prices{padding:42px 0}.ic-prices .container{width:calc(100% - 32px)}.ic-prices .section-top{flex-direction:column;gap:10px;margin-bottom:26px}.ic-prices h2{font-size:clamp(42px,12vw,60px)}.ic-prices .section-lead{font-size:15px}.ic-prices .price-sidebar{padding:22px 18px;gap:10px}.ic-prices .price-sidebar strong{font-size:16px}.ic-prices .price-header{min-height:66px;font-size:clamp(25px,7.3vw,31px);gap:12px}.ic-prices .price-header>span:first-child{gap:10px}.ic-prices .price-header small{font-size:11px}.ic-prices .price-toggle{width:34px;height:34px}.ic-prices .price-rows{padding-left:0}.ic-prices .price-row{font-size:14px;gap:12px}.ic-prices .price-row strong{white-space:normal;min-width:90px;font-size:14px}.ic-prices .button{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.ic-prices .price-toggle{transition:none}}
+</style></head><body style="margin:0"><section aria-labelledby="prices-title" class="ic-prices" id="prices"><div class="container"><div class="section-top"><div><p class="overline">ЧТО СТОИТ ЛЕЧЕНИЕ</p><h2 id="prices-title">ЦЕНЫ НА УСЛУГИ</h2></div><p class="section-lead">Основные позиции прайса Interdent Clinic. Стоимость и план лечения уточняются после осмотра.</p></div><div class="price-layout"><div class="price-sidebar"><p>С ЧЕГО НАЧАТЬ</p><strong>Консультация врача</strong><span>5 000 ₸</span><a class="button button--taupe" data-track="whatsapp_click" href="https://wa.me/77711623326?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%B2%20Interdent%20Clinic" rel="noopener noreferrer" target="_blank">Записаться <svg aria-hidden="true" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a></div><div class="price-list ic-price-accordion" id="ic-price-accordion"><div class="price-group ic-price-item ic-is-open"><div class="price-header ic-price-header"><span><small>01</small>Диагностика</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Консультация (осмотр и приём без лечения)</span><strong>5 000 ₸</strong></div>
+<div class="price-row"><span>Рентгенография 1 зуба (прицельный снимок)</span><strong>3 125 ₸</strong></div>
+<div class="price-row"><span>Панорамный снимок (ортопантомография)</span><strong>5 625 ₸</strong></div>
+<div class="price-row"><span>3D-томография (КТ)</span><strong>17 000 ₸</strong></div>
+<div class="price-row"><span>3D-томография (КТ), без диска</span><strong>7 000 ₸</strong></div></div></div>
+<div class="price-group ic-price-item"><div class="price-header ic-price-header"><span><small>02</small>Имплантация</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Установка импланта Izen (Южная Корея)</span><strong>165 000 ₸</strong></div>
+<div class="price-row"><span>Установка импланта DIO (Южная Корея)</span><strong>165 000 ₸</strong></div>
+<div class="price-row"><span>Установка импланта Dentium (Южная Корея)</span><strong>206 250 ₸</strong></div>
+<div class="price-row"><span>Установка импланта Neodent (Швейцария)</span><strong>250 000 ₸</strong></div>
+<div class="price-row"><span>Установка импланта Straumann (Швейцария)</span><strong>500 000 ₸</strong></div>
+<div class="price-row"><span>Синус-лифтинг закрытый</span><strong>206 250 ₸</strong></div>
+<div class="price-row"><span>Синус-лифтинг открытый, 1-я категория сложности</span><strong>231 250 ₸</strong></div>
+<div class="price-row"><span>Наращивание костей (НКР)</span><strong>312 500 ₸</strong></div><p class="price-note">Стоимость All-on-4 / All-on-6 будет доступна в полном прайс-листе клиники.</p></div></div>
+<div class="price-group ic-price-item"><div class="price-header ic-price-header"><span><small>03</small>Ортодонтия</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Металлические брекеты (США), 1 челюсть</span><strong>225 000 ₸</strong></div>
+<div class="price-row"><span>Самолигирующие металлические брекеты (Бразилия), 1 челюсть</span><strong>343 750 ₸</strong></div>
+<div class="price-row"><span>Самолигирующие металлические брекеты H4, 1 челюсть</span><strong>550 000 ₸</strong></div>
+<div class="price-row"><span>Самолигирующие металлические брекеты Damon, 1 челюсть</span><strong>687 500 ₸</strong></div>
+<div class="price-row"><span>Ортодонтический аппарат Hyrax, Марко Росса</span><strong>206 250 ₸</strong></div>
+<div class="price-row"><span>Ортодонтический аппарат MSE 1</span><strong>662 500 ₸</strong></div>
+<div class="price-row"><span>Ортодонтический аппарат MSE 2, KBE</span><strong>750 000 ₸</strong></div>
+<div class="price-row"><span>Ортодонтическая пластинка простая</span><strong>104 375 ₸</strong></div>
+<div class="price-row"><span>Установка ретейнера</span><strong>34 375 ₸</strong></div></div></div>
+<div class="price-group ic-price-item"><div class="price-header ic-price-header"><span><small>04</small>Терапия</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Лечение поверхностного кариеса</span><strong>30 250 ₸</strong></div>
+<div class="price-row"><span>Лечение среднего кариеса</span><strong>43 375 ₸</strong></div>
+<div class="price-row"><span>Лечение глубокого кариеса</span><strong>52 750 ₸</strong></div>
+<div class="price-row"><span>Лечение одноканального пульпита (за 1 день)</span><strong>75 000 ₸</strong></div>
+<div class="price-row"><span>Лечение одноканального периодонтита (за 1 день)</span><strong>98 750 ₸</strong></div>
+<div class="price-row"><span>Лечение под микроскопом (при эндодонтическом лечении)</span><strong>37 500 ₸</strong></div>
+<div class="price-row"><span>Билд-ап</span><strong>40 000 ₸</strong></div>
+<div class="price-row"><span>Художественная реставрация</span><strong>от 48 125 до 80 000 ₸</strong></div><p class="price-note">Цены на лечение кариеса, пульпита и периодонтита указаны с учётом анестезии, коффердама и восстановления зуба.</p></div></div>
+<div class="price-group ic-price-item"><div class="price-header ic-price-header"><span><small>05</small>Хирургия</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Простое удаление</span><strong>23 750 ₸</strong></div>
+<div class="price-row"><span>Среднее удаление</span><strong>27 500 ₸</strong></div>
+<div class="price-row"><span>Сложное удаление</span><strong>35 000 ₸</strong></div>
+<div class="price-row"><span>Удаление зуба мудрости простое</span><strong>37 500 ₸</strong></div>
+<div class="price-row"><span>Удаление зуба мудрости среднее</span><strong>48 125 ₸</strong></div>
+<div class="price-row"><span>Удаление зуба мудрости сложное</span><strong>55 000 ₸</strong></div>
+<div class="price-row"><span>Удаление ретинированного зуба мудрости</span><strong>75 000 ₸</strong></div>
+<div class="price-row"><span>Пластика уздечки языка с наложением швов</span><strong>48 125 ₸</strong></div>
+<div class="price-row"><span>Пластика уздечки верхней губы</span><strong>40 000 ₸</strong></div>
+<div class="price-row"><span>Пластика рецессии десны (1 ед.)</span><strong>62 500 ₸</strong></div>
+<div class="price-row"><span>Мягкотканная пластика со свободным забором соединительной ткани</span><strong>75 000 ₸</strong></div></div></div>
+<div class="price-group ic-price-item"><div class="price-header ic-price-header"><span><small>06</small>Ортопедия</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Металлокерамическая коронка</span><strong>87 500 ₸</strong></div>
+<div class="price-row"><span>Циркониевая коронка</span><strong>156 250 ₸</strong></div>
+<div class="price-row"><span>Циркониевая коронка художественная</span><strong>181 250 ₸</strong></div>
+<div class="price-row"><span>Коронка керамическая прессованная EMAX</span><strong>175 000 ₸</strong></div>
+<div class="price-row"><span>Вкладка керамическая</span><strong>143 750 ₸</strong></div>
+<div class="price-row"><span>Съёмный протез из пластмассы (частичный или полный)</span><strong>96 250 ₸</strong></div>
+<div class="price-row"><span>Бюгельный протез комбинированный (термобюгель)</span><strong>237 500 ₸</strong></div></div></div>
+<div class="price-group ic-price-item"><div class="price-header ic-price-header"><span><small>07</small>Гигиена и профилактика</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Профессиональная трёхэтапная чистка зубов (простая)</span><strong>34 375 ₸</strong></div>
+<div class="price-row"><span>Профессиональная трёхэтапная чистка зубов (средняя)</span><strong>41 250 ₸</strong></div>
+<div class="price-row"><span>Профессиональная трёхэтапная чистка зубов (сложная)</span><strong>48 125 ₸</strong></div>
+<div class="price-row"><span>Профессиональное отбеливание Opalescence BOOST</span><strong>225 000 ₸</strong></div>
+<div class="price-row"><span>Эндоотбеливание одного зуба Opalescence Boost Endo</span><strong>100 000 ₸</strong></div>
+<div class="price-row"><span>Плазмолифтинг на две челюсти (1 процедура)</span><strong>21 250 ₸</strong></div>
+<div class="price-row"><span>Система Vector за челюсть</span><strong>96 250 ₸</strong></div>
+<div class="price-row"><span>Лечение начального кариеса препаратом Icon</span><strong>16 250 ₸</strong></div></div></div>
+<div class="price-group ic-price-item"><div class="price-header ic-price-header"><span><small>08</small>Гнатология</span><span aria-hidden="true" class="price-toggle">+</span></div><div class="price-rows ic-price-content"><div class="price-row"><span>Консультация гнатолога</span><strong>13 750 ₸</strong></div>
+<div class="price-row"><span>Сплинт-каппа</span><strong>162 500 ₸</strong></div></div></div><div class="price-download"><a aria-label="Запросить полный прайс-лист PDF в WhatsApp" class="button button--taupe" data-track="whatsapp_click" href="https://wa.me/77711623326?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20Interdent%20Clinic." rel="noopener noreferrer" target="_blank">Скачать полный прайс-лист (PDF) <svg aria-hidden="true" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a></div></div></div></div></section></body></html>
