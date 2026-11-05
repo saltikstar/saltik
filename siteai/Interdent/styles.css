@@ -136,3 +136,76 @@
   .price-download .button{width:100%;font-size:15px;line-height:1.35}
   .doc-visual img{border-radius:15px}
 }
+
+
+/* Client revision — 05 Nov 2026: source team photography, full services, aligned composition. */
+@media (min-width:951px){
+ .hero{min-height:790px;background:#ece8e2;color:#473b34}
+ .hero-image{inset:auto 0 0 auto;width:66%;height:calc(100% - 108px);object-fit:contain;object-position:right bottom;filter:none}
+ .hero-shade{background:linear-gradient(90deg,#ece8e2 0%,#ece8e2 31%,rgba(236,232,226,.92) 44%,rgba(236,232,226,.1) 76%,transparent 100%)}
+ .hero-inner{width:min(calc(100% - 92px),var(--container));max-width:var(--container);min-height:790px;padding:155px 0 130px;display:flex;align-items:center;justify-content:flex-start}
+ .hero-content{max-width:660px}.hero h1{font-size:clamp(82px,8vw,120px)}
+ .hero-facts{right:max(4%,calc((100% - 1328px)/2));bottom:130px;max-width:none;border-radius:24px;padding:16px 21px;background:rgba(250,248,245,.9);font-size:15px;gap:8px}
+ .hero-facts span{text-shadow:none}
+ .hero-buttons{margin-left:0!important;margin-right:0;justify-content:flex-start}
+ .hero-buttons .button{min-width:0}.hero-buttons .button:first-child{min-width:300px}
+ .hero-bottom{left:50%;right:auto;width:min(calc(100% - 92px),var(--container));transform:translateX(-50%);bottom:15px}
+}
+.hero{background-color:#ece8e2}
+.hero-kicker,.hero h1,.hero-sub,.hero-small,.hero-facts{color:#4b3d34;text-shadow:none}
+.hero-small{color:#5d5147}.hero h1 em{font-style:italic}
+.hero-buttons .button--glass{color:#4b3d34;border-color:#ad9f90;background:rgba(253,250,245,.55)}
+.hero-buttons .button--glass:hover{background:rgba(253,250,245,.9)}
+.hero-buttons{margin-left:0!important;align-items:flex-start;justify-content:flex-start}
+.hero-facts span{color:#4e443b;text-shadow:none}
+.hero-facts .icon{color:#9b876f}
+.hero-bottom{max-width:var(--container)}
+.header-wa .icon{width:25px;height:25px;stroke-width:1.6}
+/* Keep photo subjects intact rather than cropping into oversized closeups. */
+.service-visual{height:245px;background:#e8e1d9}
+.service-visual img{object-fit:contain;object-position:center;background:#e8e1d9}
+.service-visual::after{background:linear-gradient(0deg,rgba(57,45,34,.1),transparent 45%)}
+.service-feature-body{padding-top:20px}
+.service-detail ul{margin:0 0 21px;padding-left:22px;font-size:18px;line-height:1.48}
+.service-price-link{font-size:17px;align-self:flex-start;text-align:left}
+/* Keep the CTA aligned with the left edge of the accompanying content. */
+.diagnostic-copy .button,.price-sidebar .button,.price-download .button{align-self:flex-start;margin-left:0!important}
+.clinic-team{background:#fff;padding:70px 0}
+.clinic-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px;align-items:center}
+.clinic-copy h2{font-size:clamp(54px,5vw,76px);margin-bottom:25px}
+.clinic-copy p:not(.overline){max-width:565px;font-size:18px;line-height:1.55;color:#5e554d;margin-bottom:18px}
+.clinic-copy .quiet-pill{margin-top:13px}
+.clinic-image{margin:0;background:#e9e8e7;overflow:hidden;border-radius:30px;height:470px;display:flex;align-items:flex-end;justify-content:center}
+.clinic-image img{width:100%;height:100%;object-fit:cover;object-position:center 73%}
+.surgical-case img{object-fit:contain;padding:0;height:360px;background:#292c2c}
+@media (min-width:601px) and (max-width:950px){
+ .hero{color:#44382f}.hero-image{filter:none;object-fit:contain;object-position:right bottom;width:65%;height:65%;left:auto;top:auto}
+ .hero-shade{background:linear-gradient(90deg,#ece8e2 5%,rgba(236,232,226,.94) 40%,rgba(236,232,226,.1) 100%)}
+ .hero-inner{width:calc(100% - 50px);padding-left:0;padding-right:0}
+ .hero-facts{padding:10px 0}.hero-buttons{margin-left:0!important}
+ .hero-bottom{width:calc(100% - 50px);left:50%;right:auto;transform:translateX(-50%)}
+ .clinic-layout{grid-template-columns:1fr 1fr;gap:24px}.clinic-image{height:440px}
+}
+@media (max-width:600px){
+ .hero,.hero-inner{min-height:940px}
+ .hero{color:#44382f;background:#ece8e2}
+ .hero-image{top:84px;left:0;right:0;bottom:auto;width:100%;height:337px;object-fit:cover;object-position:center 65%;filter:none}
+ .hero-shade{background:linear-gradient(180deg,transparent 18%,rgba(236,232,226,.06) 34%,#ece8e2 47%,#ece8e2 100%)}
+ .hero-inner{width:auto;max-width:none;padding:395px 19px 160px;justify-content:flex-start;align-items:flex-start}
+ .hero-content{max-width:100%}.hero h1{font-size:clamp(60px,15.1vw,79px);line-height:.82;margin-bottom:20px}
+ .hero-sub{font-size:21px;line-height:1.25}.hero-small{font-size:15px}
+ .hero-kicker{font-size:10px;color:#51463b}.hero-buttons{margin:0;gap:9px}
+ .hero-facts{color:#51453b;margin-top:19px;padding:0;font-size:12px}.floating-booking{display:none}
+ .hero-bottom{left:18px;right:18px;bottom:11px;transform:none;width:auto;max-width:none;grid-template-columns:1fr;gap:5px;border-radius:20px;background:rgba(255,255,255,.45)}
+ .hero-bottom div{font-size:12px;padding:7px 13px;min-height:32px;display:flex;justify-content:center;gap:7px}
+ .hero-bottom div:last-child{display:flex}.hero-buttons .button{justify-content:center}
+ .service-visual{height:213px}.service-detail ul{font-size:15px;margin-bottom:18px}
+ .clinic-team{padding:48px 0}.clinic-layout{display:flex;flex-direction:column;gap:20px;align-items:stretch}
+ .clinic-copy h2{font-size:50px}.clinic-copy p:not(.overline){font-size:15px}
+ .clinic-image{height:440px;border-radius:24px}.clinic-image img{object-position:center 70%}
+ .surgical-case img{height:315px}
+}
+/* Primary call to action: unmistakable contrast against the warm team photograph. */
+.hero-buttons .button--ivory{background:#fffaf2;color:#48392f;border:1px solid #cabcae;box-shadow:0 7px 25px rgba(68,50,33,.08)}
+.hero-buttons .button--ivory:hover{background:#ffffff}
+@media(max-width:600px){.hero-buttons .button--ivory{background:#fffaf3;border-color:#d1bfae}}
