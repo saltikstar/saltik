@@ -209,3 +209,45 @@
 .hero-buttons .button--ivory{background:#fffaf2;color:#48392f;border:1px solid #cabcae;box-shadow:0 7px 25px rgba(68,50,33,.08)}
 .hero-buttons .button--ivory:hover{background:#ffffff}
 @media(max-width:600px){.hero-buttons .button--ivory{background:#fffaf3;border-color:#d1bfae}}
+
+
+/* Client-approved USP, header descriptor and crisp, unfiltered team photo. */
+.header-descriptor{display:block;flex:0 1 185px;min-width:0;padding-left:16px;border-left:1px solid #d9d1c8;font-size:12px;line-height:1.3;font-weight:500;color:#6a594d;text-wrap:balance}
+.header-inner{column-gap:clamp(11px,1.25vw,23px)}
+.header-wa{display:flex;align-items:center;justify-content:center;padding:0;line-height:0;flex-shrink:0}
+.header-wa svg.icon{display:block;position:static;margin:0;width:27px;height:27px;stroke:#fff;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;fill:none;transform:none;vertical-align:middle}
+.hero-shade{display:none!important}
+.hero-image{filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
+.hero-facts span{text-shadow:none!important}
+.hero-sub{max-width:640px}
+.hero-small{font-weight:500}
+.map-card iframe{display:block;width:100%;height:100%;min-height:255px;flex:1 1 auto;border:0;border-radius:17px;background:#f3efe9}
+.map-card{gap:10px}
+.map-card .map-link{flex-shrink:0}
+@media (min-width:1251px){
+ .header-inner{width:min(100%,1460px)}
+ .brand{min-width:170px}
+ .header-descriptor{flex-basis:174px}
+ .main-nav{gap:clamp(11px,1.3vw,22px)}
+}
+@media (min-width:951px) and (max-width:1250px){.header-descriptor{display:none}}
+@media (min-width:601px) and (max-width:950px){
+ .header-descriptor{font-size:11px;flex-basis:174px}
+ .hero-image{object-fit:contain;object-position:right bottom;filter:none!important}
+}
+@media (max-width:600px){
+ .header-descriptor{display:none}
+ .header-wa svg.icon{width:24px;height:24px}
+ .hero-image{filter:none!important;opacity:1!important}
+ .hero-inner{padding-top:438px}
+ .hero-sub{font-size:20px;line-height:1.3}
+ .hero-small{font-size:15px}
+ .map-card iframe{min-height:280px}
+}
+
+/* Refined service image presentation: preserve aspect ratio and avoid montage seam artifacts. */
+.service-visual{background:#ebe5dd;overflow:hidden}
+.service-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center;filter:none;background:transparent}
+.service-visual::after{display:none!important}
+@media(min-width:951px){.service-visual{height:240px}}
+@media(max-width:600px){.service-visual{height:220px}}
