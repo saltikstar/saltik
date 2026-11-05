@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interdent Clinic — первый экран для импорта в Zero Block</title>
+<style>
+/* Desktop and mobile Zero Block layout. */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#514239;font-family:Manrope,Arial,sans-serif}
+.it-first{position:relative;width:100%;min-height:710px;overflow:hidden;border-radius:34px;background:#eee9e2;padding:96px 44px 83px}
+.it-first__nav{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:min(1340px,calc(100% - 64px));min-height:67px;border-radius:999px;background:#fffcf8;display:flex;align-items:center;gap:24px;padding:10px 18px 10px 26px;z-index:4;box-shadow:0 8px 28px rgba(35,28,22,.08)}
+.it-logo{display:flex;align-items:center;gap:9px;white-space:nowrap;text-decoration:none;color:#564239}
+.it-logo img{width:44px;height:44px;object-fit:contain;display:block}
+.it-logo__text{display:flex;flex-direction:column;font-family:Georgia,serif;font-size:23px;line-height:.95}.it-logo__text small{font:600 9px/1.5 Manrope,Arial,sans-serif;letter-spacing:.4em;text-align:center}
+.it-desc{border-left:1px solid #d5cec5;padding-left:16px;font-size:11px;line-height:1.3}
+.it-menu{display:flex;align-items:center;justify-content:center;gap:20px;flex:1}
+.it-menu a,.it-phone{font-size:12px;white-space:nowrap;color:#5f534a;text-decoration:none}
+.it-wa{width:46px;height:46px;flex-shrink:0;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#a99b89}
+.it-wa img{display:block;width:23px;height:23px}
+.it-photo{display:block;background-size:cover;background-repeat:no-repeat;background-position:center center;position:absolute;top:0;right:0;width:55%;height:100%;object-fit:cover;object-position:center center;z-index:0}
+.it-text{position:relative;z-index:2;width:48%;max-width:590px;padding:65px 0 20px}
+.it-kicker{font-size:14px;letter-spacing:.08em;line-height:1.35}
+.it-title{font:500 clamp(66px,7.5vw,110px)/.8 'Cormorant Garamond',Georgia,serif;letter-spacing:-.045em;margin:22px 0 30px}
+.it-title em{display:block;font-weight:400}
+.it-usp{font-size:clamp(22px,2vw,29px);font-weight:500;line-height:1.27;max-width:560px;margin:0 0 14px}
+.it-extra{font-size:16px;margin:0 0 28px}
+.it-actions{display:flex;justify-content:flex-start;align-items:stretch;gap:0;max-width:550px}
+.it-actions a{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:14px;padding:12px 20px;text-decoration:none;border:1px solid #c6b9a9;color:#4c4038;background:#fffaf3}
+.it-actions a:first-child{border-radius:100px 0 0 100px;flex:1}
+.it-actions a:last-child{border-radius:0 100px 100px 0;background:#f2ece3}
+.it-actions img{width:17px;height:17px;object-fit:contain}
+.it-info{position:absolute;bottom:19px;left:50%;transform:translateX(-50%);width:min(1328px,calc(100% - 76px));z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.it-info>div{display:flex;align-items:center;justify-content:center;gap:8px;background:#f9f6f1;border-radius:999px;padding:15px 12px;font-size:13px;white-space:nowrap}
+.it-info img{width:17px;height:17px;object-fit:contain}
+@media(max-width:1100px){.it-menu{gap:10px}.it-menu a{font-size:10px}.it-first{min-height:680px}.it-photo{width:55%}.it-text{width:53%}.it-desc{display:none}}
+@media(max-width:760px){
+.it-photo{background-image:url('https://saltik.sito.kz/siteai/Interdent/assets/team-clinic.webp')!important;background-position:center 48%!important}
+.it-first{min-height:0;padding:0 18px 22px;border-radius:26px}
+.it-first__nav{position:relative;top:auto;left:auto;transform:none;width:calc(100% + 4px);margin:14px -2px 0;min-height:66px;justify-content:space-between;padding:9px 15px}
+.it-menu,.it-phone,.it-desc{display:none}
+.it-logo img{width:42px;height:42px}.it-wa{margin-left:auto}
+.it-photo{position:relative;top:auto;right:auto;width:calc(100% + 36px);height:220px;object-fit:cover;object-position:center 47%;margin:18px -18px 0}
+.it-text{width:100%;max-width:none;padding:18px 5px 12px}
+.it-kicker{font-size:10px}.it-title{font-size:clamp(55px,15vw,82px);margin:15px 0 18px}
+.it-usp{font-size:20px}.it-extra{font-size:14px;margin-bottom:18px}
+.it-actions{display:flex;max-width:100%;width:100%}.it-actions a{font-size:12px;padding:10px 12px;min-height:52px}
+.it-info{position:relative;bottom:auto;left:auto;transform:none;width:100%;display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0 0}
+.it-info>div{font-size:13px;padding:11px 12px}
+}
+</style>
+</head>
+<body>
+<section class="it-first" aria-label="Первый экран Interdent Clinic">
+<header class="it-first__nav">
+<a class="it-logo" href="#top"><img src="https://saltik.sito.kz/siteai/Interdent/assets/mark-transparent.webp" width="44" height="44" alt=""><span class="it-logo__text">Interdent<small>CLINIC</small></span></a>
+<span class="it-desc">Стоматологическая<br>клиника в Астане</span>
+<nav class="it-menu" aria-label="Навигация">
+<a href="#services">Услуги</a><a href="#clinic">О клинике</a><a href="#doctors">Врачи</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#documents">Лицензия</a><a href="#contacts">Контакты</a>
+</nav>
+<a class="it-phone" href="tel:+77172650022">+7 (7172) 65-00-22</a>
+<a class="it-wa" href="https://wa.me/77711623326" aria-label="Записаться в WhatsApp"><img src="https://saltik.sito.kz/siteai/Interdent/tilda/icons/whatsapp.svg" alt="" width="23" height="23"></a>
+</header>
+<div class="it-photo" role="img" aria-label="Команда стоматологической клиники Interdent Clinic" style="background-image:url('https://saltik.sito.kz/siteai/Interdent/assets/team-hero.webp');background-size:cover;background-repeat:no-repeat;background-position:center center"></div>
+<div class="it-text">
+<div class="it-kicker">[ СТОМАТОЛОГИЯ ПОЛНОГО ЦИКЛА В АСТАНЕ ]</div>
+<h1 class="it-title">Interdent <em>Clinic</em></h1>
+<p class="it-usp">Имплантация, брекеты, лечение под микроскопом и все направления стоматологии в одной клинике.</p>
+<p class="it-extra">Всё по одному адресу.</p>
+<div class="it-actions"><a href="https://wa.me/77711623326">Записаться на консультацию <img src="https://saltik.sito.kz/siteai/Interdent/tilda/icons/arrow-up-right.svg" alt="" width="17" height="17"></a><a href="#services">Выбрать услугу <img src="https://saltik.sito.kz/siteai/Interdent/tilda/icons/arrow-down.svg" alt="" width="17" height="17"></a></div>
+</div>
+<div class="it-info">
+<div><img src="https://saltik.sito.kz/siteai/Interdent/tilda/icons/map-pin.svg" alt="" width="17" height="17">Астана, Кенесары, 52</div>
+<div><img src="https://saltik.sito.kz/siteai/Interdent/tilda/icons/clock.svg" alt="" width="17" height="17">Ежедневно · 9:00–20:00</div>
+<div><img src="https://saltik.sito.kz/siteai/Interdent/tilda/icons/credit-card.svg" alt="" width="17" height="17">Kaspi Red / рассрочка / ЕНПФ</div>
+</div>
+</section>
+</body>
+</html>
