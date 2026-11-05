@@ -317,3 +317,8 @@
 #doctor-dialog .doctor-booking:hover{background:#ddd3c7;transform:translateY(-1px);box-shadow:0 9px 24px rgba(74,57,42,.12)}
 #doctor-dialog .doctor-booking:focus-visible{outline:3px solid #a88961;outline-offset:3px}
 @media(max-width:600px){#doctor-dialog .doctor-booking{width:100%;min-height:52px;min-width:0;font-size:16px}}
+
+/* Tilda-friendly inline SVG: no sprite/use or external icon font dependency. */
+.icon{display:inline-block;flex-shrink:0;vertical-align:-.16em;stroke:currentColor;fill:none;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round;width:20px;height:20px}
+.header-wa .icon{width:23px;height:23px;display:block;margin:auto}
+.service-price-link .icon,.quiet-pill .icon{width:18px;height:18px}
