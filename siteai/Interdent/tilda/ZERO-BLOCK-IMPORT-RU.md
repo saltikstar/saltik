@@ -68,15 +68,18 @@
 
 Для кнопок и карточек: Group → Object → Auto Layout → Direction Horizontal/Vertical/Wrap, затем Gap, Padding и Hug/Fixed. Проверьте порядок чтения на мобильном, особенно у фото и текста.
 
-## 5. Профили врачей (7 всплывающих окон)
+## 5. Профили врачей (7 отдельных всплывающих окон)
 
-В разделе `08-doctors.html` ссылки «Подробнее» ведут на хэши `#doctor-abu`, `#doctor-maksat`, `#doctor-gaziza`, `#doctor-zhuldyz`, `#doctor-aliya`, `#doctor-akmaral`, `#doctor-indira`.
+Для нативного редактирования в Zero Block используйте облегчённые файлы **`popups-zero/doctor-*.html`**. Они содержат полностью раскрытые анкеты каждого врача и кнопку записи; без SVG и JavaScript. Подробная схема: **`popups-zero/README-RU.md`**. Исходные версии остаются в `popups/`.
+
+В разделе `08-doctors.html` ссылки «Подробнее» ведут на `#doctor-abu`, `#doctor-maksat`, `#doctor-gaziza`, `#doctor-zhuldyz`, `#doctor-aliya`, `#doctor-akmaral`, `#doctor-indira`.
 
 Для каждого профиля:
-1. Создайте отдельный Zero Block и импортируйте соответствующий `popups/doctor-*.html`.
-2. Добавьте модификатор **T1093** (Popup: Zero Block в попапе).
-3. Укажите ID этого Zero Block и точный хэш ссылки из раздела врачей.
-4. Проверьте размер окна, прокрутку длинного текста, крестик закрытия и кнопку «Записаться» (WhatsApp).
+1. Создайте **отдельный пустой Zero Block** и импортируйте нужный `popups-zero/doctor-*.html` через меню Zero Block «… → Импорт из HTML» (не через Tiltify/Figma JSON).
+2. Установите прозрачный фон артборда и проверьте Auto Layout / высоту длинного содержимого на мобильном.
+3. Добавьте **отдельный модификатор T1093** (Popup: Zero Block в попапе).
+4. В T1093 выберите реальный ID созданного Zero Block и укажите соответствующий хэш `#doctor-...`.
+5. Проверьте открытие по «Подробнее», закрытие, прокрутку длинного текста и кнопку «Записаться».
 
 Документация: https://help-ru.tilda.cc/zero
 
