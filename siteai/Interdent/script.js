@@ -16,7 +16,7 @@
   document.querySelectorAll('[data-slide]').forEach(button => button.addEventListener('click', () => {
     if (!reviewsTrack) return;
     const item = reviewsTrack.querySelector('.review-thumb');
-    const width = (item?.getBoundingClientRect().width || 330) + 24;
+    const width = (item?.getBoundingClientRect().width || 330) + 18;
     reviewsTrack.scrollBy({ left: button.dataset.slide === 'next' ? width : -width, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   }));
 
@@ -59,7 +59,11 @@
   document.querySelectorAll('.doctor-more').forEach(button => button.addEventListener('click', () => {
     doctorDialog.querySelector('#dialog-name').textContent = button.dataset.name;
     doctorDialog.querySelector('#dialog-role').textContent = button.dataset.role;
-    doctorDialog.querySelector('#dialog-description').textContent = button.dataset.desc;
+    const profile = doctorDialog.querySelector('#dialog-description');
+    const template = button.dataset.profile ? document.getElementById(button.dataset.profile) : null;
+    profile.replaceChildren();
+    if (template?.content) profile.append(template.content.cloneNode(true));
+    else profile.textContent = button.dataset.desc || '';
     openDialog(doctorDialog, button);
   }));
   document.querySelector('#license-open')?.addEventListener('click', e => openDialog(document.querySelector('#license-dialog'), e.currentTarget));

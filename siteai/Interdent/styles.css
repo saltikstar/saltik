@@ -31,3 +31,70 @@
 /* Third-round visual QA refinements */
 @media(min-width:951px){.hero-buttons{margin-left:39px}.hero-buttons .button:first-child{min-width:332px}.main-nav a{font-size:14px}.header-phone{font-size:14px}}
 @media(max-width:600px){.hero,.hero-inner{min-height:900px}.hero-image{object-position:center top;filter:none}.hero-shade{background:linear-gradient(0deg,rgba(44,35,29,.55),rgba(44,35,29,0) 75%)}.hero-inner{padding-top:160px;padding-bottom:128px}.hero-content{padding-top:70px}}
+
+
+/* Service catalogue: full TЗ descriptions, balanced photo and typography. */
+.services-grid{align-items:stretch;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.service-feature{background:#f3f0eb;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.service-visual{height:218px;position:relative;overflow:hidden;background:#e6dfd5}
+.service-visual:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(43,39,34,.32));pointer-events:none}
+.service-visual img{height:100%;width:100%;object-fit:cover}
+.service-visual-label{position:absolute;bottom:18px;left:20px;z-index:2;border-radius:100px;background:#f8f5efed;padding:8px 21px;color:#493f37;font-size:21px;line-height:1.2;font-weight:600}
+.service-visual--text{background:linear-gradient(135deg,#e4ded4,#d6caba)}
+.service-visual--text:after{display:none}
+.service-visual--text .service-visual-label{background:transparent;bottom:26px;font:500 44px/1 var(--serif);padding:0;max-width:calc(100% - 40px)}
+.service-feature-body{padding:25px 25px 30px;display:flex;flex:1;flex-direction:column;min-width:0}
+.service-detail summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-weight:700;font-size:18px;color:#554941;list-style:none}
+.service-detail summary::-webkit-details-marker{display:none}
+.service-detail-chevron{width:11px;height:11px;border-bottom:1.75px solid currentColor;border-right:1.75px solid currentColor;transform:rotate(45deg);transition:transform .18s;flex:none}
+.service-detail[open] .service-detail-chevron{transform:translateY(4px) rotate(225deg)}
+.service-detail ul{margin:14px 0 24px;padding-left:22px;font-size:18px;line-height:1.48;overflow-wrap:anywhere}
+.service-detail li{padding:0 0 8px 3px}
+.service-detail li::marker{color:#a89279}
+.service-price-link{margin-top:auto;display:inline-flex;align-items:center;gap:5px;align-self:flex-start;font-weight:700;font-size:16px;line-height:1.2;color:#735f50;border-bottom:1px solid #bfae9a;padding-bottom:4px}
+.service-price-link:hover{color:#432e20}
+.service-feature .icon{width:18px;height:18px}
+/* Surgical cases: anonymized diagnostic source images. */
+.surgical{background:#fff;padding-top:80px;padding-bottom:88px}
+.surgical .section-top h2{max-width:1050px;font-size:clamp(38px,4.8vw,66px);line-height:.98}
+.surgical-intro{font-size:18px;color:#6e625b;max-width:780px;margin:12px 0 28px}
+.surgical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;align-items:stretch}
+.surgical-case{margin:0;border:1px solid #e9e2d9;background:#faf9f7;border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.surgical-case img{height:340px;width:100%;object-fit:contain;background:#282b2a;padding:13px}
+.surgical-case figcaption{padding:19px 23px 25px;line-height:1.43;font-size:18px;color:#52463e;font-weight:600}
+/* Original review screenshots: same height, variable width, no extra UI cards. */
+.reviews-track{display:flex;align-items:center;gap:17px;overflow-x:auto;padding:10px 0 22px;scroll-snap-type:x mandatory}
+.review-thumb{display:block;flex:0 0 auto;width:auto;min-height:0;height:auto;padding:0;border:none;border-radius:20px;box-shadow:none;background:transparent;overflow:visible;scroll-snap-align:start}
+.review-thumb img{display:block;width:auto;height:290px;max-width:480px;object-fit:contain;object-position:center;border-radius:19px;pointer-events:none}
+.review-thumb:focus-visible img{outline:3px solid #bf9355;outline-offset:4px}
+.review-thumb>span{display:none!important}
+.reviews-footer,.team-note{display:none!important}
+/* Doctor dossiers preserve full qualifications and clinical skills. */
+.info-dialog{max-width:min(750px,95vw)}
+#dialog-description{font-size:18px;line-height:1.54}
+#dialog-description .profile-facts p{margin:0 0 12px;font-size:18px}
+.profile-skills-title{font:500 30px/1.1 var(--serif);margin:25px 0 15px}
+.profile-skills{padding-left:23px;margin:0 0 25px}
+.profile-skills li{margin:0 0 10px;font-size:18px}
+.doctor-placeholder img{width:108px;height:108px;object-fit:contain;opacity:.45}
+.doctor-placeholder small,.doctor-placeholder span{display:none}
+/* Prevent oversized thin serif headings on narrow mobile viewports. */
+@media(max-width:600px){
+ #diagnostic-title{font-size:clamp(33px,8.25vw,42px)!important;line-height:1.02!important;letter-spacing:-.035em;overflow-wrap:normal;word-break:normal}
+ .services-grid{grid-template-columns:1fr;gap:17px}
+ .service-visual{height:205px}
+ .service-feature-body{padding:22px 21px 26px}
+ .service-detail ul{font-size:15px;line-height:1.5}
+ .service-detail summary{font-size:16px}
+ .service-visual-label{font-size:20px}
+ .service-visual--text .service-visual-label{font-size:36px}
+ .surgical{padding:55px 0}
+ .surgical .section-top h2{font-size:clamp(34px,8.5vw,43px)}
+ .surgical-grid{grid-template-columns:1fr;gap:17px}
+ .surgical-case img{height:290px}
+ .surgical-case figcaption,.surgical-intro{font-size:15px}
+ .review-thumb img{height:300px;max-width:calc(100vw - 50px)}
+ #dialog-description,.profile-skills li,#dialog-description .profile-facts p{font-size:15px}
+ .profile-skills-title{font-size:28px}
+}
+@media(min-width:601px) and (max-width:1050px){.services-grid,.surgical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
