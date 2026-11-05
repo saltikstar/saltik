@@ -299,3 +299,14 @@
  .hero h1{font-size:52px}
  .hero-sub{font-size:16px}
 }
+/* Align full-height hero team photography with the photo side of the large hero. */
+@media (min-width:951px){
+ .hero-image{top:0!important;bottom:0!important;left:auto!important;right:0!important;width:55%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center center!important}
+}
+@media (min-width:601px) and (max-width:950px){
+ .hero-image{top:0!important;bottom:0!important;right:0!important;left:auto!important;width:60%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center center!important}
+}
+/* Full-length client copy without falling below the required desktop body size. */
+.adv-grid p{font-size:18px;line-height:1.48}
+.clinic-copy p:not(.overline){font-size:18px;line-height:1.55}
+@media(max-width:600px){.adv-grid p,.clinic-copy p:not(.overline){font-size:15px}}
