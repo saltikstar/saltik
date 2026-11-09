@@ -1,0 +1,65 @@
+<!-- ELITE Dental Clinic about section. Use portable HTML from ZIP for direct Tilda import. -->
+<style>
+#edc-about,#edc-about *{box-sizing:border-box}
+#edc-about{--gold:#ad8a35;--green:#258321;--ink:#20211f;--muted:#696b64;background:#fbfaf7;color:var(--ink);font:16px/1.6 Arial,sans-serif;overflow:hidden}
+#edc-about .shell{width:min(1180px,calc(100% - 56px));margin:auto}
+#edc-about p,#edc-about h2,#edc-about h3,#edc-about figure,#edc-about blockquote{margin:0}
+#edc-about .intro{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(30px,6vw,86px);align-items:center;padding:94px 0 72px}
+#edc-about .eyebrow{display:flex;gap:12px;align-items:center;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:23px}
+#edc-about .eyebrow:before{content:'';width:32px;height:1px;background:var(--gold);flex:none}
+#edc-about h2,#edc-about h3{font-family:Georgia,serif;font-weight:400;line-height:1.11;letter-spacing:-.045em}
+#edc-about h2{font-size:clamp(37px,4.4vw,61px);margin-bottom:30px}
+#edc-about h2 em{font-style:normal;color:var(--gold)}
+#edc-about .lead{font-size:18px;line-height:1.65;color:#353630}
+#edc-about .sub{font-size:15px;line-height:1.85;color:var(--muted);margin-top:16px}
+#edc-about .quote{border-left:2px solid var(--gold);padding:22px 0 22px 24px;margin:30px 0}
+#edc-about .quote blockquote{font:italic 20px/1.5 Georgia,serif}
+#edc-about .quote cite{display:block;font:13px/1.5 Arial,sans-serif;color:var(--muted);margin-top:14px}
+#edc-about .cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--green);padding:12px 25px;border-radius:100px;color:#fff;font-weight:700;font-size:14px;text-decoration:none;transition:.2s}
+#edc-about .cta:hover{background:#206f1e;transform:translateY(-2px)}
+#edc-about .photo-col{position:relative;padding:11px 0 12px 23px;min-width:0}
+#edc-about .photo-col:before{content:'';position:absolute;top:-17px;right:-18px;width:73%;height:80%;border:1px solid #e5ddc9;border-radius:260px 260px 12px 12px}
+#edc-about .portrait{position:relative;aspect-ratio:4/5.05;background:#d8d8d5;overflow:hidden;border-radius:260px 260px 14px 14px}
+#edc-about .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 34%;display:block}
+#edc-about .portrait:after{content:'';position:absolute;inset:65% 0 0;background:linear-gradient(transparent,#121a1e9c);pointer-events:none}
+#edc-about .caption{position:absolute;z-index:1;bottom:26px;left:30px;color:#fff}
+#edc-about .caption small{display:block;font-size:11px;color:#e7dbb9;text-transform:uppercase;letter-spacing:.15em}
+#edc-about .caption strong{display:block;font-size:23px;font-weight:500}
+#edc-about .years{position:absolute;z-index:2;left:0;top:53%;transform:translate(-6%,-50%);width:126px;height:126px;border-radius:50%;border:1px solid #d7c69c;background:white;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 12px 40px #30302421}
+#edc-about .years b{font:40px Georgia,serif;color:var(--gold)}
+#edc-about .years span{text-align:center;font-size:11px;line-height:1.2}
+#edc-about .learning{border-top:1px solid #e5ddc9;padding:55px 0 86px}
+#edc-about .learning-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:31px}
+#edc-about .learning-head .eyebrow{margin-bottom:14px}
+#edc-about h3{font-size:clamp(28px,3vw,40px)}
+#edc-about .learning-desc{max-width:370px;color:var(--muted);font-size:14px;line-height:1.75}
+#edc-about .track{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(210px,24vw,280px);gap:15px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding:3px 2px 18px;scrollbar-color:#cbb988 transparent;scrollbar-width:thin}
+#edc-about .tile{all:unset;display:block;position:relative;box-sizing:border-box;cursor:zoom-in;border-radius:10px;overflow:hidden;aspect-ratio:4/4.8;background:#e7e2d6;scroll-snap-align:start}
+#edc-about .tile:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+#edc-about .tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+#edc-about .tile:hover img{transform:scale(1.04)}
+#edc-about .tile:after{content:'';position:absolute;inset:65% 0 0;background:linear-gradient(transparent,#0006)}
+#edc-about .tile span{position:absolute;bottom:14px;left:15px;z-index:2;color:white;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+#edc-about .controls{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
+#edc-about .tip{font-size:12px;color:#89877e}
+#edc-about .arrows{display:flex;gap:9px}
+#edc-about .arrow{width:45px;height:45px;border:1px solid #d7c69c;background:transparent;color:#796129;border-radius:50%;cursor:pointer;font-size:23px}
+#edc-about .arrow:hover{background:#efe9d7}
+#edc-about dialog{position:fixed;inset:0;margin:auto;padding:0;border:0;border-radius:12px;background:#111;overflow:visible;max-width:94vw;max-height:92vh}
+#edc-about dialog::backdrop{background:#101317dd}
+#edc-about dialog img{display:block;max-width:90vw;max-height:85vh;width:auto;height:auto;object-fit:contain;border-radius:10px}
+#edc-about .close{position:absolute;right:-13px;top:-13px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;color:#111;font-size:24px;cursor:pointer}
+@media(max-width:760px){#edc-about .shell{width:min(100% - 36px,560px)}#edc-about .intro{display:flex;flex-direction:column;align-items:stretch;gap:30px;padding:55px 0 50px}#edc-about .photo-col{width:min(100% - 24px,480px);align-self:center;padding-left:14px}#edc-about h2{font-size:clamp(36px,8vw,49px);margin-bottom:22px}#edc-about .lead{font-size:17px}#edc-about .years{width:112px;height:112px}#edc-about .learning{padding:39px 0 58px}#edc-about .learning-head{display:block}#edc-about .learning-desc{margin-top:15px}#edc-about .track{grid-auto-columns:min(67vw,252px)}}
+@media(max-width:390px){#edc-about .shell{width:calc(100% - 28px)}#edc-about h2{font-size:34px}#edc-about .quote blockquote{font-size:18px}#edc-about .years{width:96px;height:96px}#edc-about .years b{font-size:33px}}
+@media(prefers-reduced-motion:reduce){#edc-about .track{scroll-behavior:auto}#edc-about .tile img,#edc-about .cta{transition:none}}
+</style>
+<section id="edc-about" aria-labelledby="edc-about-title"><div class="shell"><div class="intro"><div class="copy"><p class="eyebrow">Elite Dental Clinic · Усть-Каменогорск</p><h2 id="edc-about-title">Забота о пациентах.<br><em>Внимание к деталям.</em></h2><p class="lead">Elite Dental Clinic — стоматология в Усть-Каменогорске, где опыт врачей сочетается с современными технологиями и внимательным отношением к каждому пациенту.</p><p class="sub">Мы уделяем внимание точной диагностике, безопасности и комфорту. Подбираем план лечения с учётом конкретной ситуации, используем современное оборудование и проверенные материалы.</p><div class="quote"><blockquote>«Для меня качество лечения, безопасность пациентов и постоянное развитие в профессии — главные принципы работы».</blockquote><cite>Адиль Ержанович · основатель Elite Dental Clinic</cite></div><a class="cta" href="https://wa.me/77077530004" target="_blank" rel="noopener noreferrer">Написать в WhatsApp ↗</a></div><div class="photo-col"><figure class="portrait"><img src="./assets/founder.webp" width="900" height="1302" alt="Адиль Ержанович — основатель Elite Dental Clinic"><figcaption class="caption"><small>Основатель клиники</small><strong>Адиль Ержанович</strong></figcaption></figure><div class="years" aria-label="Более десяти лет в стоматологии"><b>10+</b><span>лет в<br>стоматологии</span></div></div></div><div class="learning" aria-labelledby="edc-learning-title"><div class="learning-head"><div><p class="eyebrow">Профессиональное развитие</p><h3 id="edc-learning-title">Учиться. Развиваться.<br>Применять на практике.</h3></div><p class="learning-desc">Обучение и профессиональные встречи помогают развиваться в профессии. Делимся кадрами из рабочих поездок и образовательных мероприятий.</p></div><div class="track" tabindex="0" role="group" aria-label="Фотографии обучения"><button class="tile" type="button" aria-label="Открыть фотографию 1 из 9"><img loading="lazy" decoding="async" src="./assets/training-01.webp" alt="Кадр с профессионального обучения 1"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 2 из 9"><img loading="lazy" decoding="async" src="./assets/training-02.webp" alt="Кадр с профессионального обучения 2"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 3 из 9"><img loading="lazy" decoding="async" src="./assets/training-03.webp" alt="Кадр с профессионального обучения 3"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 4 из 9"><img loading="lazy" decoding="async" src="./assets/training-04.webp" alt="Кадр с профессионального обучения 4"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 5 из 9"><img loading="lazy" decoding="async" src="./assets/training-05.webp" alt="Кадр с профессионального обучения 5"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 6 из 9"><img loading="lazy" decoding="async" src="./assets/training-06.webp" alt="Кадр с профессионального обучения 6"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 7 из 9"><img loading="lazy" decoding="async" src="./assets/training-07.webp" alt="Кадр с профессионального обучения 7"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 8 из 9"><img loading="lazy" decoding="async" src="./assets/training-08.webp" alt="Кадр с профессионального обучения 8"><span>Практика / Обучение</span></button>
+<button class="tile" type="button" aria-label="Открыть фотографию 9 из 9"><img loading="lazy" decoding="async" src="./assets/training-09.webp" alt="Кадр с профессионального обучения 9"><span>Практика / Обучение</span></button></div><div class="controls"><span class="tip">Листайте фотографии →</span><div class="arrows"><button class="arrow" type="button" data-dir="-1" aria-label="Назад">←</button><button class="arrow" type="button" data-dir="1" aria-label="Вперёд">→</button></div></div></div></div><dialog aria-label="Просмотр фотографии"><button class="close" type="button" aria-label="Закрыть">×</button><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="></dialog></section>
+<script>(function(){var r=document.getElementById('edc-about');if(!r||r.dataset.inited)return;r.dataset.inited='1';var t=r.querySelector('.track');r.querySelectorAll('.arrow').forEach(function(b){b.addEventListener('click',function(){var x=t.querySelector('.tile');if(x)t.scrollBy({left:Number(b.dataset.dir)*(x.offsetWidth+15),behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});});});var d=r.querySelector('dialog');if(d&&d.showModal){r.querySelectorAll('.tile').forEach(function(b){b.addEventListener('click',function(){var img=b.querySelector('img');d.querySelector('img').src=img.src;d.querySelector('img').alt=img.alt;d.showModal();});});d.querySelector('.close').addEventListener('click',function(){d.close();});d.addEventListener('click',function(e){if(e.target===d)d.close();});}})();</script>
