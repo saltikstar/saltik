@@ -75,4 +75,7 @@
     if (typeof window.gtag === 'function') window.gtag('event', eventName, { event_category: 'contact', event_label: 'Interdent Clinic' });
     if (typeof window.fbq === 'function' && eventName === 'whatsapp_click') window.fbq('trackCustom', 'WhatsAppClick');
   }));
+  document.querySelectorAll('img[src*="implant-scene.webp"]').forEach(image => {
+    image.src = image.src.replace('implant-scene.webp', 'implant-scene-v2.png');
+  });
 })();

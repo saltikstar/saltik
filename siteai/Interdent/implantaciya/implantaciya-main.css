@@ -1,0 +1,144 @@
+/* Implantation landing: same visual language as the main Interdent page. */
+.implant-page { background: var(--paper); color: var(--ink); }
+.implant-page .hero { min-height: 760px; }
+.implant-page .hero-inner { min-height: 760px; }
+.implant-page .hero-content { max-width: 610px; }
+.implant-page .hero h1 { max-width: 570px; font-size: clamp(68px, 7.1vw, 112px); line-height: .78; }
+.implant-page .hero-sub { max-width: 535px; font-size: clamp(20px, 1.85vw, 27px); }
+.implant-page .hero-small { max-width: 520px; font-size: 15px; }
+.implant-page .hero-image { object-fit: contain !important; object-position: center bottom !important; background: #dfe3e6; }
+.implant-page .hero-facts { display: none; }
+.implant-page .implant-hero-price { margin: 22px 0 0; color: #3f342d; font-size: 24px; font-weight: 700; line-height: 1.2; }
+.implant-page .implant-hero-price small { display: block; max-width: 430px; margin-top: 7px; color: #70645c; font-size: 12px; font-weight: 500; line-height: 1.35; }
+.implant-page .hero-bottom { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.implant-page .hero-bottom div { font-size: 13px; }
+.implant-page .hero-bottom .hero-bottom--kaspi { color: #a43d39; background: #f2dfdd; border: 1px solid #d59d99; }
+.implant-page .section-lead { max-width: 420px; }
+.implant-page .implant-services { padding-top: 78px; padding-bottom: 86px; background: var(--paper); }
+.implant-page .implant-services .section-top { align-items: end; }
+.implant-page .service-feature-body { min-height: 166px; }
+.implant-page .service-detail ul { font-size: 15px; line-height: 1.42; }
+.implant-page .service-detail li { padding-bottom: 5px; }
+.implant-page .service-detail p { margin: 0; color: #5f5750; font-size: 16px; line-height: 1.45; }
+.implant-page .service-price-link { font-size: 14px; }
+.implant-page .implant-advantages { padding-top: 65px; padding-bottom: 70px; background: #fff; }
+.implant-page .implant-advantages .section-top { margin-bottom: 30px; }
+.implant-page .implant-advantages .section-top h2 { max-width: 900px; }
+.implant-page .implant-system-prices { padding: 82px 0; background: var(--milk); }
+.implant-page .implant-system-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 13px; margin: 22px 0 26px; }
+.implant-page .implant-system-grid article { display: flex; min-height: 180px; flex-direction: column; justify-content: space-between; padding: 22px 19px; border-radius: 24px; background: #e5ddd2; }
+.implant-page .implant-system-grid b { color: var(--brown); font: 500 34px/.95 var(--serif); }
+.implant-page .implant-system-grid span { color: #756a61; font-size: 13px; }
+.implant-page .implant-system-grid strong { color: #4d4139; font-size: 17px; }
+.implant-page .implant-system-prices > .container > .button { display: inline-flex; }
+.implant-page .implant-about { padding: 82px 0; background: #fff; }
+.implant-page .implant-about .clinic-layout { align-items: center; }
+.implant-page .implant-about .clinic-copy p:not(.overline) { max-width: 560px; font-size: 16px; line-height: 1.52; }
+.implant-page .implant-about .clinic-image { height: 430px; }
+.implant-page .implant-diagnostic { padding: 0 0 82px; background: #fff; }
+.implant-page .implant-diagnostic .diagnostic-copy { min-height: 390px; }
+.implant-page .implant-diagnostic .diagnostic-photo { min-height: 390px; }
+.implant-page .implant-prices { background: var(--milk); }
+.implant-page .implant-prices .price-sidebar { position: static; }
+.implant-page .implant-prices .price-row { font-size: 15px; }
+.implant-page .implant-prices .price-row strong { font-size: 15px; }
+.implant-page .implant-prices .price-note { margin-top: 10px; }
+.implant-page .implant-steps { padding: 82px 0; background: var(--paper); }
+.implant-page .steps-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.implant-page .step-card { min-height: 205px; padding: 22px 20px 24px; border-radius: 24px; background: #f0ede8; }
+.implant-page .step-card span { display: block; margin-bottom: 28px; color: var(--taupe); font-size: 13px; letter-spacing: .12em; }
+.implant-page .step-card h3 { margin: 0 0 12px; color: var(--brown); font: 500 27px/.96 var(--serif); }
+.implant-page .step-card p { margin: 0; color: #68605a; font-size: 14px; line-height: 1.43; }
+.implant-page .implant-doctors { background: #fff; }
+.implant-page .implant-doctors .doctors-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 680px; }
+.implant-page .implant-doctors .doctor-media { height: 360px; }
+.implant-page .implant-all-doctors { margin: 22px 0 0; font-size: 15px; }
+.implant-page .implant-all-doctors a { color: #6d5a4e; text-decoration: underline; text-underline-offset: 4px; }
+.implant-page .implant-payment .adv-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.implant-page .implant-reviews { background: var(--paper); }
+.implant-page .implant-reviews .reviews-track { grid-auto-columns: minmax(240px, calc((100% - 30px) / 3.2)); }
+.implant-page .implant-reviews .review-thumb { min-height: 270px; }
+.implant-page .implant-reviews .review-thumb > span { display: block !important; padding-top: 12px; color: #6c6054; font-size: 13px; }
+.implant-page .implant-faq { padding: 82px 0; background: #fff; }
+.implant-page .faq-list { max-width: 940px; border-top: 1px solid var(--line); }
+.implant-page .faq-list details { border-bottom: 1px solid var(--line); }
+.implant-page .faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; cursor: pointer; list-style: none; color: var(--brown); font: 500 28px/1.08 var(--serif); }
+.implant-page .faq-list summary::-webkit-details-marker { display: none; }
+.implant-page .faq-list summary::after { content: '+'; display: grid; place-items: center; width: 32px; height: 32px; flex: 0 0 32px; border: 1px solid #c9bfb4; border-radius: 50%; font: 400 21px/1 var(--sans); }
+.implant-page .faq-list details[open] summary::after { content: '−'; }
+.implant-page .faq-list .faq-answer { max-width: 760px; padding: 0 60px 22px 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.implant-page .implant-cta { padding: 0; background: var(--sand); }
+.implant-page .implant-cta-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); align-items: end; gap: 48px; }
+.implant-page .implant-cta-copy { padding: 54px 0 58px; }
+.implant-page .implant-cta-copy .button { margin-top: 22px; }
+.implant-page .implant-cta-doctor { height: 320px; margin: 0; overflow: hidden; background: transparent; }
+.implant-page .implant-cta-doctor img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.implant-page .implant-cta h2 { max-width: 700px; margin: 0 0 10px; color: var(--brown); font: 500 clamp(42px, 4.5vw, 67px)/.92 var(--serif); }
+.implant-page .implant-cta p { margin: 0; color: #6e6259; font-size: 16px; }
+.implant-page .implant-contacts { background: var(--paper); }
+.implant-page .implant-contacts .contact-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+.implant-page .footer-license { max-width: var(--container); margin: 0 auto; padding: 12px 24px 18px; color: rgba(255,255,255,.82); font-size: 11px; line-height: 1.45; }
+.implant-page .implant-mobile-booking { display: none; }
+@media (max-width: 1050px) { .implant-page .steps-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .implant-page .hero, .implant-page .hero-inner { min-height: 910px; }
+  .implant-page .hero-image { object-fit: cover !important; object-position: center 25% !important; }
+  .implant-page .hero h1 { font-size: clamp(58px, 14.8vw, 78px); }
+  .implant-page .hero-sub { font-size: 20px; }
+  .implant-page .hero-small { font-size: 14px; }
+  .implant-page .implant-hero-price { margin-top: 18px; font-size: 21px; }
+  .implant-page .implant-hero-price small { font-size: 11px; }
+  .implant-page .hero-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .implant-page .hero-bottom div { min-height: 38px; padding: 8px 7px; font-size: 11px; }
+  .implant-page .implant-services, .implant-page .implant-about, .implant-page .implant-faq { padding: 54px 0; }
+  .implant-page .implant-diagnostic { padding-bottom: 54px; }
+  .implant-page .implant-about .clinic-image { height: 300px; }
+  .implant-page .implant-system-prices { padding: 54px 0; }
+  .implant-page .implant-system-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .implant-page .implant-system-grid article { min-height: 145px; padding: 17px 14px; border-radius: 19px; }
+  .implant-page .implant-system-grid b { font-size: 29px; }
+  .implant-page .implant-system-grid strong { font-size: 14px; }
+  .implant-page .implant-diagnostic .diagnostic-copy, .implant-page .implant-diagnostic .diagnostic-photo { min-height: 0; }
+  .implant-page .steps-grid { grid-template-columns: 1fr; gap: 10px; }
+  .implant-page .step-card { min-height: 0; padding: 18px 18px 20px; }
+  .implant-page .step-card span { margin-bottom: 18px; }
+  .implant-page .step-card h3 { font-size: 28px; }
+  .implant-page .implant-doctors .doctors-grid { grid-template-columns: 1fr; max-width: none; }
+  .implant-page .implant-doctors .doctor-media { height: 300px; }
+  .implant-page .implant-payment .adv-grid { grid-template-columns: 1fr; }
+  .implant-page .implant-reviews .reviews-track { grid-auto-columns: minmax(260px, 86vw); }
+  .implant-page .faq-list summary { padding: 18px 0; font-size: 25px; }
+  .implant-page .faq-list .faq-answer { padding-right: 35px; font-size: 14px; }
+  .implant-page .implant-cta-inner { display: block; }
+  .implant-page .implant-cta-copy { padding: 52px 0 30px; }
+  .implant-page .implant-cta-doctor { height: 280px; }
+  .implant-page .implant-cta h2 { font-size: 48px; }
+  .implant-page .implant-cta .button { margin-top: 22px; width: 100%; }
+  .implant-page .implant-contacts .contact-buttons { display: grid; }
+  .implant-page .footer-license { padding: 10px 24px 16px; font-size: 10px; }
+  .implant-page .implant-mobile-booking { position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 40; display: block; padding: 15px 18px; border-radius: 999px; background: #554840; color: #fff; text-align: center; font-size: 14px; font-weight: 700; box-shadow: 0 12px 28px rgba(52,47,44,.2); }
+}
+
+/* Client revision: transparent doctor cutout, larger proof pills, four service columns. */
+.implant-page .hero-image { background: transparent !important; }
+.implant-page .floating-booking { display: none !important; }
+.implant-page .hero-buttons { margin-top: 24px; justify-content: flex-start; }
+.implant-page .hero-buttons .button { border-radius: 999px; }
+.implant-page .hero-bottom div { display: flex; align-items: center; justify-content: center; height: 64px; min-height: 0; box-sizing: border-box; padding: 0 18px; font-size: 18px; line-height: 1.15; text-align: center; }
+.implant-page .services-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.implant-page .service-detail p { font-size: 18px; }
+.implant-page .service-price-link { font-size: 16px; }
+.implant-page .implant-system-grid article { min-height: 266px; }
+.implant-page .implant-system-grid article > img { display: block; width: 92px; height: 105px; margin: -3px auto 3px; object-fit: contain; }
+.implant-page .implant-system-grid span { font-size: 16px; }
+.implant-page .implant-system-grid strong { font-size: 18px; }
+@media (max-width: 1050px) {
+  .implant-page .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .implant-page .hero-bottom div { height: 44px; min-height: 0; padding: 0 8px; font-size: 14px; }
+  .implant-page .services-grid { grid-template-columns: 1fr; }
+  .implant-page .implant-system-grid article { min-height: 218px; }
+  .implant-page .implant-system-grid article > img { width: 66px; height: 76px; margin: -2px auto 2px; }
+  .implant-page .implant-system-grid span { font-size: 14px; }
+}
