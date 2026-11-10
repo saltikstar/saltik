@@ -46,11 +46,4 @@
     image.src = image.src.replace('implant-scene.webp', 'implant-scene-v2.png');
   });
 
-  const allOnHero = document.querySelector('.ip-hero--allon .ip-hero-photo img');
-  if (allOnHero) {
-    allOnHero.src = '../../assets/maksat.webp';
-    allOnHero.alt = 'Алиев Махсат Нургалиевич, врач-стоматолог-ортопед';
-    document.querySelector('.ip-hero--allon .ip-hero-photo source')?.setAttribute('srcset', '../../assets/maksat.webp');
-    document.querySelector('.ip-hero--allon .ip-trust-row .ip-trust:last-child')?.remove();
-  }
 })();
