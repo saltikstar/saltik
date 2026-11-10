@@ -1,0 +1,169 @@
+<!-- Interdent Clinic · FAQ для Tilda Zero Block / T123 -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap');
+
+  .interdent-tilda-faq,
+  .interdent-tilda-faq * { box-sizing: border-box; }
+
+  .interdent-tilda-faq {
+    --faq-brown: #564840;
+    --faq-muted: #706b65;
+    --faq-gold: #a3917c;
+    --faq-line: #e4ded6;
+    width: 100%;
+    padding: 82px 0;
+    background: #fff;
+    color: var(--faq-brown);
+    font-family: Manrope, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .interdent-tilda-faq__inner {
+    width: min(calc(100% - 92px), 1328px);
+    margin: 0 auto;
+  }
+
+  .interdent-tilda-faq h2 {
+    margin: 0 0 34px;
+    color: #61564f;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: clamp(49px, 5.15vw, 78px);
+    font-weight: 500;
+    line-height: .99;
+    letter-spacing: -.03em;
+  }
+
+  .interdent-tilda-faq h2 em {
+    font-weight: 400;
+  }
+
+  .interdent-tilda-faq__list {
+    max-width: 940px;
+    border-top: 1px solid var(--faq-line);
+  }
+
+  .interdent-tilda-faq details {
+    border-bottom: 1px solid var(--faq-line);
+  }
+
+  .interdent-tilda-faq summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    cursor: pointer;
+    color: var(--faq-brown);
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.08;
+    list-style: none;
+  }
+
+  .interdent-tilda-faq summary::-webkit-details-marker { display: none; }
+
+  .interdent-tilda-faq summary::after {
+    content: '+';
+    display: grid;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    place-items: center;
+    border: 1px solid #c9bfb4;
+    border-radius: 50%;
+    color: var(--faq-brown);
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .interdent-tilda-faq details[open] summary::after { content: '−'; }
+
+  .interdent-tilda-faq__answer {
+    max-width: 760px;
+    padding: 0 60px 22px 0;
+    color: var(--faq-muted);
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .interdent-tilda-faq summary:focus-visible {
+    outline: 3px solid #bf9355;
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 640px) {
+    .interdent-tilda-faq { padding: 54px 0; }
+    .interdent-tilda-faq__inner { width: min(calc(100% - 40px), 1328px); }
+    .interdent-tilda-faq h2 { margin-bottom: 22px; font-size: clamp(43px, 13vw, 64px); }
+    .interdent-tilda-faq summary { padding: 18px 0; font-size: 25px; }
+    .interdent-tilda-faq__answer { padding-right: 35px; font-size: 14px; }
+  }
+</style>
+
+<section class="interdent-tilda-faq" aria-labelledby="interdent-tilda-faq-title">
+  <div class="interdent-tilda-faq__inner">
+    <h2 id="interdent-tilda-faq-title">ЧАСТЫЕ <em>ВОПРОСЫ</em></h2>
+
+    <div class="interdent-tilda-faq__list">
+      <details>
+        <summary>Нужна ли консультация перед имплантацией?</summary>
+        <div class="interdent-tilda-faq__answer">Да. Врач проводит осмотр, назначает диагностику (3D-снимок) и подбирает вариант лечения. Консультация платная, стоимость 5 000 тг.</div>
+      </details>
+      <details>
+        <summary>Сколько стоит имплантация?</summary>
+        <div class="interdent-tilda-faq__answer">Стоимость зависит от выбранной системы импланта и объёма лечения. Установка импланта — от 165 000 тг. Итоговую стоимость рассчитывает врач после консультации. Все цены — на странице «Цены».</div>
+      </details>
+      <details>
+        <summary>Есть ли гарантия?</summary>
+        <div class="interdent-tilda-faq__answer">Да. Заключается договор, гарантию на имплант обеспечивает производитель.</div>
+      </details>
+      <details>
+        <summary>Можно ли оплатить в рассрочку?</summary>
+        <div class="interdent-tilda-faq__answer">Да, доступна рассрочка Kaspi 0-0-24 на имплантацию.</div>
+      </details>
+      <details>
+        <summary>Есть ли скидка при оплате наличными?</summary>
+        <div class="interdent-tilda-faq__answer">Да, при оплате наличными действует дополнительная скидка. Размер скидки и итоговую стоимость рассчитывает имплантолог на консультации.</div>
+      </details>
+      <details>
+        <summary>Какой имплант выбрать?</summary>
+        <div class="interdent-tilda-faq__answer">Врач подбирает подходящий вариант после осмотра и диагностики. В клинике доступны импланты Straumann, Neodent, Dentium, Izen и DIO.</div>
+      </details>
+      <details>
+        <summary>Что делать, если не хватает костной ткани?</summary>
+        <div class="interdent-tilda-faq__answer">Возможны наращивание костной ткани и синус-лифтинг. Необходимость таких процедур врач определяет по результатам 3D-снимка.</div>
+      </details>
+      <details>
+        <summary>Больно ли устанавливать имплант?</summary>
+        <div class="interdent-tilda-faq__answer">Установка проходит под местной анестезией.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const initInterdentFaq = () => {
+      document.querySelectorAll('.interdent-tilda-faq').forEach((block) => {
+        const items = [...block.querySelectorAll('details')];
+        items.forEach((item) => {
+          const summary = item.querySelector('summary');
+          summary?.setAttribute('aria-expanded', item.open ? 'true' : 'false');
+          summary?.addEventListener('click', () => {
+            items.forEach((other) => {
+              if (other !== item) other.open = false;
+              other.querySelector('summary')?.setAttribute('aria-expanded', other.open ? 'true' : 'false');
+            });
+            window.setTimeout(() => summary?.setAttribute('aria-expanded', item.open ? 'true' : 'false'), 0);
+          });
+        });
+      });
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initInterdentFaq);
+    else initInterdentFaq();
+  })();
+</script>
