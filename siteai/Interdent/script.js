@@ -76,6 +76,6 @@
     if (typeof window.fbq === 'function' && eventName === 'whatsapp_click') window.fbq('trackCustom', 'WhatsAppClick');
   }));
   document.querySelectorAll('img[src*="implant-scene.webp"]').forEach(image => {
-    image.src = image.src.replace('implant-scene.webp', 'implant-scene-v2.png');
+    image.src = image.src.replace('implant-scene.webp', 'implant-scene-v2.jpg');
   });
 })();

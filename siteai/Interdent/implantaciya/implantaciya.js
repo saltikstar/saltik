@@ -43,7 +43,7 @@
   lightbox?.querySelector('button')?.addEventListener('click', closeLightbox);
 
   document.querySelectorAll('img[src*="implant-scene.webp"]').forEach((image) => {
-    image.src = image.src.replace('implant-scene.webp', 'implant-scene-v2.png');
+    image.src = image.src.replace('implant-scene.webp', 'implant-scene-v2.jpg');
   });
 
 })();
