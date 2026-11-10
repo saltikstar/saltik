@@ -1,0 +1,177 @@
+/* All-on-4 landing: visual language of the main Interdent implantation page. */
+.ip-allon4 {
+  --ip-bg: #faf9f7;
+  --ip-soft: #f4f2ee;
+  --ip-card: #e6e0d7;
+  --ip-brown: #564840;
+  --ip-muted: #706b65;
+  --ip-line: #e4ded6;
+  background: var(--ip-bg);
+}
+
+.ip-allon4 .ip-container { width: min(calc(100% - 92px), 1328px); }
+
+/* The main site uses a floating rounded header over the first screen. */
+.ip-allon4 .ip-header {
+  position: absolute;
+  top: 28px;
+  left: 2.9%;
+  right: 2.9%;
+  width: auto;
+  padding: 9px 14px 9px 30px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(253,252,250,.96);
+  box-shadow: 0 10px 42px rgba(43,32,24,.07);
+}
+.ip-allon4 .ip-header-inner { width: min(100%, 1380px); min-height: 74px; padding: 0; }
+.ip-allon4 .ip-brand { min-width: 193px; }
+.ip-allon4 .ip-brand img { width: 49px; height: 49px; }
+.ip-allon4 .ip-brand strong { font-size: 31px; }
+.ip-allon4 .ip-nav { gap: 25px; font-size: 13px; font-weight: 400; }
+.ip-allon4 .ip-phone { font-size: 13px; font-weight: 400; }
+.ip-allon4 .ip-header .ip-button { width: 49px; height: 49px; min-height: 49px; padding: 0; border-radius: 50%; background: #a89b8b; font-size: 0; }
+.ip-allon4 .ip-header .ip-button::after { content: '↗'; font-size: 24px; font-weight: 400; }
+
+/* Main-page hero geometry: a soft rounded canvas with a quiet lower proof row. */
+.ip-allon4 .ip-hero { padding: 10px 0 86px; background: var(--ip-bg); }
+.ip-allon4 .ip-hero .ip-container { width: auto; max-width: none; }
+.ip-allon4 .ip-hero-card {
+  min-height: 790px;
+  margin: 0 10px;
+  border-radius: 37px;
+  background: #eee9e2;
+}
+.ip-allon4 .ip-hero-copy { padding: 188px 5.4% 128px; }
+.ip-allon4 .ip-hero-copy .ip-heading { max-width: 680px; font-size: clamp(68px, 7.1vw, 112px); line-height: .78; }
+.ip-allon4 .ip-hero-copy .ip-lead { max-width: 535px; margin-top: 25px; color: #51463f; font-size: clamp(20px, 1.85vw, 27px); line-height: 1.26; }
+.ip-allon4 .ip-hero-actions { margin-top: 25px; }
+.ip-allon4 .ip-hero-actions .ip-button { min-height: 59px; padding: 14px 26px; border-radius: 999px; font-size: 16px; font-weight: 600; }
+.ip-allon4 .ip-hero-actions .ip-button--light { display: none; }
+.ip-allon4 .ip-hero-photo { min-height: 790px; background: #dfe3e6; }
+.ip-allon4 .ip-hero-photo img { object-position: center top; }
+.ip-allon4 .ip-hero-photo::after { display: none; }
+.ip-allon4 .ip-trust-row {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: -72px 3.6% 0;
+  padding: 7px;
+  border: 1px solid rgba(255,255,255,.48);
+  border-radius: 100px;
+  background: rgba(249,246,242,.28);
+  backdrop-filter: blur(8px);
+}
+.ip-allon4 .ip-trust {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 12px;
+  border-radius: 100px;
+  background: rgba(249,245,239,.9);
+  color: #51463b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+}
+.ip-allon4 .ip-trust span { display: none; }
+.ip-allon4 .ip-trust:last-child { color: #a43d39; background: #f2dfdd; border: 1px solid #d59d99; }
+
+/* Section rhythm, cards and typography follow the reference page. */
+.ip-allon4 .ip-section { padding: 88px 0; }
+.ip-allon4 .ip-section--soft { background: #f4f2ee; }
+.ip-allon4 .ip-section-head { margin-bottom: 34px; }
+.ip-allon4 .ip-eyebrow { margin-bottom: 22px; color: #9a8b7e; font-size: 12px; letter-spacing: .18em; }
+.ip-allon4 .ip-heading { color: #61564f; font-size: clamp(49px, 5.15vw, 78px); line-height: .99; }
+.ip-allon4 .ip-heading em { color: #9b8b7d; }
+.ip-allon4 .ip-lead { color: #68615a; font-size: 18px; line-height: 1.6; }
+.ip-allon4 .ip-card { border: 0; border-radius: 24px; background: #f3f0eb; }
+.ip-allon4 .ip-card--warm { background: #e5ddd2; }
+.ip-allon4 .ip-card h3 { color: #554940; font-size: 32px; }
+.ip-allon4 .ip-card p { color: #635d57; font-size: 16px; line-height: 1.54; }
+.ip-allon4 .ip-grid-4 { gap: 13px; }
+.ip-allon4 .ip-grid-4 .ip-card { min-height: 225px; padding: 28px 23px 30px; }
+
+.ip-allon4 .ip-price-groups { gap: 0; border-top: 1px solid #cfc6ba; }
+.ip-allon4 .ip-price-group { border-bottom: 1px solid #d5cdc3; border-radius: 0; background: transparent; }
+.ip-allon4 .ip-price-group summary { padding: 19px 0; font-size: 35px; font-weight: 500; }
+.ip-allon4 .ip-price-rows { padding: 2px 0 14px 33px; }
+.ip-allon4 .ip-price-row { padding: 13px 0; border-top: 1px solid #e4ddd4; font-size: 16px; }
+.ip-allon4 .ip-price-row strong { font-size: 16px; }
+
+.ip-allon4 .ip-steps { gap: 14px; }
+.ip-allon4 .ip-step { min-height: 205px; padding: 22px 20px 24px; border: 0; border-radius: 24px; background: #f0ede8; }
+.ip-allon4 .ip-step::before { display: none; }
+.ip-allon4 .ip-step h3 { margin: 0 0 12px; color: #564840; font-family: var(--ip-serif); font-size: 27px; font-weight: 500; line-height: .96; }
+.ip-allon4 .ip-step p { color: #68605a; font-size: 14px; line-height: 1.43; }
+
+.ip-allon4 .ip-doctors { gap: 16px; }
+.ip-allon4 .ip-doctor { border-radius: 24px; background: #f3f0eb; }
+.ip-allon4 .ip-doctor-photo { min-height: 360px; background: #e7e3df; }
+.ip-allon4 .ip-doctor-content { padding: 20px 20px 24px; }
+.ip-allon4 .ip-doctor-content h3 { font-size: 28px; }
+
+.ip-allon4 .ip-payment .ip-card { min-height: 225px; }
+.ip-allon4 .ip-faq summary { padding: 22px 0; color: #564840; font-family: var(--ip-serif); font-size: 28px; font-weight: 500; }
+.ip-allon4 .ip-faq summary::after { display: grid; width: 32px; height: 32px; flex: 0 0 32px; place-items: center; border: 1px solid #c9bfb4; border-radius: 50%; color: #564840; font-size: 21px; }
+.ip-allon4 .ip-faq details > div { color: #706b65; font-size: 15px; line-height: 1.55; }
+
+/* The reference uses a sand consultation band and a taupe footer. */
+.ip-allon4 .ip-cta { padding: 0; background: #e6e0d7; color: #564840; }
+.ip-allon4 .ip-cta-inner { min-height: 300px; }
+.ip-allon4 .ip-cta h2 { max-width: 700px; color: #564840; font-size: clamp(42px, 4.5vw, 67px); }
+.ip-allon4 .ip-cta p { color: #6e6259; font-size: 16px; }
+.ip-allon4 .ip-cta .ip-button { background: linear-gradient(100deg,#d8cfc2,#b6a899); color: #433a34; }
+.ip-allon4 .ip-contacts { background: #fff; }
+.ip-allon4 .ip-footer { background: #aaa095; }
+.ip-allon4 .ip-footer-brand img { filter: brightness(2.5) grayscale(1); }
+
+@media (max-width: 1050px) {
+  .ip-allon4 .ip-header { padding-left: 20px; }
+  .ip-allon4 .ip-nav { gap: 14px; }
+  .ip-allon4 .ip-hero-copy { padding-left: 5%; padding-right: 5%; }
+  .ip-allon4 .ip-trust { font-size: 14px; }
+}
+
+@media (max-width: 760px) {
+  .ip-allon4 .ip-container { width: min(calc(100% - 36px), 1328px); }
+  .ip-allon4 .ip-header { position: sticky; top: 0; left: auto; right: auto; padding: 10px 0; border-bottom: 1px solid rgba(86,72,64,.1); border-radius: 0; background: rgba(250,249,247,.92); box-shadow: none; }
+  .ip-allon4 .ip-header-inner { min-height: 44px; }
+  .ip-allon4 .ip-brand { min-width: auto; }
+  .ip-allon4 .ip-brand img { width: 36px; height: 36px; }
+  .ip-allon4 .ip-brand strong { font-size: 24px; }
+  .ip-allon4 .ip-header .ip-button { width: auto; height: 40px; min-height: 40px; padding: 8px 13px; border-radius: 999px; font-size: 12px; }
+  .ip-allon4 .ip-header .ip-button::after { content: 'Записаться'; font-size: 12px; font-weight: 700; }
+  .ip-allon4 .ip-hero { padding: 10px 0 54px; }
+  .ip-allon4 .ip-hero-card { display: flex; min-height: 0; margin: 0; flex-direction: column; border-radius: 28px; }
+  .ip-allon4 .ip-hero-copy { order: 2; padding: 45px 25px 42px; }
+  .ip-allon4 .ip-hero-copy .ip-heading { font-size: clamp(58px, 14.8vw, 78px); }
+  .ip-allon4 .ip-hero-copy .ip-lead { font-size: 20px; }
+  .ip-allon4 .ip-hero-photo { order: 1; min-height: 390px; }
+  .ip-allon4 .ip-hero-photo img { object-position: center 18%; }
+  .ip-allon4 .ip-trust-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: -37px 14px 0; padding: 6px; border-radius: 24px; }
+  .ip-allon4 .ip-trust { min-height: 52px; padding: 8px; border-radius: 18px; font-size: 13px; }
+  .ip-allon4 .ip-trust:last-child { grid-column: 1 / -1; }
+  .ip-allon4 .ip-section { padding: 54px 0; }
+  .ip-allon4 .ip-section-head { display: block; margin-bottom: 26px; }
+  .ip-allon4 .ip-heading { font-size: clamp(43px, 13vw, 64px); }
+  .ip-allon4 .ip-grid-4 { grid-template-columns: 1fr; gap: 10px; }
+  .ip-allon4 .ip-grid-4 .ip-card { min-height: 0; }
+  .ip-allon4 .ip-price-group summary { font-size: 28px; }
+  .ip-allon4 .ip-price-row { grid-template-columns: 1fr; gap: 7px; font-size: 14px; }
+  .ip-allon4 .ip-price-row strong { text-align: left; }
+  .ip-allon4 .ip-step { min-height: 0; }
+  .ip-allon4 .ip-steps { grid-template-columns: 1fr; gap: 10px; }
+  .ip-allon4 .ip-doctors { grid-template-columns: 1fr; }
+  .ip-allon4 .ip-doctor-photo { min-height: 300px; }
+  .ip-allon4 .ip-payment { grid-template-columns: 1fr; }
+  .ip-allon4 .ip-payment .ip-card { min-height: 0; }
+  .ip-allon4 .ip-faq summary { padding: 18px 0; font-size: 25px; }
+  .ip-allon4 .ip-faq details > div { padding-right: 35px; font-size: 14px; }
+  .ip-allon4 .ip-cta-inner { display: block; min-height: 0; }
+  .ip-allon4 .ip-cta { padding: 52px 0 54px; }
+  .ip-allon4 .ip-cta .ip-button { width: 100%; margin-top: 22px; }
+}
