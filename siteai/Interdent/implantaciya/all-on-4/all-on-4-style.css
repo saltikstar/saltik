@@ -90,6 +90,12 @@
 .ip-allon4 .ip-lead { color: #68615a; font-size: 18px; line-height: 1.6; }
 .ip-allon4 .ip-card { border: 0; border-radius: 24px; background: #f3f0eb; }
 .ip-allon4 .ip-card--warm { background: #e5ddd2; }
+.ip-allon4 .ip-explainer { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr); gap: 42px; align-items: center; padding: 30px; }
+.ip-allon4 .ip-explainer-copy { padding: 8px 0 8px 8px; }
+.ip-allon4 .ip-explainer-copy p + p { margin-top: 18px; }
+.ip-allon4 .ip-explainer-visual { margin: 0; overflow: hidden; border-radius: 20px; background: #dce1e4; }
+.ip-allon4 .ip-explainer-visual img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.ip-allon4 .ip-explainer-visual figcaption { padding: 13px 16px 15px; color: #6d6259; font-size: 13px; line-height: 1.4; }
 .ip-allon4 .ip-card h3 { color: #554940; font-size: 32px; }
 .ip-allon4 .ip-card p { color: #635d57; font-size: 16px; line-height: 1.54; }
 .ip-allon4 .ip-grid-4 { gap: 13px; }
@@ -102,10 +108,14 @@
 .ip-allon4 .ip-price-row { padding: 13px 0; border-top: 1px solid #e4ddd4; font-size: 16px; }
 .ip-allon4 .ip-price-row strong { font-size: 16px; }
 
-.ip-allon4 .ip-steps { gap: 14px; }
-.ip-allon4 .ip-step { min-height: 205px; padding: 22px 20px 24px; border: 0; border-radius: 24px; background: #f0ede8; }
+.ip-allon4 .ip-steps { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; padding-top: 2px; }
+.ip-allon4 .ip-steps::before { content: ''; position: absolute; z-index: 0; top: 58px; left: 10%; right: 10%; height: 1px; background: #c9bfb4; }
+.ip-allon4 .ip-step { position: relative; z-index: 1; min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; text-align: center; }
 .ip-allon4 .ip-step::before { display: none; }
-.ip-allon4 .ip-step h3 { margin: 0 0 12px; color: #564840; font-family: var(--ip-serif); font-size: 27px; font-weight: 500; line-height: .96; }
+.ip-allon4 .ip-step-marker { width: 116px; height: 116px; margin: 0 auto 20px; overflow: hidden; border: 8px solid #f4f2ee; border-radius: 50%; background: #e6e0d7; box-shadow: 0 0 0 1px #d8cec2; }
+.ip-allon4 .ip-step-marker img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ip-allon4 .ip-step-copy { max-width: 230px; margin: 0 auto; }
+.ip-allon4 .ip-step h3 { margin: 0 0 11px; color: #564840; font-family: var(--ip-serif); font-size: 24px; font-weight: 500; line-height: 1.03; }
 .ip-allon4 .ip-step p { color: #68605a; font-size: 14px; line-height: 1.43; }
 
 .ip-allon4 .ip-doctors { gap: 16px; }
@@ -158,13 +168,22 @@
   .ip-allon4 .ip-section { padding: 54px 0; }
   .ip-allon4 .ip-section-head { display: block; margin-bottom: 26px; }
   .ip-allon4 .ip-heading { font-size: clamp(43px, 13vw, 64px); }
+  .ip-allon4 .ip-explainer { grid-template-columns: 1fr; gap: 26px; padding: 20px; }
+  .ip-allon4 .ip-explainer-copy { padding: 4px 4px 0; }
+  .ip-allon4 .ip-explainer-visual { border-radius: 18px; }
+  .ip-allon4 .ip-explainer-visual figcaption { font-size: 12px; }
   .ip-allon4 .ip-grid-4 { grid-template-columns: 1fr; gap: 10px; }
   .ip-allon4 .ip-grid-4 .ip-card { min-height: 0; }
   .ip-allon4 .ip-price-group summary { font-size: 28px; }
   .ip-allon4 .ip-price-row { grid-template-columns: 1fr; gap: 7px; font-size: 14px; }
   .ip-allon4 .ip-price-row strong { text-align: left; }
   .ip-allon4 .ip-step { min-height: 0; }
-  .ip-allon4 .ip-steps { grid-template-columns: 1fr; gap: 10px; }
+  .ip-allon4 .ip-steps { grid-template-columns: 1fr; gap: 22px; padding-left: 0; }
+  .ip-allon4 .ip-steps::before { top: 28px; bottom: 28px; left: 28px; right: auto; width: 1px; height: auto; }
+  .ip-allon4 .ip-step { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 18px; align-items: start; text-align: left; }
+  .ip-allon4 .ip-step-marker { width: 58px; height: 58px; margin: 0; border-width: 4px; }
+  .ip-allon4 .ip-step-copy { max-width: none; margin: 0; padding-top: 5px; }
+  .ip-allon4 .ip-step h3 { font-size: 24px; }
   .ip-allon4 .ip-doctors { grid-template-columns: 1fr; }
   .ip-allon4 .ip-doctor-photo { min-height: 300px; }
   .ip-allon4 .ip-payment { grid-template-columns: 1fr; }
