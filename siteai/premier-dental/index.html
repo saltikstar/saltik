@@ -149,6 +149,119 @@ body{font-size:18px;line-height:1.65}
 .promo-grid>.promo{flex:1 1 calc((100% - 14px)/2)}
 }
 
+
+/* Premier Dental — reference refinement 2026; Flexbox and Tildify-safe assets */
+:root{--blue:#1455a4;--ink:#1b2c42;--muted:#5b7086}
+header{background:rgba(255,255,255,.97);box-shadow:0 6px 26px rgba(30,74,129,.06)}
+.nav{height:89px}
+.brand-location{padding-left:16px;border-left:1px solid #e3eaf3;color:#607084;font-size:12px}
+.logo-img{width:142px;height:73px}
+.links{gap:19px}.links a{font-size:13px;font-weight:700}
+.hero{padding:16px 0 54px}
+.hero-shell{min-height:580px;background:linear-gradient(112deg,#f4f8fe 5%,#eef5fd 65%,#dceaf8 100%);border-radius:30px;position:relative;isolation:isolate}
+.hero-content{flex:0 0 62%;max-width:none;padding:70px 25px 67px 58px;position:relative;z-index:4}
+.hero-content .eyebrow{color:#1558a3;font-size:12px;letter-spacing:1.5px;margin-bottom:26px}
+.hero-content h1{font-size:clamp(36px,3.7vw,52px);line-height:1.17;letter-spacing:-2px;font-weight:700;color:#1c2f44;margin-bottom:22px}
+.hero-content h1 em{color:var(--blue)}
+.hero-content .lead{font-size:18px;line-height:1.72;color:#546a81;max-width:530px}
+.hero-actions{gap:12px;margin:29px 0 21px}
+.hero-actions .button{min-height:56px;padding:14px 24px;font-size:15px;box-shadow:0 7px 17px rgba(20,85,164,.13)}
+.hero-actions .button.light{background:rgba(255,255,255,.8);border-color:#92b1d3;color:#124d97}
+.hero-content .address{font-size:15px;color:#60768d}
+.hero-visual{position:absolute;z-index:1;right:0;top:0;width:52%;height:100%;min-height:0;flex:none;overflow:hidden;pointer-events:none}
+.hero-visual .hero-photo{display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:67% center}
+.hero-visual:before{content:"";position:absolute;z-index:2;left:-25%;top:-12%;width:56%;height:124%;border-radius:0 80% 80% 0 / 0 63% 63% 0;background:linear-gradient(90deg,#eff6fd 20%,#eef5fd 65%,rgba(238,245,253,0) 100%)}
+.hero-floating{right:20px;bottom:19px;background:rgba(255,255,255,.93);box-shadow:0 12px 30px rgba(20,65,114,.13);border-radius:15px;max-width:210px}
+.quick{gap:14px;margin-top:17px}
+.quick-item{position:relative;min-height:151px;padding:21px 20px;border-radius:21px;background:#f0f5fa;border:1px solid #e9f0f7;flex:1 1 18%;overflow:hidden}
+.quick-item .mini{font-size:11px;letter-spacing:.3px;text-transform:uppercase}
+.quick-item b{font-size:25px;margin:12px 0 7px}
+.quick-item span:not(.mini){font-size:14px;line-height:1.45}
+.quick-item--offer{flex:1.75 1 31%;min-width:295px;background:linear-gradient(125deg,#3386bd,#145ba8 58%,#0c488e);color:#fff;border-color:transparent;padding-right:115px;box-shadow:0 10px 26px rgba(20,85,164,.16)}
+.quick-item--offer .mini{color:#d9eafb}
+.quick-item--offer b{font-size:34px;color:white}
+.quick-item--offer span:not(.mini){color:white;position:relative;z-index:1}
+.quick-item--offer .quick-offer-media{display:block;position:absolute;right:0;top:0;width:58%;height:100%;object-fit:cover;object-position:25% center;opacity:.7;mask-image:linear-gradient(90deg,transparent 0%,#000 65%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 65%);z-index:0}
+.quick-item--offer .mini,.quick-item--offer b{position:relative;z-index:1}
+.cards>.service{flex:1 1 calc((100% - 32px)/3);min-height:260px}
+.cards>.service p{font-size:18px;line-height:1.55;max-width:89%}
+.cards>.service h3{font-size:23px}.cards>.service a{font-size:15px}
+.cards>.service--hygiene{background:#eff5fb}
+.promos{position:relative;overflow:hidden;padding:88px 0 95px;background:linear-gradient(120deg,#f9fbff 0%,#edf4ff 54%,#f8fbff 100%)}
+.promos:before{content:"";position:absolute;top:-210px;right:-240px;width:650px;height:650px;border:110px solid rgba(185,211,246,.19);border-radius:50%;pointer-events:none}
+.promos .container{position:relative;z-index:1}
+.promos .section-head{align-items:center;gap:35px;margin-bottom:40px}
+.promos .section-head>div{flex:1 1 52%}
+.promos .section-head p{max-width:460px;flex:1 1 40%;font-size:18px;line-height:1.6;padding-left:28px;border-left:1px solid #a3b6ce;color:#53677e}
+.promos h2{font-size:clamp(36px,4vw,55px);letter-spacing:-2px;font-weight:700}
+.promo-grid{display:flex;flex-wrap:wrap;gap:17px;align-items:stretch}
+.promo-grid>.promo{flex:1 1 calc((100% - 51px)/4);min-width:0;min-height:570px;padding:0;display:flex;flex-direction:column;border:0;background:transparent;border-radius:24px;overflow:hidden;box-shadow:0 12px 29px rgba(28,76,127,.12)}
+.promo-photo{width:100%;height:207px;overflow:hidden;flex:0 0 auto;background:#d8e9f5}
+.promo-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.promo-body{position:relative;z-index:1;display:flex;flex-direction:column;flex:1;margin-top:-22px;padding:19px 21px 23px;border-radius:22px 22px 24px 24px;background:rgba(255,255,255,.97)}
+.promo-label{display:inline-flex;align-self:flex-start;background:#e4efff;color:#1455a4;border-radius:999px;padding:6px 11px;letter-spacing:.3px;font-size:11px;font-weight:800;text-transform:uppercase}
+.promo h3{font-size:19px;font-weight:800;line-height:1.35;letter-spacing:-.6px;margin:14px 0 10px}
+.promo-description{font-size:18px;line-height:1.48;color:#53677c;margin:0 0 14px}
+.promo .price{color:#1455a4;font-size:clamp(23px,2.15vw,30px);line-height:1.2;letter-spacing:-.8px;margin:auto 0 16px;font-weight:800}
+.promo .price s{display:block;margin-bottom:5px;color:#8b96a6;font-size:14px;letter-spacing:0;font-weight:500}
+.promo .button.small{width:100%;min-height:50px;padding:10px 8px;font-size:13px;line-height:1.35;white-space:normal;gap:8px}
+.promo .button.small span{font-size:18px}
+@media(max-width:1110px){
+ .links{gap:12px}.links a{font-size:12px}
+ .hero-content{padding:58px 24px 58px 40px;flex-basis:63%}
+ .hero-content h1{font-size:42px}
+ .hero-visual{width:51%}
+ .quick-item--offer{padding-right:100px;min-width:250px}
+ .promo-grid>.promo{flex-basis:calc((100% - 17px)/2);min-height:525px}
+ .promo-photo{height:220px}
+ .promo-body{padding:21px 24px 24px}
+ .cards>.service{flex-basis:calc((100% - 16px)/2)}
+}
+@media(max-width:760px){
+ .nav{height:66px}
+ .hero{padding:14px 0 40px}
+ .hero-shell{min-height:0;display:flex;flex-direction:column;border-radius:24px}
+ .hero-content{order:1;width:100%;flex:none;padding:34px 23px 26px}
+ .hero-content .eyebrow{font-size:11px;margin-bottom:16px}
+ .hero-content h1{font-size:clamp(30px,8vw,38px);line-height:1.17;letter-spacing:-1.5px;margin-bottom:17px}
+ .hero-content .lead{font-size:14px;line-height:1.65}
+ .hero-actions{margin:22px 0 18px}
+ .hero-actions .button{width:100%;min-height:50px;font-size:14px}
+ .hero-content .address{font-size:14px}
+ .hero-visual{position:relative;top:auto;right:auto;width:100%;height:310px;min-height:310px;order:2}
+ .hero-visual .hero-photo{height:310px;min-height:310px;object-position:67% 45%}
+ .hero-visual:before{display:none}
+ .hero-floating{right:12px;bottom:12px;max-width:175px}
+ .quick{gap:11px}
+ .quick-item{flex:1 1 calc((100% - 11px)/2);min-height:115px;padding:17px}
+ .quick-item b{font-size:22px;margin:9px 0 6px}
+ .quick-item span:not(.mini){font-size:12px}
+ .quick-item--offer{flex:1 1 100%;min-width:0;min-height:142px;padding:19px 118px 19px 19px}
+ .quick-item--offer b{font-size:32px;margin:8px 0}
+ .quick-item--offer span:not(.mini){font-size:14px}
+ .cards>.service{flex:1 1 100%;min-height:230px}
+ .cards>.service p{font-size:14px}
+ .promos{padding:60px 0 70px}
+ .promos .section-head{display:block;margin-bottom:30px}
+ .promos .section-head p{font-size:14px;padding-left:17px;border-left:2px solid #9db6d1;margin-top:19px}
+ .promos h2{font-size:36px}
+ .promo-grid{gap:16px}
+ .promo-grid>.promo{flex:1 1 100%;min-height:0}
+ .promo-photo{height:215px}
+ .promo-body{min-height:0;padding:20px 22px 23px}
+ .promo h3{font-size:21px}
+ .promo-description{font-size:14px}
+ .promo .price{font-size:29px;margin:18px 0}
+ .promo .button.small{font-size:14px}
+}
+@media(min-width:761px) and (max-width:960px){
+ .quick-item{flex-basis:calc((100% - 14px)/2)}
+ .quick-item--offer{flex:1 1 100%;min-width:0}
+}
+@media(max-width:420px){
+ .promo-photo{height:190px}
+ .promo h3{font-size:20px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Premier Dental Clinic","address":{"@type":"PostalAddress","streetAddress":"ул. Габит Мусрепов, 2/1","addressLocality":"Астана","addressCountry":"KZ"},"telephone":"+77005551678","sameAs":["https://www.instagram.com/premier_dental.cl/","https://2gis.kz/astana/geo/70000001018116030"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Friday","Saturday"],"opens":"10:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"10:00","closes":"20:00"}]}</script>
 </head>
