@@ -1,0 +1,130 @@
+<!-- ELITE DENTAL CLINIC / GNATHOLOGY HERO / Tilda T123. Standalone, scoped HTML and CSS. -->
+<style>
+#edc-gnathology-hero, #edc-gnathology-hero * { box-sizing: border-box; }
+#edc-gnathology-hero {
+  --edc-gold: #c49a44; --edc-gold-dark: #946c21; --edc-ink: #14171b;
+  --edc-body: #44484b; --edc-muted: #6e7275; --edc-rule: #e5e7e9;
+  --edc-white: #fff; --edc-fog: #f4f5f6;
+  width: 100%; background: var(--edc-white); color: var(--edc-ink);
+  font-family: inherit; font-size: 16px; line-height: 1.55;
+  -webkit-font-smoothing: antialiased; isolation: isolate; overflow: clip;
+}
+#edc-gnathology-hero :where(h1,h2,h3,p,figure) { margin: 0; padding: 0; font-family: inherit; }
+#edc-gnathology-hero a { font-family: inherit; }
+#edc-gnathology-hero .edgh-shell { width: min(1240px, calc(100% - 96px)); margin-inline: auto; }
+#edc-gnathology-hero .edgh-strap { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--edc-rule); }
+#edc-gnathology-hero .edgh-brand { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; line-height: 1.3; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+#edc-gnathology-hero .edgh-brand-mark { color: var(--edc-gold); font-weight: 400; font-size: 27px; line-height: 1; }
+#edc-gnathology-hero .edgh-strap-end { color: #82878b; font-size: 12px; letter-spacing: .03em; }
+#edc-gnathology-hero .edgh-grid { display: grid; grid-template-columns: minmax(0, 1.11fr) minmax(0, .89fr); column-gap: clamp(35px, 5vw, 84px); align-items: stretch; padding-block: 46px 70px; }
+#edc-gnathology-hero .edgh-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 0; padding: 25px 0 17px; }
+#edc-gnathology-hero .edgh-eyebrow { display: flex; gap: 13px; align-items: center; font-size: 12px; font-weight: 700; color: var(--edc-gold-dark); letter-spacing: .125em; text-transform: uppercase; margin-bottom: 27px; }
+#edc-gnathology-hero .edgh-eyebrow::before { content: ''; width: 31px; height: 2px; flex: 0 0 31px; background: var(--edc-gold); }
+#edc-gnathology-hero .edgh-headline { font-size: clamp(42px, 4.55vw, 70px); line-height: 1.09; font-weight: 580; letter-spacing: -.053em; max-width: 730px; text-wrap: balance; }
+#edc-gnathology-hero .edgh-headline span { color: var(--edc-gold-dark); }
+#edc-gnathology-hero .edgh-lead { color: var(--edc-body); font-size: clamp(16px, 1.35vw, 19px); line-height: 1.67; max-width: 545px; margin-top: 29px; }
+#edc-gnathology-hero .edgh-cta-row { display: flex; gap: 24px; align-items: center; margin-top: 35px; flex-wrap: wrap; }
+#edc-gnathology-hero .edgh-cta { min-height: 64px; display: inline-flex; align-items: center; justify-content: space-between; gap: 36px; padding: 13px 14px 13px 25px; background: var(--edc-gold-dark); color: #fff; border-radius: 7px; text-decoration: none; font-size: 15px; font-weight: 650; line-height: 1.25; transition: background .2s ease, transform .2s ease; }
+#edc-gnathology-hero .edgh-cta svg { width: 33px; height: 33px; background: #fff; border-radius: 50%; padding: 8px; stroke: var(--edc-gold-dark); flex: 0 0 33px; }
+#edc-gnathology-hero .edgh-cta:hover { background: #77540f; transform: translateY(-2px); }
+#edc-gnathology-hero .edgh-cta:focus-visible { outline: 3px solid var(--edc-gold); outline-offset: 4px; }
+#edc-gnathology-hero .edgh-cta-note { color: var(--edc-muted); font-size: 13px; max-width: 185px; line-height: 1.45; }
+#edc-gnathology-hero .edgh-doctor { margin-top: 48px; border-top: 1px solid var(--edc-rule); width: min(100%, 545px); padding-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: end; }
+#edc-gnathology-hero .edgh-doctor-role { display: block; color: var(--edc-muted); font-size: 11px; text-transform: uppercase; letter-spacing: .135em; font-weight: 700; margin-bottom: 6px; }
+#edc-gnathology-hero .edgh-doctor-name { display: block; color: var(--edc-ink); font-size: clamp(17px, 1.55vw, 23px); line-height: 1.3; letter-spacing: -.017em; font-weight: 600; }
+#edc-gnathology-hero .edgh-doctor-place { font-size: 13px; color: var(--edc-muted); white-space: nowrap; text-align: right; padding-bottom: 3px; }
+#edc-gnathology-hero .edgh-visual { position: relative; min-width: 0; }
+#edc-gnathology-hero .edgh-portrait-box { position: relative; height: 100%; min-height: 610px; background: #f3f4f4; border: 1px solid #eceeef; border-radius: 12px; overflow: hidden; }
+#edc-gnathology-hero .edgh-portrait-box::before { content: ''; position: absolute; width: 104%; height: 86%; border: 1px solid rgba(148,108,33,.22); border-radius: 50%; top: 9%; left: 14%; transform: rotate(-18deg); }
+#edc-gnathology-hero .edgh-portrait-box::after { content: ''; position: absolute; width: 120%; height: 100%; border: 1px solid rgba(148,108,33,.13); border-radius: 50%; top: -7%; left: 8%; transform: rotate(-18deg); }
+#edc-gnathology-hero .edgh-photo-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 45px; text-align: center; z-index: 1; }
+#edc-gnathology-hero .edgh-photo-monogram { font-size: clamp(110px, 13vw, 210px); color: rgba(148,108,33,.20); font-weight: 500; line-height: .95; letter-spacing: -.09em; padding-right: .13em; }
+#edc-gnathology-hero .edgh-photo-message { margin-top: 24px; max-width: 250px; font-size: 13px; color: #7d817f; line-height: 1.5; letter-spacing: .015em; }
+#edc-gnathology-hero .edgh-portrait-box img.edgh-portrait { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 20%; position: absolute; inset: 0; z-index: 3; }
+#edc-gnathology-hero .edgh-photo-index { position: absolute; top: 25px; left: 28px; z-index: 4; color: var(--edc-gold-dark); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+#edc-gnathology-hero .edgh-photo-bottom { position: absolute; z-index: 4; left: 26px; right: 26px; bottom: 25px; display: flex; justify-content: space-between; gap: 20px; font-size: 11px; font-weight: 700; letter-spacing: .13em; color: var(--edc-gold-dark); text-transform: uppercase; }
+#edc-gnathology-hero .edgh-photo-bottom span:last-child { color: #7c8082; }
+#edc-gnathology-hero .edgh-bottom-line { border-top: 1px solid var(--edc-rule); padding: 17px 0 30px; display: flex; justify-content: space-between; align-items: center; gap: 14px; font-size: 12px; color: #83878b; }
+#edc-gnathology-hero .edgh-bottom-line b { color: var(--edc-gold-dark); font-size: 12px; letter-spacing: .08em; font-weight: 600; }
+@media (max-width: 1180px) {
+  #edc-gnathology-hero .edgh-grid { gap: 38px; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); }
+  #edc-gnathology-hero .edgh-headline { font-size: clamp(39px, 4.6vw, 60px); }
+  #edc-gnathology-hero .edgh-portrait-box { min-height: 580px; }
+}
+@media (max-width: 900px) {
+  #edc-gnathology-hero .edgh-shell { width: calc(100% - 56px); }
+  #edc-gnathology-hero .edgh-grid { grid-template-columns: 1fr; padding-top: 28px; gap: 34px; padding-bottom: 42px; }
+  #edc-gnathology-hero .edgh-copy { padding: 12px 0 0; }
+  #edc-gnathology-hero .edgh-headline { font-size: clamp(43px, 7.1vw, 66px); max-width: 740px; }
+  #edc-gnathology-hero .edgh-lead { max-width: 670px; }
+  #edc-gnathology-hero .edgh-doctor { margin-top: 33px; max-width: 670px; }
+  #edc-gnathology-hero .edgh-portrait-box { height: 490px; min-height: 0; }
+  #edc-gnathology-hero .edgh-photo-monogram { font-size: 168px; }
+}
+@media (max-width: 600px) {
+  #edc-gnathology-hero .edgh-shell { width: calc(100% - 36px); }
+  #edc-gnathology-hero .edgh-strap { min-height: 59px; }
+  #edc-gnathology-hero .edgh-brand { font-size: 10px; letter-spacing: .10em; gap: 8px; }
+  #edc-gnathology-hero .edgh-brand-mark { font-size: 22px; }
+  #edc-gnathology-hero .edgh-strap-end { font-size: 10px; text-align: right; }
+  #edc-gnathology-hero .edgh-grid { padding-top: 19px; padding-bottom: 30px; gap: 30px; }
+  #edc-gnathology-hero .edgh-eyebrow { font-size: 10px; letter-spacing: .11em; margin-bottom: 17px; }
+  #edc-gnathology-hero .edgh-eyebrow::before { width: 22px; flex-basis: 22px; }
+  #edc-gnathology-hero .edgh-headline { font-size: clamp(36px, 9.4vw, 52px); line-height: 1.12; letter-spacing: -.046em; }
+  #edc-gnathology-hero .edgh-lead { font-size: 15px; line-height: 1.65; margin-top: 19px; }
+  #edc-gnathology-hero .edgh-cta-row { margin-top: 25px; gap: 13px; width: 100%; }
+  #edc-gnathology-hero .edgh-cta { width: 100%; font-size: 14px; min-height: 60px; }
+  #edc-gnathology-hero .edgh-cta-note { max-width: unset; font-size: 12px; }
+  #edc-gnathology-hero .edgh-doctor { margin-top: 27px; grid-template-columns: 1fr; gap: 7px; }
+  #edc-gnathology-hero .edgh-doctor-name { font-size: 19px; }
+  #edc-gnathology-hero .edgh-doctor-place { text-align: left; font-size: 12px; }
+  #edc-gnathology-hero .edgh-portrait-box { height: 430px; border-radius: 10px; }
+  #edc-gnathology-hero .edgh-photo-monogram { font-size: 148px; }
+  #edc-gnathology-hero .edgh-photo-index { left: 18px; top: 18px; font-size: 10px; }
+  #edc-gnathology-hero .edgh-photo-bottom { left: 18px; right: 18px; bottom: 18px; font-size: 10px; }
+  #edc-gnathology-hero .edgh-bottom-line { padding: 13px 0 18px; font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #edc-gnathology-hero .edgh-cta { transition: none; }
+}
+</style>
+<section id="edc-gnathology-hero" aria-labelledby="edgh-title">
+  <div class="edgh-shell">
+    <div class="edgh-strap" aria-label="Клиника и направление">
+      <span class="edgh-brand"><span class="edgh-brand-mark" aria-hidden="true">✳</span> Elite Dental Clinic</span>
+      <span class="edgh-strap-end">Усть-Каменогорск · Казахстан</span>
+    </div>
+    <div class="edgh-grid">
+      <div class="edgh-copy">
+        <p class="edgh-eyebrow">Врач-гнатолог · Усть-Каменогорск</p>
+        <h1 class="edgh-headline" id="edgh-title">Гнатология.<br><span>Здоровье и функция</span> зубочелюстной системы.</h1>
+        <p class="edgh-lead">Диагностика и комплексный подход к проблемам височно-нижнечелюстного сустава, жевательных мышц и прикуса. Причины дискомфорта определяем индивидуально.</p>
+        <div class="edgh-cta-row">
+          <a class="edgh-cta" href="https://wa.me/77077530004?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BA%20%D0%B3%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D1%83%20%D0%90%D1%82%D0%B0%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D1%83%20%D0%90%D0%B7%D0%B0%D0%BC%D0%B0%D1%82%D1%83%20%D0%91%D0%BE%D0%BB%D0%B0%D1%82%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2%D0%B8%D1%87%D1%83." target="_blank" rel="noopener noreferrer" aria-label="Записаться на консультацию через WhatsApp клиники">
+            Записаться на консультацию
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <span class="edgh-cta-note">Запись через WhatsApp клиники</span>
+        </div>
+        <div class="edgh-doctor">
+          <div><span class="edgh-doctor-role">Ваш специалист</span><strong class="edgh-doctor-name">Атаманов Азамат Болатбекович</strong></div>
+          <span class="edgh-doctor-place">Врач-гнатолог · Усть-Каменогорск</span>
+        </div>
+      </div>
+      <div class="edgh-visual">
+        <div class="edgh-portrait-box">
+          <span class="edgh-photo-index">01 / Специалист</span>
+          <!-- PHOTO REPLACEMENT: Delete the edgh-photo-placeholder div below, then place
+               <img class="edgh-portrait" src="YOUR_TILDA_IMAGE_URL" alt="Атаманов Азамат Болатбекович, врач-гнатолог">
+               directly inside .edgh-portrait-box. Do NOT wrap the image in button/figure/a. -->
+          <div class="edgh-photo-placeholder" aria-label="Место для профессионального портрета врача">
+            <span class="edgh-photo-monogram" aria-hidden="true">АБ</span>
+            <p class="edgh-photo-message">Здесь будет профессиональный портрет врача после получения фотографии</p>
+          </div>
+          <div class="edgh-photo-bottom"><span>Elite Dental Clinic</span><span>Гнатология</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="edgh-bottom-line"><span>Диагностика ВНЧС, жевательных мышц и прикуса</span><b>ELITE / 01</b></div>
+  </div>
+</section>
