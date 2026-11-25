@@ -1,0 +1,87 @@
+<style>
+#edc-implant-process,#edc-implant-process *{box-sizing:border-box}
+#edc-implant-process{--edip-ink:#14171b;--edip-text:#484f54;--edip-gold:#9f7b35;--edip-line:#d7c5a4;--edip-border:#e8e8e8;background:#fff;color:var(--edip-ink);font-family:inherit;isolation:isolate;overflow:hidden}
+#edc-implant-process :where(h2,h3,p,ol,li){margin:0;padding:0;font-family:inherit}
+#edc-implant-process .edip-container{width:calc(100% - 160px);margin:0 auto;padding:84px 0 90px}
+#edc-implant-process .edip-kicker{display:flex;align-items:center;gap:12px;color:var(--edip-gold);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+#edc-implant-process .edip-kicker:before{content:"";width:28px;height:2px;background:#c49a44}
+#edc-implant-process .edip-heading{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:43px}
+#edc-implant-process h2{font-size:clamp(39px,4.1vw,62px);line-height:1.1;letter-spacing:-.045em;font-weight:620;max-width:920px}
+#edc-implant-process h2 em{font-style:normal;color:var(--edip-gold)}
+#edc-implant-process .edip-lead{max-width:370px;color:var(--edip-text);font-size:18px;line-height:1.55}
+#edc-implant-process .edip-steps{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;position:relative}
+#edc-implant-process .edip-steps:before{content:"";position:absolute;z-index:0;top:72px;left:10%;right:10%;height:1px;background:var(--edip-line)}
+#edc-implant-process .edip-step{position:relative;z-index:1;min-width:0;text-align:center}
+#edc-implant-process .edip-visual{position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;width:146px;height:146px;padding:7px;border-radius:50%;border:1px solid var(--edip-line);background:#fff}
+#edc-implant-process .edip-illustration{width:100%;height:100%;display:grid;place-items:center;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 25%,#fff 0%,#f7f8f7 54%,#f0efec 100%)}
+#edc-implant-process .edip-illustration svg{display:block;width:114px;height:114px}
+#edc-implant-process .edip-number{position:absolute;right:-5px;bottom:-5px;min-width:33px;height:33px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--edip-line);font-size:11px;font-weight:750;line-height:1;color:var(--edip-gold)}
+#edc-implant-process .edip-step h3{font-size:21px;line-height:1.22;letter-spacing:-.025em;font-weight:650;margin:0 0 11px}
+#edc-implant-process .edip-step p{font-size:18px;line-height:1.54;color:var(--edip-text);max-width:255px;margin:0 auto}
+#edc-implant-process .edip-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:37px;padding-top:24px;border-top:1px solid var(--edip-border)}
+#edc-implant-process .edip-note{font-size:18px;line-height:1.55;color:var(--edip-text);max-width:670px}
+#edc-implant-process .edip-cta{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;min-height:55px;padding:12px 25px;border-radius:999px;background:#1b1e20;color:#fff!important;text-decoration:none;font-weight:650;font-size:16px;transition:background .2s ease}
+#edc-implant-process .edip-cta:hover{background:#805f27}
+#edc-implant-process .edip-cta:focus-visible{outline:3px solid #c49a44;outline-offset:3px}
+@media(max-width:1280px){
+#edc-implant-process .edip-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 18px}
+#edc-implant-process .edip-steps:before{display:none}
+#edc-implant-process .edip-visual{margin-bottom:19px}
+#edc-implant-process .edip-heading{align-items:start;flex-direction:column;gap:15px}
+#edc-implant-process .edip-lead{max-width:680px}
+}
+@media(max-width:900px){
+#edc-implant-process .edip-container{width:calc(100% - 56px);padding:66px 0 70px}
+#edc-implant-process .edip-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 18px}
+#edc-implant-process .edip-bottom{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:600px){
+#edc-implant-process .edip-container{width:calc(100% - 36px);padding:58px 0 60px}
+#edc-implant-process .edip-heading{margin-bottom:29px}
+#edc-implant-process h2{font-size:clamp(36px,9vw,47px)}
+#edc-implant-process .edip-steps{display:grid;grid-template-columns:1fr;gap:0}
+#edc-implant-process .edip-step{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding:0 0 27px;text-align:left;min-height:139px}
+#edc-implant-process .edip-step:not(:last-child):before{content:"";position:absolute;z-index:0;top:100px;left:49px;height:calc(100% - 100px);width:1px;background:var(--edip-line)}
+#edc-implant-process .edip-visual{width:100px;height:100px;margin:0;padding:5px}
+#edc-implant-process .edip-illustration svg{width:82px;height:82px}
+#edc-implant-process .edip-number{width:24px;height:24px;min-width:24px;font-size:9px;right:-2px;bottom:-2px}
+#edc-implant-process .edip-step-text{padding-top:5px}
+#edc-implant-process .edip-step h3{font-size:19px;margin-bottom:6px}
+#edc-implant-process .edip-step p{font-size:18px;line-height:1.43;max-width:none}
+#edc-implant-process .edip-note{font-size:18px}
+#edc-implant-process .edip-cta{width:100%}
+}
+@media(prefers-reduced-motion:reduce){#edc-implant-process .edip-cta{transition:none}}
+</style>
+<section id="edc-implant-process" aria-labelledby="edip-heading">
+<div class="edip-container">
+<div class="edip-kicker">Имплантация · Этапы лечения</div>
+<div class="edip-heading">
+<h2 id="edip-heading">Имплант за 1 день: <em>как это проходит</em></h2>
+<p class="edip-lead">Первый этап лечения иногда можно провести за одно посещение. Полное восстановление обычно занимает больше времени.</p>
+</div>
+<ol class="edip-steps">
+<li class="edip-step">
+  <div class="edip-visual"><div class="edip-illustration"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="22" y="25" width="76" height="65" rx="9" fill="#fff" stroke="#d2b77b" stroke-width="2"/><path d="M34 37h52v39H34z" fill="#23323c" stroke="#23323c"/><path d="M40 47c6-9 11-5 15-1 4-4 9-8 15 0 6-7 12-4 16 1M40 56c4 6 7 14 10 14 3 0 5-10 7-11 3 1 4 10 7 11 3 0 7-12 11-13" fill="none" stroke="#d9e5e8" stroke-width="2.2" stroke-linecap="round"/><path d="M45 83h30M60 91v8M47 99h26" fill="none" stroke="#9f7b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="85" cy="37" r="8" fill="#e8cea0" stroke="#ba944c" stroke-width="1.5"/></svg></div><span class="edip-number">01</span></div>
+  <div class="edip-step-text"><h3>Консультация и диагностика</h3><p>Осмотр и КТ помогают оценить состояние костной ткани и определить показания.</p></div>
+</li>
+<li class="edip-step">
+  <div class="edip-visual"><div class="edip-illustration"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="32" y="19" width="64" height="83" rx="9" fill="#fff" stroke="#d2b77b" stroke-width="2"/><path d="M47 17h34v13H47z" fill="#eadbbd" stroke="#b9944f" stroke-width="2"/><path d="M47 46l5 5 8-11M67 46h16M47 65l5 5 8-11M67 65h16M48 86h35" fill="none" stroke="#9f7b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 82l16-22 9 7-16 22-14 5z" fill="#f4e9d5" stroke="#b9944f" stroke-width="2"/><path d="M23 82l9 7" fill="none" stroke="#9f7b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="edip-number">02</span></div>
+  <div class="edip-step-text"><h3>План лечения</h3><p>Врач объясняет этапы, возможные варианты, сроки и стоимость лечения.</p></div>
+</li>
+<li class="edip-step">
+  <div class="edip-visual"><div class="edip-illustration"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M19 43Q60 26 101 43L98 61Q60 52 22 61Z" fill="#d99192" opacity=".45"/><path d="M35 44q-2-16 11-15c9 0 10 12 14 12s5-12 14-12c13-1 13 14 11 15l-8 14-9-7-8 12-11-11-7 8z" fill="#fff" stroke="#c1bdb9" stroke-width="2"/><path d="M53 62h14l-1 8H54z" fill="#b0b8be" stroke="#64747e" stroke-width="1.5"/><path d="M55 70l-2 5 15 4-15 5 15 4-14 5 7 4 7-4" fill="none" stroke="#6d7a82" stroke-width="3" stroke-linejoin="round"/><path d="M61 96v6" stroke="#6d7a82" stroke-width="2"/><path d="M17 61q43 12 86 0" fill="none" stroke="#c5868b" stroke-width="3"/></svg></div><span class="edip-number">03</span></div>
+  <div class="edip-step-text"><h3>Установка импланта</h3><p>Хирургический этап проводят под местной анестезией, если нет противопоказаний.</p></div>
+</li>
+<li class="edip-step">
+  <div class="edip-visual"><div class="edip-illustration"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M24 74Q60 91 96 74L96 93Q60 108 24 93Z" fill="#ead5cd" stroke="#c79e9a" stroke-width="2"/><path d="M39 75c-6-12-7-36 5-38 12-3 13 8 16 8s4-11 16-8c12 2 11 26 5 38-5 7-11 6-15 4l-6-3-6 3c-4 2-10 3-15-4z" fill="#fff" stroke="#c4c1bc" stroke-width="2"/><path d="M41 87h38M60 82v15" fill="none" stroke="#9f7b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="92" cy="28" r="15" fill="#e9d3a5" stroke="#ba944c" stroke-width="2"/><path d="M86 28l4 4 8-9" fill="none" stroke="#9f7b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="edip-number">04</span></div>
+  <div class="edip-step-text"><h3>Временная коронка</h3><p>По показаниям временную конструкцию могут установить в день операции.</p></div>
+</li>
+<li class="edip-step">
+  <div class="edip-visual"><div class="edip-illustration"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M22 85Q60 100 98 85L98 99Q60 113 22 99Z" fill="#e8c9c5" stroke="#c79995" stroke-width="2"/><path d="M32 74c-8-18-6-43 9-45 11-1 13 8 19 8s8-9 19-8c15 2 17 27 9 45-5 12-12 11-20 6l-8-5-8 5c-8 5-15 6-20-6z" fill="#fff" stroke="#c4c1bc" stroke-width="2"/><path d="M60 75v9m-10 4h20" stroke="#b9944f" stroke-width="2" stroke-linecap="round"/><path d="M88 23l2-7m4 14 7-2M29 26l-5-6" fill="none" stroke="#9f7b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="edip-number">05</span></div>
+  <div class="edip-step-text"><h3>Постоянная коронка</h3><p>После приживления импланта устанавливают постоянную коронку и проводят контроль.</p></div>
+</li></ol>
+<div class="edip-bottom">
+<p class="edip-note">Сроки приживления и возможность установки временной коронки зависят от клинической ситуации. Точный план врач определяет после диагностики.</p>
+<a class="edip-cta" href="https://wa.me/77077530004?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%B8%D0%BC%D0%BF%D0%BB%D0%B0%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8" target="_blank" rel="noopener noreferrer">Записаться на консультацию</a>
+</div></div></section>
