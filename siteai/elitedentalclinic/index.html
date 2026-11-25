@@ -1,5 +1,103 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Elite Dental Clinic — Гнатология · Первый экран</title><style>html{scroll-behavior:smooth}body{margin:0;background:#fff;font-family:"TildaSans",Arial,Helvetica,sans-serif}</style></head><body><!-- ELITE DENTAL CLINIC / GNATHOLOGY HERO / Tilda T123. Standalone, scoped HTML and CSS. -->
 <style>
+#edc-site-header,#edc-site-header *{box-sizing:border-box}
+#edc-site-header{--edh-gold:#ae8638;--edh-ink:#191d20;--edh-muted:#5e6467;position:sticky;top:0;z-index:100000;background:rgba(255,255,255,.98);border-bottom:1px solid #e9eaeb;box-shadow:0 9px 34px rgba(13,17,19,.035);font-family:inherit;color:var(--edh-ink);-webkit-font-smoothing:antialiased}
+#edc-site-header .edh-wrap{width:calc(100% - 160px);min-height:102px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+#edc-site-header a{font-family:inherit;text-decoration:none}
+#edc-site-header .edh-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;min-width:0;color:var(--edh-ink)}
+#edc-site-header .edh-logo-img{display:block;width:82px;height:82px;object-fit:contain;mix-blend-mode:multiply;flex-shrink:0}
+#edc-site-header .edh-logo-type{display:flex;flex-direction:column;gap:1px;line-height:1.25}
+#edc-site-header .edh-logo-type strong{font-size:18px;letter-spacing:-.045em;font-weight:740;white-space:nowrap}
+#edc-site-header .edh-logo-type small{font-size:10px;line-height:1.25;color:#7e8284;letter-spacing:.035em;white-space:nowrap}
+#edc-site-header .edh-nav{display:flex;align-items:center;gap:clamp(12px,1.65vw,30px);justify-content:center;min-width:0}
+#edc-site-header .edh-nav a{font-size:14px;font-weight:560;color:#4d5559;line-height:1.35;white-space:nowrap;padding:10px 0;transition:color .2s ease}
+#edc-site-header .edh-nav a:hover{color:#9c722b}
+#edc-site-header .edh-actions{display:flex;align-items:center;justify-content:flex-end;gap:19px;flex-shrink:0}
+#edc-site-header .edh-phone{display:flex;flex-direction:column;gap:1px;font-size:15px;font-weight:700;color:#1a1d20;white-space:nowrap;line-height:1.3}
+#edc-site-header .edh-phone small{font-weight:500;color:#7b8286;font-size:10px;line-height:1.25;letter-spacing:.025em}
+#edc-site-header .edh-cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;gap:11px;padding:12px 19px;border-radius:999px;background:#af883d;color:#fff;font-size:14px;font-weight:730;white-space:nowrap;line-height:1.3;transition:background .2s ease}
+#edc-site-header .edh-cta:hover{background:#8e6b2e}
+#edc-site-header .edh-cta svg{width:15px;height:15px;flex:none}
+#edc-site-header .edh-mobile{display:none}
+#edc-site-header :where(a,summary):focus-visible{outline:3px solid #cda04e;outline-offset:3px}
+#edcn-why-title,#edcn-services-title,#edgn-implant-title,#edgn-treat-title,#edc-contacts,#edch-h1{scroll-margin-top:120px}
+@media(max-width:1500px){
+#edc-site-header .edh-logo-type small{display:none}
+#edc-site-header .edh-logo-img{width:69px;height:69px}
+#edc-site-header .edh-wrap{min-height:86px;gap:16px}
+#edc-site-header .edh-actions{gap:12px}
+#edc-site-header .edh-nav{gap:14px}
+}
+@media(max-width:1250px){
+#edc-site-header .edh-logo-type{display:none}
+#edc-site-header .edh-phone small{display:none}
+#edc-site-header .edh-nav{gap:17px}
+#edc-site-header .edh-cta{padding:12px 15px}
+}
+@media(max-width:1070px){
+#edc-site-header .edh-wrap{width:calc(100% - 56px);min-height:82px}
+#edc-site-header .edh-logo-img{width:70px;height:70px}
+#edc-site-header .edh-logo-type{display:flex}
+#edc-site-header .edh-nav,#edc-site-header .edh-phone{display:none}
+#edc-site-header .edh-actions{margin-left:auto}
+#edc-site-header .edh-mobile{display:block;position:relative;flex-shrink:0}
+#edc-site-header .edh-mobile summary{list-style:none;display:flex;align-items:center;gap:9px;justify-content:center;min-height:46px;border:1px solid #d9dcde;border-radius:100px;padding:9px 14px;color:#272e32;background:#fff;cursor:pointer;font-weight:650;font-size:14px;user-select:none}
+#edc-site-header .edh-mobile summary::-webkit-details-marker{display:none}
+#edc-site-header .edh-menu-icon{width:17px;height:16px;display:flex;justify-content:space-around;flex-direction:column}
+#edc-site-header .edh-menu-icon i{display:block;background:#262b2e;width:100%;height:1.6px;border-radius:3px}
+#edc-site-header .edh-mobile[open] .edh-menu-icon i:first-child{transform:translateY(5px) rotate(45deg)}
+#edc-site-header .edh-mobile[open] .edh-menu-icon i:nth-child(2){opacity:0}
+#edc-site-header .edh-mobile[open] .edh-menu-icon i:last-child{transform:translateY(-5px) rotate(-45deg)}
+#edc-site-header .edh-menu-list{position:absolute;right:0;top:calc(100% + 13px);width:min(340px,calc(100vw - 48px));padding:8px;border-radius:15px;background:#fff;border:1px solid #e4e6e7;box-shadow:0 19px 50px rgba(21,27,32,.13)}
+#edc-site-header .edh-menu-list a{display:flex;justify-content:space-between;align-items:center;padding:13px 13px;border-radius:8px;border-bottom:1px solid #eff0f0;font-size:16px;font-weight:600;color:#272c30;line-height:1.4}
+#edc-site-header .edh-menu-list a:hover{background:#f6f6f4;color:#966f2a}
+#edc-site-header .edh-menu-list a:last-child{border-bottom:0}
+#edc-site-header .edh-menu-list a span{color:#b18b40}
+}
+@media(max-width:600px){
+#edc-site-header .edh-wrap{width:calc(100% - 36px);min-height:73px;gap:9px}
+#edc-site-header .edh-logo-img{width:60px;height:60px}
+#edc-site-header .edh-logo-type strong{font-size:14px}
+#edc-site-header .edh-logo-type small{display:none}
+#edc-site-header .edh-cta{min-height:40px;font-size:12px;padding:9px 10px}
+#edc-site-header .edh-cta svg{display:none}
+#edc-site-header .edh-actions{gap:8px}
+#edc-site-header .edh-mobile summary{min-height:40px;padding:9px 10px}
+#edc-site-header .edh-mobile summary span.edh-menu-word{display:none}
+#edc-site-header .edh-menu-list{right:0;top:calc(100% + 11px)}
+}
+@media(max-width:390px){
+#edc-site-header .edh-logo-type{display:none}
+#edc-site-header .edh-wrap{gap:6px}
+}
+@media(prefers-reduced-motion:reduce){#edc-site-header .edh-nav a,#edc-site-header .edh-cta{transition:none}}
+</style>
+<header id="edc-site-header" aria-label="Шапка Elite Dental Clinic">
+<div class="edh-wrap">
+<a class="edh-logo" href="#edch-h1" aria-label="Elite Dental Clinic — к началу страницы">
+<img class="edh-logo-img" src="https://elitedentalclinic.kz/images/tild3664-3230-4430-b030-653463323232__logo.jpg" alt="Официальный логотип Elite Dental Clinic" width="82" height="82" decoding="async" fetchpriority="high">
+<span class="edh-logo-type"><strong>Elite Dental Clinic</strong><small>Усть-Каменогорск · ул. Жастар, 15/2</small></span>
+</a>
+<nav class="edh-nav" aria-label="Основная навигация"><a href="#edcn-why-title">Преимущества</a>
+<a href="#edcn-services-title">Услуги</a>
+<a href="#edgn-implant-title">Имплантация</a>
+<a href="#edgn-treat-title">Гнатология</a>
+<a href="#edc-contacts">Контакты</a></nav>
+<div class="edh-actions">
+<a class="edh-phone" href="tel:+77077530004"><small>Позвонить в клинику</small>+7 707 753 0004</a>
+<a class="edh-cta" href="https://wa.me/77077530004?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BA%20%D0%B3%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D1%83%20%D0%90%D1%82%D0%B0%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D1%83%20%D0%90%D0%B7%D0%B0%D0%BC%D0%B0%D1%82%D1%83%20%D0%91%D0%BE%D0%BB%D0%B0%D1%82%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2%D0%B8%D1%87%D1%83." target="_blank" rel="noopener noreferrer">Записаться <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<details class="edh-mobile"><summary aria-label="Открыть меню сайта"><span class="edh-menu-word">Меню</span><span class="edh-menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></summary>
+<nav class="edh-menu-list" aria-label="Мобильная навигация"><a href="#edch-h1">На главную<span aria-hidden="true">↗</span></a>
+<a href="#edcn-why-title">Преимущества<span aria-hidden="true">↗</span></a>
+<a href="#edcn-services-title">Услуги<span aria-hidden="true">↗</span></a>
+<a href="#edgn-implant-title">Имплантация<span aria-hidden="true">↗</span></a>
+<a href="#edgn-treat-title">Гнатология<span aria-hidden="true">↗</span></a>
+<a href="#edc-contacts">Контакты<span aria-hidden="true">↗</span></a></nav>
+</details>
+</div>
+</div>
+</header>
+<style>
 #edc-gnathology-hero,#edc-gnathology-hero *{box-sizing:border-box}
 #edc-gnathology-hero{--edch-gold:#c49a44;--edch-ink:#171a1d;--edch-grey:#52585b;background:#fff;color:var(--edch-ink);font-family:inherit;font-size:18px;line-height:1.55;isolation:isolate;-webkit-font-smoothing:antialiased}
 #edc-gnathology-hero :where(h1,p){padding:0;margin:0;font-family:inherit}
@@ -87,10 +185,7 @@
 </style>
 <section id="edc-gnathology-hero" aria-labelledby="edch-h1">
  <div class="edch-container">
-  <header class="edch-nav">
-   <div class="edch-brand"><span class="edch-brand-mark" aria-hidden="true">✳</span><span>Elite Dental Clinic</span></div>
-   <nav class="edch-nav-links" aria-label="Навигация по разделам"><a href="#edcn-services-title">Услуги</a><a href="#edgn-treat-title">Гнатология</a><a href="#edc-contacts">Контакты</a><a class="edch-nav-cta" href="https://wa.me/77077530004?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BA%20%D0%B3%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D1%83%20%D0%90%D1%82%D0%B0%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D1%83%20%D0%90%D0%B7%D0%B0%D0%BC%D0%B0%D1%82%D1%83%20%D0%91%D0%BE%D0%BB%D0%B0%D1%82%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2%D0%B8%D1%87%D1%83." target="_blank" rel="noopener noreferrer">Записаться</a></nav>
-  </header>
+  
   <div class="edch-frame">
    <div class="edch-copy">
     <div class="edch-kicker">Гнатология · Усть-Каменогорск</div>
