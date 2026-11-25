@@ -108,6 +108,18 @@
 @media(max-width:1360px){#edc-site-header .edh-descriptor{display:none}}
 @media(max-width:1070px){#edc-site-header .edh-logo-img{width:121px;height:61px}}
 @media(max-width:600px){#edc-site-header .edh-logo-img{width:105px;height:55px}}
+
+/* On small screens the location descriptor moves below the identity mark */
+@media(max-width:1070px){
+ #edc-site-header .edh-logo{flex-direction:column;align-items:flex-start;gap:1px}
+ #edc-site-header .edh-descriptor{display:block;max-width:160px;border:0;padding:0;font-size:10px;line-height:1.15;font-weight:600;color:#585e62;letter-spacing:0}
+ #edc-site-header .edh-logo-img{width:110px;height:55px}
+}
+@media(max-width:600px){
+ #edc-site-header .edh-logo-img{width:90px;height:46px}
+ #edc-site-header .edh-descriptor{font-size:9px;max-width:130px}
+ #edc-site-header .edh-logo{gap:1px}
+}
 </style>
 <header id="edc-site-header" aria-label="Шапка Elite Dental Clinic">
 <div class="edh-wrap">
