@@ -1,0 +1,88 @@
+<style>
+#edc-contacts,#edc-contacts *{box-sizing:border-box}
+#edc-contacts{--edcc-gold:#946c21;--edcc-gold-light:#c49a44;--edcc-ink:#14171b;--edcc-muted:#50565b;--edcc-rule:#e5e7e8;--edcc-fog:#f7f8f8;background:#fff;color:var(--edcc-ink);font-family:inherit;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;isolation:isolate}
+#edc-contacts :where(h2,h3,p,dl,dt,dd){margin:0;padding:0;font-family:inherit}
+#edc-contacts a{font-family:inherit}
+#edc-contacts .edcc-wrap{width:calc(100% - 160px);margin:0 auto;padding:100px 0 91px;border-top:1px solid var(--edcc-rule)}
+#edc-contacts .edcc-kicker{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.15em;font-weight:700;text-transform:uppercase;color:var(--edcc-gold);margin-bottom:17px}
+#edc-contacts .edcc-kicker:before{content:"";height:2px;width:31px;background:var(--edcc-gold-light);flex:none}
+#edc-contacts .edcc-header{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:35px}
+#edc-contacts .edcc-header h2{font-size:clamp(42px,4.4vw,70px);letter-spacing:-.052em;font-weight:620;line-height:1.06}
+#edc-contacts .edcc-header h2 span{color:var(--edcc-gold)}
+#edc-contacts .edcc-header p{max-width:380px;color:var(--edcc-muted);font-size:18px;line-height:1.55}
+#edc-contacts .edcc-grid{display:grid;grid-template-columns:minmax(350px,.82fr) minmax(0,1.18fr);gap:18px;align-items:stretch}
+#edc-contacts .edcc-info{background:var(--edcc-fog);border:1px solid var(--edcc-rule);border-radius:13px;padding:clamp(27px,3.2vw,50px);display:flex;flex-direction:column;min-height:490px}
+#edc-contacts .edcc-info h3{font-size:clamp(26px,2.4vw,37px);letter-spacing:-.035em;font-weight:620;line-height:1.18;margin-bottom:28px}
+#edc-contacts .edcc-details{display:grid;gap:0}
+#edc-contacts .edcc-item{border-top:1px solid #dedfe0;padding:18px 0 20px}
+#edc-contacts .edcc-item dt{font-size:12px;font-weight:700;letter-spacing:.13em;color:var(--edcc-gold);text-transform:uppercase;margin-bottom:7px}
+#edc-contacts .edcc-item dd{color:var(--edcc-ink);font-size:19px;line-height:1.5}
+#edc-contacts .edcc-item dd.edcc-phone{font-size:clamp(22px,2.2vw,31px);font-weight:620;letter-spacing:-.03em}
+#edc-contacts .edcc-item a:not(.edcc-action){text-decoration:none;color:inherit}
+#edc-contacts .edcc-item a:hover{color:var(--edcc-gold)}
+#edc-contacts .edcc-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:22px}
+#edc-contacts .edcc-action{display:inline-flex;justify-content:center;align-items:center;min-height:54px;padding:12px 21px;border-radius:999px;font-size:16px;font-weight:650;line-height:1.35;text-align:center;text-decoration:none;transition:background .2s ease,color .2s ease}
+#edc-contacts .edcc-action--primary{background:var(--edcc-gold);color:#fff!important}
+#edc-contacts .edcc-action--primary:hover{background:#79571a}
+#edc-contacts .edcc-action--secondary{background:transparent;color:var(--edcc-ink)!important;border:1px solid #aeb3b5}
+#edc-contacts .edcc-action--secondary:hover{background:#fff}
+#edc-contacts a:focus-visible{outline:3px solid var(--edcc-gold-light);outline-offset:3px}
+#edc-contacts .edcc-map{position:relative;min-height:490px;overflow:hidden;border:1px solid var(--edcc-rule);border-radius:13px;background:#edf0f1}
+#edc-contacts .edcc-map iframe{display:block;position:absolute;inset:0;width:100%;height:100%;border:0}
+#edc-contacts .edcc-map-note{position:absolute;left:15px;bottom:15px;z-index:1;display:flex;gap:12px;align-items:center;max-width:calc(100% - 30px);padding:10px 13px;background:rgba(255,255,255,.95);border:1px solid #e2e2e2;box-shadow:0 4px 18px rgba(0,0,0,.08);border-radius:9px;font-size:15px;line-height:1.4;color:var(--edcc-ink);pointer-events:none}
+#edc-contacts .edcc-map-note:before{content:"";width:8px;height:8px;flex:none;border-radius:50%;background:var(--edcc-gold-light)}
+#edc-contacts .edcc-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:24px;color:var(--edcc-muted);font-size:14px}
+#edc-contacts .edcc-footer a{color:var(--edcc-gold);text-decoration:underline;text-underline-offset:3px;font-weight:650}
+@media(max-width:1100px){
+ #edc-contacts .edcc-grid{grid-template-columns:1fr}
+ #edc-contacts .edcc-info{min-height:0}
+ #edc-contacts .edcc-map{min-height:450px}
+ #edc-contacts .edcc-header{align-items:start;flex-direction:column;gap:12px}
+}
+@media(max-width:900px){#edc-contacts .edcc-wrap{width:calc(100% - 56px);padding:73px 0}}
+@media(max-width:600px){
+ #edc-contacts .edcc-wrap{width:calc(100% - 36px);padding:61px 0}
+ #edc-contacts .edcc-header{margin-bottom:26px}
+ #edc-contacts .edcc-header h2{font-size:clamp(39px,9vw,52px)}
+ #edc-contacts .edcc-header p{font-size:18px}
+ #edc-contacts .edcc-info{padding:24px 20px}
+ #edc-contacts .edcc-info h3{font-size:26px}
+ #edc-contacts .edcc-item dd{font-size:18px}
+ #edc-contacts .edcc-buttons{flex-direction:column}
+ #edc-contacts .edcc-action{width:100%}
+ #edc-contacts .edcc-map{min-height:360px}
+ #edc-contacts .edcc-footer{align-items:flex-start;flex-direction:column;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){#edc-contacts .edcc-action{transition:none}}
+</style>
+<section id="edc-contacts" aria-labelledby="edcc-title">
+ <div class="edcc-wrap">
+  <div class="edcc-kicker">Elite Dental Clinic / Усть-Каменогорск</div>
+  <div class="edcc-header">
+   <h2 id="edcc-title">Наши <span>контакты</span></h2>
+   <p>Адрес, график работы и карта — всё, что нужно, чтобы нас найти и записаться на консультацию.</p>
+  </div>
+  <div class="edcc-grid">
+   <div class="edcc-info">
+    <h3>Ждём вас в клинике</h3>
+    <dl class="edcc-details">
+     <div class="edcc-item"><dt>Адрес</dt><dd><a href="https://go.2gis.com/pNKMy" target="_blank" rel="noopener noreferrer">г. Усть-Каменогорск, ул. Жастар, 15/2</a></dd></div>
+     <div class="edcc-item"><dt>Телефон</dt><dd class="edcc-phone"><a href="tel:+77077530004">+7 707 753 0004</a></dd></div>
+     <div class="edcc-item"><dt>Режим работы</dt><dd>Ежедневно, 09:30–21:00<br>Без выходных</dd></div>
+    </dl>
+    <div class="edcc-buttons">
+     <a class="edcc-action edcc-action--primary" href="https://wa.me/77077530004" target="_blank" rel="noopener noreferrer">Записаться в WhatsApp</a>
+     <a class="edcc-action edcc-action--secondary" href="https://2gis.kz/ustkam/directions/points/%7C82.613211%2C49.90375%3B70000001057457569" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
+    </div>
+   </div>
+   <div class="edcc-map" aria-label="Расположение Elite Dental Clinic на карте 2ГИС">
+    <iframe title="Карта 2ГИС — Elite Dental Clinic, Усть-Каменогорск, улица Жастар 15/2" src="https://makemap.2gis.ru/widget?data=eJzVjk1OxDAMhe9ittGo-SFtcoBB7GaHBJpF1RqIlNZV6pEYqt4dt4VD4JX1nv3etwCVHgv2T0gDckk4Q3xbgO8TQoQztnwrCAqmQhMW3v0FOspUxH-oTKPfjficOG8fsvY4dyVNnGg8hO_nsccviLr6m1XBx1F43-J-2y6URpb7jgQqjS3vMI05eW2N1sqFU6hs_XiV99RDNCGs6p-wWmvXq4KhnS40p6NvgdwyxP3UBFM7p5013inIm72HmdDoOnhRvRc6okHYnIQKN-X88omYX3eVyw3XH6-_jJg" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="edcc-map-note">Жастар, 15/2 · Усть-Каменогорск</div>
+   </div>
+  </div>
+  <div class="edcc-footer">
+   <span>Elite Dental Clinic · Усть-Каменогорск</span>
+   <a href="https://go.2gis.com/pNKMy" target="_blank" rel="noopener noreferrer">Открыть клинику в 2ГИС</a>
+  </div>
+ </div>
+</section>
