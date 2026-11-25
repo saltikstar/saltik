@@ -11,7 +11,7 @@
 }
 #edc-gnathology-hero :where(h1,h2,h3,p,figure) { margin: 0; padding: 0; font-family: inherit; }
 #edc-gnathology-hero a { font-family: inherit; }
-#edc-gnathology-hero .edgh-shell { width: min(1240px, calc(100% - 96px)); margin-inline: auto; }
+#edc-gnathology-hero .edgh-shell { width: calc(100% - 160px); margin-inline: auto; }
 #edc-gnathology-hero .edgh-strap { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--edc-rule); }
 #edc-gnathology-hero .edgh-brand { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; line-height: 1.3; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 #edc-gnathology-hero .edgh-brand-mark { color: var(--edc-gold); font-weight: 400; font-size: 27px; line-height: 1; }
@@ -22,7 +22,7 @@
 #edc-gnathology-hero .edgh-eyebrow::before { content: ''; width: 31px; height: 2px; flex: 0 0 31px; background: var(--edc-gold); }
 #edc-gnathology-hero .edgh-headline { font-size: clamp(42px, 4.55vw, 70px); line-height: 1.09; font-weight: 580; letter-spacing: -.053em; max-width: 730px; text-wrap: balance; }
 #edc-gnathology-hero .edgh-headline span { color: var(--edc-gold-dark); }
-#edc-gnathology-hero .edgh-lead { color: var(--edc-body); font-size: clamp(16px, 1.35vw, 19px); line-height: 1.67; max-width: 545px; margin-top: 29px; }
+#edc-gnathology-hero .edgh-lead { color: var(--edc-body); font-size: clamp(18px, 1.35vw, 20px); line-height: 1.67; max-width: 545px; margin-top: 29px; }
 #edc-gnathology-hero .edgh-cta-row { display: flex; gap: 24px; align-items: center; margin-top: 35px; flex-wrap: wrap; }
 #edc-gnathology-hero .edgh-cta { min-height: 64px; display: inline-flex; align-items: center; justify-content: space-between; gap: 36px; padding: 13px 14px 13px 25px; background: var(--edc-gold-dark); color: #fff; border-radius: 7px; text-decoration: none; font-size: 15px; font-weight: 650; line-height: 1.25; transition: background .2s ease, transform .2s ease; }
 #edc-gnathology-hero .edgh-cta svg { width: 33px; height: 33px; background: #fff; border-radius: 50%; padding: 8px; stroke: var(--edc-gold-dark); flex: 0 0 33px; }
@@ -71,7 +71,7 @@
   #edc-gnathology-hero .edgh-eyebrow { font-size: 10px; letter-spacing: .11em; margin-bottom: 17px; }
   #edc-gnathology-hero .edgh-eyebrow::before { width: 22px; flex-basis: 22px; }
   #edc-gnathology-hero .edgh-headline { font-size: clamp(36px, 9.4vw, 52px); line-height: 1.12; letter-spacing: -.046em; }
-  #edc-gnathology-hero .edgh-lead { font-size: 15px; line-height: 1.65; margin-top: 19px; }
+  #edc-gnathology-hero .edgh-lead { font-size: 18px; line-height: 1.65; margin-top: 19px; }
   #edc-gnathology-hero .edgh-cta-row { margin-top: 25px; gap: 13px; width: 100%; }
   #edc-gnathology-hero .edgh-cta { width: 100%; font-size: 14px; min-height: 60px; }
   #edc-gnathology-hero .edgh-cta-note { max-width: unset; font-size: 12px; }
@@ -134,30 +134,30 @@
 #edc-next { --edc-gold:#c49a44; --edc-gold-dark:#946c21; --edc-ink:#14171b; --edc-body:#4a4f53; --edc-muted:#777d80; --edc-line:#e6e8e9; --edc-white:#fff; --edc-mist:#f6f7f7; color:var(--edc-ink); background:var(--edc-white); font-family:inherit; font-size:16px; line-height:1.55; isolation:isolate; -webkit-font-smoothing:antialiased; overflow:clip; }
 #edc-next :where(h2,h3,p) {margin:0; padding:0; font-family:inherit;}
 #edc-next a {font-family:inherit;}
-#edc-next .edcn-wrap {width:min(1240px,calc(100% - 96px)); margin-inline:auto;}
+#edc-next .edcn-wrap {width:calc(100% - 160px); margin-inline:auto;}
 #edc-next .edcn-eyebrow {display:flex; align-items:center; gap:12px; color:var(--edc-gold-dark); text-transform:uppercase; letter-spacing:.15em; font-size:11px; font-weight:700; line-height:1.4;}
 #edc-next .edcn-eyebrow::before {content:""; display:block; width:32px; height:2px; background:var(--edc-gold);}
 #edc-next .edcn-title {font-size:clamp(41px,4.4vw,66px); font-weight:590; letter-spacing:-.05em; line-height:1.07; color:var(--edc-ink);}
 #edc-next .edcn-title em {font-style:normal;color:var(--edc-gold-dark);}
-#edc-next .edcn-intro {max-width:390px; color:var(--edc-body); font-size:16px; line-height:1.75;}
+#edc-next .edcn-intro {max-width:540px; color:var(--edc-body); font-size:18px; line-height:1.72;}
 #edc-next .edcn-why {padding:91px 0 98px;background:var(--edc-white);}
 #edc-next .edcn-head {display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:36px; align-items:end; margin:28px 0 35px;}
 #edc-next .edcn-bgrid {display:grid;grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px;}
-#edc-next .edcn-benefit {min-height:242px; padding:26px 20px 22px; border:1px solid var(--edc-line); background:#fafbfb; border-radius:12px; display:flex;flex-direction:column;align-items:flex-start;}
+#edc-next .edcn-benefit {min-height:285px; padding:26px 20px 22px; border:1px solid var(--edc-line); background:#fafbfb; border-radius:12px; display:flex;flex-direction:column;align-items:flex-start;}
 #edc-next .edcn-benefit .edcn-icon {width:44px;height:44px;color:var(--edc-gold-dark);margin-bottom:24px;}
 #edc-next .edcn-benefit svg {width:44px;height:44px;stroke:currentColor;stroke-width:1.45;fill:none;stroke-linecap:round;stroke-linejoin:round;}
-#edc-next .edcn-benefit h3 {font-size:16px;font-weight:670;letter-spacing:-.025em;line-height:1.29;margin-bottom:10px;}
-#edc-next .edcn-benefit p {color:var(--edc-body);font-size:12px;line-height:1.58;}
+#edc-next .edcn-benefit h3 {font-size:19px;font-weight:670;letter-spacing:-.025em;line-height:1.29;margin-bottom:10px;}
+#edc-next .edcn-benefit p {color:var(--edc-body);font-size:18px;line-height:1.53;}
 #edc-next .edcn-services {border-top:1px solid var(--edc-line); background:var(--edc-mist); padding:93px 0 106px;}
 #edc-next .edcn-services .edcn-head {margin-bottom:35px;}
 #edc-next .edcn-services .edcn-intro{font-size:15px;}
 #edc-next .edcn-sgrid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px;}
-#edc-next .edcn-service {position:relative; overflow:hidden;display:flex;flex-direction:column;min-height:332px;padding:30px 30px 25px;border-radius:12px;border:1px solid #e6e9e9;background:#fff;}
+#edc-next .edcn-service {position:relative; overflow:hidden;display:flex;flex-direction:column;min-height:375px;padding:30px 30px 25px;border-radius:12px;border:1px solid #e6e9e9;background:#fff;}
 #edc-next .edcn-service-no {font-size:11px;font-weight:700;color:var(--edc-gold-dark);letter-spacing:.12em;display:flex;align-items:center;justify-content:space-between;padding-bottom:32px;border-bottom:1px solid var(--edc-line);margin-bottom:22px;}
 #edc-next .edcn-service-no svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;}
 #edc-next .edcn-service h3{font-size:clamp(24px,2.15vw,31px);font-weight:590;line-height:1.13;letter-spacing:-.037em; margin-bottom:15px;}
-#edc-next .edcn-service p{font-size:14px;line-height:1.64;color:var(--edc-body);max-width:440px; margin-bottom:26px;}
-#edc-next .edcn-service-cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--edc-gold-dark);font-weight:700;font-size:13px;text-decoration:none;line-height:1.35;border-top:1px solid var(--edc-line);padding-top:16px;}
+#edc-next .edcn-service p{font-size:18px;line-height:1.55;color:var(--edc-body);max-width:440px; margin-bottom:26px;}
+#edc-next .edcn-service-cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--edc-gold-dark);font-weight:700;font-size:18px;text-decoration:none;line-height:1.35;border-top:1px solid var(--edc-line);padding-top:16px;}
 #edc-next .edcn-service-cta svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease;}
 #edc-next .edcn-service-cta:hover svg{transform:translateX(4px);}
 #edc-next .edcn-service-cta:focus-visible {outline:3px solid var(--edc-gold);outline-offset:5px;border-radius:2px;}
@@ -169,7 +169,7 @@
 #edc-next .edcn-service--feature .edcn-service-cta{border-color:#4a4c4b;color:#eacb87;max-width:100%;}
 #edc-next .edcn-footer-note{display:flex;align-items:flex-start;gap:12px;border-top:1px solid #dddfe0;padding-top:21px;margin-top:31px;color:var(--edc-muted);font-size:13px;line-height:1.55;}
 #edc-next .edcn-footer-note::before{content:"";flex:0 0 5px;width:5px;height:5px;border-radius:50%;background:var(--edc-gold);margin-top:7px;}
-@media(max-width:1180px){
+@media(max-width:1550px){
  #edc-next .edcn-bgrid{grid-template-columns:repeat(3,minmax(0,1fr));}
  #edc-next .edcn-benefit{min-height:215px;}
 }
@@ -192,20 +192,20 @@
  #edc-next .edcn-eyebrow{font-size:10px;}
  #edc-next .edcn-eyebrow::before{width:23px;}
  #edc-next .edcn-title{font-size:clamp(37px,9vw,49px);}
- #edc-next .edcn-intro{font-size:14px;line-height:1.68;}
+ #edc-next .edcn-intro{font-size:18px;line-height:1.6;}
  #edc-next .edcn-bgrid{grid-template-columns:1fr;gap:9px;}
  #edc-next .edcn-benefit{min-height:0;padding:20px;display:grid;grid-template-columns:42px 1fr;column-gap:17px;row-gap:3px;align-items:start;}
  #edc-next .edcn-benefit .edcn-icon{width:38px;height:38px;grid-row:span 2;margin:0;}
  #edc-next .edcn-benefit svg{width:38px;height:38px;}
- #edc-next .edcn-benefit h3{font-size:16px;margin:0;}
- #edc-next .edcn-benefit p{font-size:13px;}
+ #edc-next .edcn-benefit h3{font-size:19px;margin:0;}
+ #edc-next .edcn-benefit p{font-size:18px;}
  #edc-next .edcn-sgrid{grid-template-columns:1fr;gap:10px;}
- #edc-next .edcn-service{min-height:280px;padding:22px;}
- #edc-next .edcn-service--feature{grid-column:auto;padding:25px;min-height:308px;}
+ #edc-next .edcn-service{min-height:335px;padding:22px;}
+ #edc-next .edcn-service--feature{grid-column:auto;padding:25px;min-height:355px;}
  #edc-next .edcn-service-no{padding-bottom:20px;margin-bottom:18px;}
  #edc-next .edcn-service h3{font-size:27px;}
  #edc-next .edcn-service--feature h3{font-size:33px;}
- #edc-next .edcn-service p{font-size:14px;margin-bottom:22px;}
+ #edc-next .edcn-service p{font-size:18px;margin-bottom:22px;}
  #edc-next .edcn-footer-note{font-size:12px;}
 }
 @media(prefers-reduced-motion:reduce){#edc-next .edcn-service-cta svg{transition:none;}}
@@ -256,7 +256,7 @@
       </div>
       <div class="edcn-sgrid">
         <article class="edcn-service edcn-service--feature">
-          <div class="edcn-service-no">01 / Функция и прикус <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></div>
+          <div class="edcn-service-no">01 / Функция и прикус</div>
           <h3>Гнатология</h3>
           <p>Диагностика нарушений работы височно-нижнечелюстного сустава, жевательных мышц и прикуса. Подбор тактики лечения по результатам обследования.</p>
           <a class="edcn-service-cta" href="https://wa.me/77077530004?text=Здравствуйте%21%20Хочу%20записаться%20на%20консультацию%20по%20гнатологии%20в%20Elite%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" aria-label="Записаться на консультацию по гнатологии в WhatsApp">
@@ -265,7 +265,7 @@
           </a>
         </article>
         <article class="edcn-service">
-          <div class="edcn-service-no">02 / Здоровье зубов <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></div>
+          <div class="edcn-service-no">02 / Здоровье зубов</div>
           <h3>Терапия</h3>
           <p>Лечение кариеса, пульпита, периодонтита и других заболеваний тканей зуба. Пломбирование, лечение каналов и реставрация.</p>
           <a class="edcn-service-cta" href="https://wa.me/77077530004?text=Здравствуйте%21%20Хочу%20записаться%20на%20консультацию%20по%20терапии%20в%20Elite%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" aria-label="Записаться на консультацию по терапии в WhatsApp">
@@ -274,7 +274,7 @@
           </a>
         </article>
         <article class="edcn-service">
-          <div class="edcn-service-no">03 / Прикус и положение зубов <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></div>
+          <div class="edcn-service-no">03 / Прикус и положение зубов</div>
           <h3>Ортодонтия</h3>
           <p>Диагностика и коррекция положения зубов и прикуса с помощью брекетов, кап и других ортодонтических аппаратов.</p>
           <a class="edcn-service-cta" href="https://wa.me/77077530004?text=Здравствуйте%21%20Хочу%20записаться%20на%20консультацию%20по%20ортодонтии%20в%20Elite%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" aria-label="Записаться на консультацию по ортодонтии в WhatsApp">
@@ -283,7 +283,7 @@
           </a>
         </article>
         <article class="edcn-service">
-          <div class="edcn-service-no">04 / Хирургическая помощь <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></div>
+          <div class="edcn-service-no">04 / Хирургическая помощь</div>
           <h3>Хирургия</h3>
           <p>Удаление зубов, включая сложные случаи, имплантация и лечение кист, абсцессов и других воспалительных процессов.</p>
           <a class="edcn-service-cta" href="https://wa.me/77077530004?text=Здравствуйте%21%20Хочу%20записаться%20на%20консультацию%20по%20хирургии%20в%20Elite%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" aria-label="Записаться на консультацию по хирургии в WhatsApp">
@@ -292,7 +292,7 @@
           </a>
         </article>
         <article class="edcn-service">
-          <div class="edcn-service-no">05 / Здоровье дёсен <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></div>
+          <div class="edcn-service-no">05 / Здоровье дёсен</div>
           <h3>Пародонтология</h3>
           <p>Диагностика и лечение заболеваний тканей вокруг зубов, в том числе гингивита и пародонтита. Помощь в сохранении здоровья дёсен.</p>
           <a class="edcn-service-cta" href="https://wa.me/77077530004?text=Здравствуйте%21%20Хочу%20записаться%20на%20консультацию%20по%20пародонтологии%20в%20Elite%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" aria-label="Записаться на консультацию по пародонтологии в WhatsApp">
