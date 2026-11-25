@@ -83,6 +83,40 @@
 #edc-gnathology-hero .edch-caption{font-size:11px;padding:17px 0 24px;flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){#edc-gnathology-hero .edch-button{transition:none}}
+
+/* One-screen desktop hero: navigation + hero + short caption fit into viewport. */
+@media(min-width:901px){
+#edc-gnathology-hero .edch-frame{
+ height:clamp(510px,calc(100svh - 132px),790px);
+ min-height:0;
+}
+#edc-gnathology-hero .edch-photo{height:100%;min-height:0}
+#edc-gnathology-hero .edch-copy{min-height:0;padding:clamp(20px,3svh,34px) clamp(28px,3.2vw,59px)}
+#edc-gnathology-hero h1{
+ font-size:clamp(38px,min(3.6vw,7svh),66px);
+ line-height:1.055;
+ letter-spacing:-.052em;
+}
+#edc-gnathology-hero .edch-kicker{margin-bottom:clamp(12px,2svh,20px)}
+#edc-gnathology-hero .edch-description{font-size:18px;line-height:1.48;margin-top:clamp(12px,1.8svh,20px)}
+#edc-gnathology-hero .edch-actions{gap:15px;margin-top:clamp(14px,2svh,22px)}
+#edc-gnathology-hero .edch-button{min-height:53px;padding:11px 15px 11px 22px}
+#edc-gnathology-hero .edch-specialties{margin-top:clamp(17px,3svh,29px);padding-top:14px}
+#edc-gnathology-hero .edch-caption{padding:12px 0 17px;min-height:43px}
+}
+@media (min-width:901px) and (max-height:760px){
+#edc-gnathology-hero .edch-frame{height:calc(100svh - 128px)}
+#edc-gnathology-hero h1{font-size:clamp(36px,min(3.2vw,6svh),54px)}
+#edc-gnathology-hero .edch-copy{padding-top:15px;padding-bottom:15px}
+#edc-gnathology-hero .edch-kicker{margin-bottom:10px}
+#edc-gnathology-hero .edch-description{margin-top:10px}
+#edc-gnathology-hero .edch-actions{margin-top:12px}
+#edc-gnathology-hero .edch-specialties{margin-top:13px;padding-top:10px}
+}
+@media(max-width:900px){
+#edc-gnathology-hero .edch-frame{height:auto;min-height:0}
+#edc-gnathology-hero .edch-photo{min-height:0}
+}
 </style>
 <section id="edc-gnathology-hero" aria-labelledby="edch-h1">
  <div class="edch-container">
