@@ -93,11 +93,27 @@
 #edc-site-header .edh-cta{min-height:46px}
 @media(max-width:1340px){#edc-site-header .edh-phone{font-size:20px}}
 @media(max-width:1070px){#edc-site-header .edh-phone{display:none}}
+
+/* Typographic identity: logo + local clinic descriptor */
+#edc-site-header .edh-logo{gap:16px;max-width:none}
+#edc-site-header .edh-logo-img{width:115px;height:67px;object-fit:contain;flex-shrink:0}
+#edc-site-header .edh-descriptor{display:block;min-width:0;max-width:200px;border-left:1px solid #d2bd93;padding-left:15px;font-size:14px;line-height:1.33;font-weight:620;color:#4d5356;letter-spacing:-.01em;white-space:nowrap}
+#edc-site-header .edh-wrap{gap:15px}
+#edc-site-header .edh-nav{gap:clamp(11px,1.1vw,19px)}
+#edc-site-header .edh-nav a{font-size:13px}
+@media(max-width:1450px){
+#edc-site-header .edh-logo-img{width:105px;height:61px}
+#edc-site-header .edh-descriptor{font-size:12px;padding-left:12px;max-width:170px}
+}
+@media(max-width:1360px){#edc-site-header .edh-descriptor{display:none}}
+@media(max-width:1070px){#edc-site-header .edh-logo-img{width:121px;height:61px}}
+@media(max-width:600px){#edc-site-header .edh-logo-img{width:105px;height:55px}}
 </style>
 <header id="edc-site-header" aria-label="Шапка Elite Dental Clinic">
 <div class="edh-wrap">
 <a class="edh-logo" href="#edch-h1" aria-label="Elite Dental Clinic — к началу страницы">
 <img class="edh-logo-img" src="https://static.tildacdn.pro/tild3930-3737-4261-b738-623839306534/_elite_dental.png" alt="Elite Dental Clinic" width="150" height="73" decoding="async" fetchpriority="high">
+<span class="edh-descriptor">Стоматология<br>в Усть-Каменогорске</span>
 </a>
 <nav class="edh-nav" aria-label="Основная навигация"><a href="#edcn-why-title">Преимущества</a>
 <a href="#edcn-services-title">Услуги</a>
