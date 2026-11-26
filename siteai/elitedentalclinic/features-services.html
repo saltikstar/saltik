@@ -17,34 +17,34 @@
 #edc-next .edcn-icon svg{width:42px;height:42px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
 #edc-next .edcn-benefit h3{font-size:19px;font-weight:660;line-height:1.2;margin-bottom:9px;letter-spacing:-.025em}
 #edc-next .edcn-benefit p{font-size:18px;line-height:1.45;color:#50575b}
-#edc-next .edcn-services{padding:100px 0 110px;border-top:1px solid #e6e8e9;background:#fff}
-#edc-next .edcs-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:36px}
-#edc-next .edcs-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
-#edc-next .edcs-card{position:relative;display:block;overflow:hidden;isolation:isolate;border:1px solid #e3e6e7;border-radius:18px;min-height:390px;grid-column:span 4;background:#f5f6f6}
-#edc-next .edcs-card--therapy{grid-column:span 4;min-height:475px;background:#eef1f2}
+#edc-next .edcn-services{border-top:1px solid #e6e8e9;}
+#edc-next .edcs-heading{display:flex;justify-content:space-between;}
+
+#edc-next .edcs-card{position:relative;grid-column:span 4;}
+#edc-next .edcs-card--therapy{min-height:475px;}
 #edc-next .edcs-content{position:relative;z-index:2;display:flex;flex-direction:column;height:100%;min-height:inherit;padding:31px}
 #edc-next .edcs-index{border-bottom:1px solid rgba(45,55,59,.2);padding-bottom:20px;margin-bottom:24px;letter-spacing:.11em;font-size:12px;font-weight:750;color:#896d2f;text-transform:uppercase}
-#edc-next .edcs-card h3{font-size:clamp(30px,2.6vw,43px);line-height:1.1;font-weight:580;letter-spacing:-.045em;margin-bottom:16px}
-#edc-next .edcs-card p{font-size:18px;line-height:1.54;color:#4a5255;max-width:440px;margin:0 0 29px}
+
+
 #edc-next .edcs-link{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid rgba(45,55,59,.2);margin-top:auto;padding-top:17px;color:#856424;font-size:17px;font-weight:700;line-height:1.25;text-decoration:none}
 #edc-next .edcs-link svg{flex:none;transition:transform .2s ease}
 #edc-next .edcs-link:hover svg{transform:translateX(4px)}
 #edc-next .edcs-link:focus-visible{outline:3px solid #b18b40;outline-offset:4px}
 #edc-next .edcs-image{position:absolute;display:block;width:100%;height:100%;object-fit:cover;inset:0;z-index:0}
 #edc-next .edcs-card--therapy:after{content:"02";position:absolute;right:-13px;top:80px;font-size:210px;line-height:1;color:rgba(117,126,131,.09);letter-spacing:-.13em;pointer-events:none}
-#edc-next .edcs-card--ortho{background:#eff1f1}
+
 #edc-next .edcs-card--ortho .edcs-image{inset:auto 0 0 auto;width:70%;height:60%;object-fit:contain;object-position:right bottom;opacity:.73}
 #edc-next .edcs-card--ortho:after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,#eff1f1 0%,rgba(239,241,241,.94) 43%,rgba(239,241,241,.16) 88%);pointer-events:none}
 #edc-next .edcs-card--ortho .edcs-content{min-height:390px}
 #edc-next .edcs-card--ortho .edcs-link{background:rgba(239,241,241,.93);padding-bottom:8px}
-#edc-next .edcs-card--surgery{background:#171b1f;border-color:#171b1f;color:#fff}
-#edc-next .edcs-card--surgery .edcs-index{color:#ddbe81;border-color:rgba(255,255,255,.2)}
-#edc-next .edcs-card--surgery p{color:#d2d7d9}
-#edc-next .edcs-card--surgery .edcs-link{color:#ebca8b;border-color:rgba(255,255,255,.26)}
+#edc-next .edcs-card--surgery{border-color:#171b1f;}
+#edc-next .edcs-card--surgery .edcs-index{border-color:rgba(255,255,255,.2)}
+
+#edc-next .edcs-card--surgery .edcs-link{border-color:rgba(255,255,255,.26)}
 #edc-next .edcs-card--surgery:before{content:"";position:absolute;width:270px;height:270px;right:-145px;bottom:-140px;border:1px solid rgba(196,154,68,.35);border-radius:50%;box-shadow:0 0 0 60px rgba(196,154,68,.045);pointer-events:none}
-#edc-next .edcs-card--perio{background:#fff}
-#edc-next .edcs-card--perio .edcs-content:before{content:"";width:29px;height:3px;background:#b18b40;margin-bottom:21px}
-#edc-next .edcn-footer-note{margin-top:25px;border-top:1px solid #e3e5e6;padding-top:18px;color:#60686b;font-size:16px}
+
+#edc-next .edcs-card--perio .edcs-content:before{width:29px;height:3px;background:#b18b40;margin-bottom:21px}
+#edc-next .edcn-footer-note{border-top:1px solid #e3e5e6;color:#60686b;}
 @media(max-width:1250px){
 #edc-next .edcn-bgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
@@ -173,7 +173,7 @@
 #edc-next .edcs-card .edcs-link svg{flex-shrink:0}
 #edc-next .edcs-card--gnat{
  grid-column:1 / span 2;grid-row:1 / span 2;
- border:1px solid #e0e4e6;background:#eff2f3;
+ border:1px solid #e0e4e6;
 }
 #edc-next .edcs-card--gnat .edcs-image{
  display:block;position:absolute;z-index:0;top:0;right:0;bottom:0;left:auto;
@@ -185,15 +185,14 @@
 #edc-next .edcs-card--gnat .edcs-content{
  display:flex;flex-direction:column;justify-content:center;
  min-height:0;height:100%;width:55%;
- padding:34px 30px;background:transparent;color:#191d20;
+ padding:34px 30px;background:transparent;
 }
 #edc-next .edcs-card--gnat .edcs-index{color:#97712d;font-size:12px}
-#edc-next .edcs-card--gnat h3{
- color:#171c1f;font-size:clamp(35px,3.35vw,54px);
+#edc-next .edcs-card--gnat h3{font-size:clamp(35px,3.35vw,54px);
  line-height:1.07;margin-bottom:15px
 }
 #edc-next .edcs-card--gnat p{
- font-size:18px;line-height:1.49;color:#3c474c;
+ font-size:18px;line-height:1.49;
  max-width:440px;margin-bottom:22px;
 }
 #edc-next .edcs-card--gnat .edcs-link{
@@ -222,7 +221,7 @@
 @media(max-width:1080px){
  #edc-next .edcs-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto;gap:11px}
  #edc-next .edcs-card--gnat{grid-column:1 / -1;grid-row:auto;min-height:390px}
- #edc-next .edcs-card--gnat .edcs-content{width:54%;min-height:390px}
+ #edc-next .edcs-card--gnat .edcs-content{width:54%;}
  #edc-next .edcs-card--gnat .edcs-image{width:42%;height:100%;object-fit:contain}
  #edc-next .edcs-card--therapy,#edc-next .edcs-card--ortho,
  #edc-next .edcs-card--surgery,#edc-next .edcs-card--perio{grid-column:auto;grid-row:auto;min-height:245px}
@@ -235,26 +234,12 @@
  #edc-next .edcn-services .edcn-title{font-size:clamp(40px,9.7vw,55px)}
  #edc-next .edcs-grid{grid-template-columns:1fr;gap:10px}
  #edc-next .edcs-card{min-height:0;border-radius:10px}
- #edc-next .edcs-card--gnat{grid-column:1;grid-row:auto;min-height:0}
- #edc-next .edcs-card--gnat .edcs-image{
-  top:0;bottom:auto;left:0;right:0;width:100%;height:235px;
-  object-fit:contain;object-position:center center;
- }
- #edc-next .edcs-card--gnat .edcs-content{
-  display:flex;flex-direction:column;justify-content:flex-start;
-  width:100%;min-height:0;height:auto;
-  padding:253px 21px 24px;
- }
- #edc-next .edcs-card--gnat h3{font-size:37px;margin-bottom:10px}
- #edc-next .edcs-card--gnat p{font-size:18px;line-height:1.46;margin-bottom:20px}
  #edc-next .edcs-card--therapy,#edc-next .edcs-card--ortho,
  #edc-next .edcs-card--surgery,#edc-next .edcs-card--perio{min-height:0;grid-column:1;grid-row:auto}
  #edc-next .edcs-card .edcs-content{padding:21px}
- #edc-next .edcs-card--gnat .edcs-content{padding:253px 21px 24px}
  #edc-next .edcs-card h3{font-size:29px}
  #edc-next .edcs-card p{font-size:18px;line-height:1.45}
  #edc-next .edcs-card .edcs-link{margin-top:12px;font-size:17px}
- #edc-next .edcs-card--gnat .edcs-link{margin-top:0}
 }
 
 
@@ -262,10 +247,17 @@
 /* Compact mobile swipe demonstration (pure CSS, safe inside Tilda T123). */
 .edc-swipe-cue{display:none}
 @media(max-width:720px){
+ /* Mobile headings follow the left content gutter. */
+ #edc-next .edcs-heading{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left}
+ #edc-next .edcs-heading > div{width:100%;text-align:left}
+ #edc-next .edcs-heading .edcn-eyebrow{justify-content:flex-start;text-align:left}
+ #edc-next #edcn-services-title{width:100%;margin-left:0;margin-right:0;text-align:left}
+ #edc-next .edcs-heading .edcn-intro{margin-left:0;margin-right:0;text-align:left;max-width:100%}
+
  .edc-swipe-cue{position:relative;display:block;width:96px;height:24px;margin:2px 0 12px;pointer-events:none}
  .edc-swipe-cue::before{content:"";position:absolute;left:7px;right:7px;top:11px;height:2px;background:#d7dfdf;border-radius:2px}
  .edc-swipe-cue::after{content:"";position:absolute;left:2px;top:3px;width:16px;height:16px;box-sizing:border-box;border:2px solid #a47d34;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(164,125,52,.1);animation:edc-swipe-glide 2.6s ease-in-out infinite}
- .edc-swipe-cue + .edgn-implant-list{margin-top:0!important}
+ 
 }
 @keyframes edc-swipe-glide{0%,100%{transform:translateX(0)}50%{transform:translateX(75px)}}
 @media(prefers-reduced-motion:reduce){.edc-swipe-cue::after{animation:none;transform:translateX(36px)}}
@@ -387,15 +379,8 @@
 
 /* Canonical mobile / typography fixes */
 
-/* Unified section heading system (preview + independent Tilda T123 blocks). */
 #edc-next #edcn-why-title,
-#edc-next #edcn-services-title,
-#edc-gnathology-next #edgn-braces-title,
-#edc-gnathology-next #edgn-implant-title,
-#edc-gnathology-next #edgn-treat-title,
-#edc-implant-process #edip-heading,
-#edc-about-editorial #eda-title,
-#edc-contacts #edcc-title {
+#edc-next #edcn-services-title{
  font-family:"TildaSans",Arial,Helvetica,sans-serif;
  font-size:clamp(48px,5vw,76px)!important;
  font-weight:500!important;
@@ -403,23 +388,11 @@
  letter-spacing:-.052em!important;
  text-wrap:balance;
 }
-@media(max-width:720px){
- #edc-next #edcn-why-title,
- #edc-next #edcn-services-title,
- #edc-gnathology-next #edgn-braces-title,
- #edc-gnathology-next #edgn-implant-title,
- #edc-gnathology-next #edgn-treat-title,
- #edc-implant-process #edip-heading,
- #edc-about-editorial #eda-title,
- #edc-contacts #edcc-title {
+@media(max-width:720px){#edc-next #edcn-why-title,
+#edc-next #edcn-services-title{
    font-size:clamp(36px,9.5vw,48px)!important;
    line-height:1.1!important;letter-spacing:-.048em!important
- }
- #edc-next .edcs-card h3,
- #edc-gnathology-next .edgn-mini h3,
- #edc-gnathology-next .edgn-implant-item h3,
- #edc-gnathology-next .edgn-treat-card h3,
- #edc-implant-process .edip-step h3 {
+ }#edc-next .edcs-card h3{
    font-size:clamp(22px,6.6vw,27px)!important;
    font-weight:500!important;line-height:1.2!important
  }
@@ -439,12 +412,11 @@
    border-radius:10px!important;overflow:hidden!important;
  }
  #edc-next .edcs-grid > .edcs-card--gnat > .edcs-image {
-   display:block!important;position:relative!important;
-   inset:auto!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
-   z-index:0!important;flex:0 0 auto!important;
-   width:100%!important;height:clamp(160px,47vw,195px)!important;
-   min-height:0!important;max-height:none!important;
-   object-fit:cover!important;object-position:center 35%!important;margin:0!important;
+   position:static!important;display:block!important;
+   flex:0 0 auto!important;width:100%!important;height:auto!important;
+   aspect-ratio:1 / 1!important;object-fit:contain!important;
+   object-position:center center!important;margin:0!important;
+   background:#eef2f3;
  }
  #edc-next .edcs-grid > .edcs-card--gnat > .edcs-content {
    position:relative!important;z-index:1!important;display:flex!important;
