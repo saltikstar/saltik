@@ -1,25 +1,25 @@
 <style>
 #edc-site-header,#edc-site-header *{box-sizing:border-box}
 #edc-site-header{--edh-gold:#ae8638;--edh-ink:#191d20;--edh-muted:#5e6467;position:sticky;top:0;z-index:100000;background:rgba(255,255,255,.98);border-bottom:1px solid #e9eaeb;box-shadow:0 9px 34px rgba(13,17,19,.035);font-family:inherit;color:var(--edh-ink);-webkit-font-smoothing:antialiased}
-#edc-site-header .edh-wrap{width:calc(100% - 160px);min-height:102px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+#edc-site-header .edh-wrap{width:calc(100% - 160px);margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
 #edc-site-header a{font-family:inherit;text-decoration:none}
-#edc-site-header .edh-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;min-width:0;color:var(--edh-ink)}
-#edc-site-header .edh-logo-img{display:block;width:82px;height:82px;object-fit:contain;mix-blend-mode:multiply;flex-shrink:0}
-#edc-site-header .edh-nav{display:flex;align-items:center;gap:clamp(12px,1.65vw,30px);justify-content:center;min-width:0}
-#edc-site-header .edh-nav a{font-size:14px;font-weight:560;color:#4d5559;line-height:1.35;white-space:nowrap;padding:10px 0;transition:color .2s ease}
+#edc-site-header .edh-logo{display:flex;align-items:center;flex-shrink:0;color:var(--edh-ink)}
+#edc-site-header .edh-logo-img{display:block;}
+#edc-site-header .edh-nav{display:flex;align-items:center;justify-content:center;min-width:0}
+#edc-site-header .edh-nav a{font-weight:560;color:#4d5559;line-height:1.35;white-space:nowrap;padding:10px 0;transition:color .2s ease}
 #edc-site-header .edh-nav a:hover{color:#9c722b}
-#edc-site-header .edh-actions{display:flex;align-items:center;justify-content:flex-end;gap:19px;flex-shrink:0}
-#edc-site-header .edh-phone{display:flex;flex-direction:column;gap:1px;font-size:15px;font-weight:700;color:#1a1d20;white-space:nowrap;line-height:1.3}
+#edc-site-header .edh-actions{display:flex;align-items:center;justify-content:flex-end;flex-shrink:0}
+#edc-site-header .edh-phone{display:flex;flex-direction:column;gap:1px;color:#1a1d20;white-space:nowrap;}
 #edc-site-header .edh-phone small{font-weight:500;color:#7b8286;font-size:10px;line-height:1.25;letter-spacing:.025em}
-#edc-site-header .edh-cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;gap:11px;padding:12px 19px;border-radius:999px;background:#af883d;color:#fff;font-size:14px;font-weight:730;white-space:nowrap;line-height:1.3;transition:background .2s ease}
+#edc-site-header .edh-cta{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:12px 19px;border-radius:999px;background:#af883d;color:#fff;font-size:14px;font-weight:730;white-space:nowrap;line-height:1.3;transition:background .2s ease}
 #edc-site-header .edh-cta:hover{background:#8e6b2e}
 #edc-site-header .edh-cta svg{width:15px;height:15px;flex:none}
 #edc-site-header .edh-mobile{display:none}
 #edc-site-header :where(a,summary):focus-visible{outline:3px solid #cda04e;outline-offset:3px}
 #edcn-why-title,#edcn-services-title,#edgn-implant-title,#edgn-treat-title,#edc-contacts,#edch-h1{scroll-margin-top:120px}
 @media(max-width:1500px){
-#edc-site-header .edh-logo-img{width:69px;height:69px}
-#edc-site-header .edh-wrap{min-height:86px;gap:16px}
+
+#edc-site-header .edh-wrap{gap:16px}
 #edc-site-header .edh-actions{gap:12px}
 #edc-site-header .edh-nav{gap:14px}
 }
@@ -29,8 +29,8 @@
 #edc-site-header .edh-cta{padding:12px 15px}
 }
 @media(max-width:1070px){
-#edc-site-header .edh-wrap{width:calc(100% - 56px);min-height:82px}
-#edc-site-header .edh-logo-img{width:70px;height:70px}
+#edc-site-header .edh-wrap{width:calc(100% - 56px);}
+
 #edc-site-header .edh-nav,#edc-site-header .edh-phone{display:none}
 #edc-site-header .edh-actions{margin-left:auto}
 #edc-site-header .edh-mobile{display:block;position:relative;flex-shrink:0}
@@ -48,8 +48,8 @@
 #edc-site-header .edh-menu-list a span{color:#b18b40}
 }
 @media(max-width:600px){
-#edc-site-header .edh-wrap{width:calc(100% - 36px);min-height:73px;gap:9px}
-#edc-site-header .edh-logo-img{width:60px;height:60px}
+#edc-site-header .edh-wrap{width:calc(100% - 36px);gap:9px}
+
 #edc-site-header .edh-cta{min-height:40px;font-size:12px;padding:9px 10px}
 #edc-site-header .edh-cta svg{display:none}
 #edc-site-header .edh-actions{gap:8px}
@@ -64,19 +64,19 @@
 
 /* Compact desktop header · official Tilda logo */
 #edc-site-header .edh-wrap{min-height:82px}
-#edc-site-header .edh-logo{max-width:168px;min-width:0}
-#edc-site-header .edh-logo-img{width:144px;height:72px;max-width:100%;object-fit:contain;object-position:left center;mix-blend-mode:normal}
+#edc-site-header .edh-logo{min-width:0}
+#edc-site-header .edh-logo-img{max-width:100%;object-position:left center;mix-blend-mode:normal}
 @media(max-width:1500px){
 #edc-site-header .edh-wrap{min-height:78px}
 #edc-site-header .edh-logo-img{width:130px;height:66px}
 }
 @media(max-width:1070px){
 #edc-site-header .edh-wrap{min-height:72px}
-#edc-site-header .edh-logo-img{width:125px;height:62px}
+
 }
 @media(max-width:600px){
 #edc-site-header .edh-wrap{min-height:64px}
-#edc-site-header .edh-logo-img{width:105px;height:55px}
+
 }
 
 #edc-site-header .edh-phone{font-size:clamp(20px,1.55vw,27px);font-weight:730;letter-spacing:-.04em;line-height:1.06}
@@ -97,8 +97,8 @@
 #edc-site-header .edh-descriptor{font-size:12px;padding-left:12px;max-width:170px}
 }
 @media(max-width:1360px){#edc-site-header .edh-descriptor{display:none}}
-@media(max-width:1070px){#edc-site-header .edh-logo-img{width:121px;height:61px}}
-@media(max-width:600px){#edc-site-header .edh-logo-img{width:105px;height:55px}}
+@media(max-width:1070px){}
+@media(max-width:600px){}
 
 /* On small screens the location descriptor moves below the identity mark */
 @media(max-width:1070px){
