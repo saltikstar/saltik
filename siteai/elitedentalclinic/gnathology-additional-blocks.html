@@ -152,13 +152,13 @@
 /* Compact mobile swipe demonstration (pure CSS, safe inside Tilda T123). */
 .edc-swipe-cue{display:none}
 @media(max-width:720px){
- .edc-swipe-cue{position:relative;display:block;width:96px;height:24px;margin:2px 0 12px;pointer-events:none}
- .edc-swipe-cue::before{content:"";position:absolute;left:7px;right:7px;top:11px;height:2px;background:#d7dfdf;border-radius:2px}
- .edc-swipe-cue::after{content:"";position:absolute;left:2px;top:3px;width:16px;height:16px;box-sizing:border-box;border:2px solid #a47d34;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(164,125,52,.1);animation:edc-swipe-glide 2.6s ease-in-out infinite}
+ .edc-swipe-cue{position:relative;display:block;width:86px;height:20px;margin:4px 0 12px;pointer-events:none}
+ .edc-swipe-cue::before{content:"";position:absolute;left:6px;right:6px;top:10px;height:2px;background:#e2e5e7;border-radius:2px}
+ .edc-swipe-cue::after{content:"";position:absolute;left:3px;top:4px;width:12px;height:12px;box-sizing:border-box;border:2px solid #a5adb1;border-radius:50%;background:#f7f8f8;animation:edc-swipe-glide 6s ease-in-out infinite}
  .edc-swipe-cue + .edgn-implant-list{margin-top:0!important}
 }
-@keyframes edc-swipe-glide{0%,100%{transform:translateX(0)}50%{transform:translateX(75px)}}
-@media(prefers-reduced-motion:reduce){.edc-swipe-cue::after{animation:none;transform:translateX(36px)}}
+@keyframes edc-swipe-glide{0%,55%,100%{transform:translateX(0)}17%{transform:translateX(66px)}34%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.edc-swipe-cue::after{animation:none;transform:translateX(32px)}}
 
 /* Mobile scroll-snap layout for this standalone Tilda T123 block. */
 @media(max-width:720px){
