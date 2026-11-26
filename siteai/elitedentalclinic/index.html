@@ -1568,4 +1568,464 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
   #edc-gnathology-next #edc-implant-process .edip-step h3{font-size:20px}
 }
 </style>
+<style id="edc-editorial-motion-v8">
+/* Elite Dental Clinic · Motion & mobile swipe UX · 2026-11-26
+   Scoped to project sections. Preserve existing content and image sources. */
+
+/* A single typographic rhythm across braces, implant options, timeline and services. */
+#edc-gnathology-next .edgn-braces-title h2,
+#edc-gnathology-next .edgn-section--implant .edgn-implant-headline h2,
+#edc-gnathology-next .edgn-treat-head h2,
+#edc-implant-process .edip-heading h2 {
+  font-family: 'TildaSans', Arial, Helvetica, sans-serif;
+  font-weight: 400 !important;
+  letter-spacing: -.052em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+#edc-gnathology-next .edgn-mini h3,
+#edc-gnathology-next .edgn-implant-item h3,
+#edc-gnathology-next .edgn-treat-card h3,
+#edc-gnathology-next #edc-implant-process .edip-step h3,
+#edc-next .edcs-card h3,
+#edc-next .edcs-card--gnat h3 {
+  font-family: 'TildaSans', Arial, Helvetica, sans-serif;
+  font-weight: 500 !important;
+  letter-spacing: -.028em;
+}
+#edc-gnathology-next .edgn-braces-price {font-weight: 500 !important;}
+#edc-gnathology-next .edgn-section--implant .edgn-implant-headline h2 em {
+  font-weight: inherit;
+}
+
+/* Spacious white editorial pages; gold as a small, purposeful accent. */
+#edc-next .edcs-heading h2,
+#edc-gnathology-next .edgn-braces-title h2,
+#edc-gnathology-next .edgn-implant-headline h2,
+#edc-gnathology-next .edgn-treat-head h2,
+#edc-implant-process .edip-heading h2 {font-feature-settings: 'kern';}
+#edc-gnathology-next .edgn-braces-visual,
+#edc-gnathology-next .edgn-section--implant .edgn-implant-photo,
+#edc-about-editorial .eda-collage img {transition: border-color .3s ease, filter .35s ease;}
+#edc-gnathology-next .edgn-braces-image img {object-fit: contain !important; object-position: center center !important;}
+#edc-gnathology-next .edgn-section--implant .edgn-implant-photo img {object-fit: contain !important; object-position: center !important;}
+
+/* Small interaction rather than busy motion. */
+@media (hover:hover) and (pointer:fine) {
+  #edc-next .edcs-card,
+  #edc-gnathology-next .edgn-implant-item,
+  #edc-gnathology-next .edgn-treat-card,
+  #edc-gnathology-next .edgn-mini {
+    transition: transform .34s cubic-bezier(.2,.72,.2,1),border-color .34s ease,box-shadow .34s ease;
+  }
+  #edc-next .edcs-card:hover,
+  #edc-gnathology-next .edgn-implant-item:hover,
+  #edc-gnathology-next .edgn-treat-card:hover,
+  #edc-gnathology-next .edgn-mini:hover {
+    transform: translateY(-3px);
+    border-color: #c5b389;
+    box-shadow: 0 10px 30px rgba(23,29,31,.055);
+  }
+  #edc-next .edcs-link svg,
+  #edc-gnathology-next .edgn-cta,
+  #edc-site-header .edh-cta {transition: transform .27s ease,background-color .27s ease;}
+  #edc-next .edcs-link:hover svg {transform:translateX(4px);}
+  #edc-gnathology-next .edgn-cta:hover {transform:translateY(-2px);}
+}
+
+/* Scroll reveals only become active when JS/IntersectionObserver is working.
+   No animation code = everything remains visible. */
+@media (prefers-reduced-motion:no-preference) {
+  html.ed-motion-ready .ed-reveal:not(.is-visible) {
+    opacity:0;
+    transform:translate3d(0,18px,0);
+  }
+  html.ed-motion-ready .ed-reveal {
+    transition: opacity .72s cubic-bezier(.18,.65,.27,1),
+                transform .72s cubic-bezier(.18,.65,.27,1);
+    transition-delay:var(--ed-reveal-delay,0ms);
+  }
+  html.ed-motion-ready .ed-reveal.is-visible {
+    opacity:1;
+    transform:translate3d(0,0,0);
+  }
+  #edc-gnathology-next .edgn-braces-price::after {
+    content:'';display:block;width:70px;height:1px;margin-top:19px;
+    background:#b68c42;transform-origin:left;transform:scaleX(.3);
+    transition:transform .8s ease;
+  }
+  #edc-gnathology-next .edgn-braces-title.is-visible .edgn-braces-price::after {
+    transform:scaleX(1);
+  }
+}
+
+/* Native, keyboard-accessible horizontal swiping on phones.
+   No overflow hacks on html/body; only the intended strip scrolls. */
+.ed-swipe-ui {display:none;}
+@media (max-width:720px) {
+  #edc-next .edcs-grid,
+  #edc-gnathology-next .edgn-braces-side,
+  #edc-gnathology-next .edgn-implant-list,
+  #edc-implant-process .edip-steps,
+  #edc-gnathology-next .edgn-treat-grid {
+    display:flex !important;
+    flex-flow:row nowrap !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:12px !important;
+    width:100%;
+    max-width:100%;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    padding:4px 2px 13px !important;
+    margin-left:0;
+    margin-right:0;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:2px;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#ba9758 transparent;
+  }
+  #edc-next .edcs-grid::-webkit-scrollbar,
+  #edc-gnathology-next .edgn-braces-side::-webkit-scrollbar,
+  #edc-gnathology-next .edgn-implant-list::-webkit-scrollbar,
+  #edc-implant-process .edip-steps::-webkit-scrollbar,
+  #edc-gnathology-next .edgn-treat-grid::-webkit-scrollbar {height:3px;}
+  #edc-next .edcs-grid::-webkit-scrollbar-thumb,
+  #edc-gnathology-next .edgn-braces-side::-webkit-scrollbar-thumb,
+  #edc-gnathology-next .edgn-implant-list::-webkit-scrollbar-thumb,
+  #edc-implant-process .edip-steps::-webkit-scrollbar-thumb,
+  #edc-gnathology-next .edgn-treat-grid::-webkit-scrollbar-thumb {background:#ba9758;border-radius:5px;}
+  #edc-next .edcs-grid:focus-visible,
+  #edc-gnathology-next .edgn-braces-side:focus-visible,
+  #edc-gnathology-next .edgn-implant-list:focus-visible,
+  #edc-implant-process .edip-steps:focus-visible,
+  #edc-gnathology-next .edgn-treat-grid:focus-visible {outline:2px solid #b18939;outline-offset:2px;}
+
+  /* Services: all five cards in one discoverable strip; complete clinical image. */
+  #edc-next .edcs-grid > .edcs-card {
+    flex:0 0 min(82vw,340px) !important;
+    width:min(82vw,340px) !important;
+    max-width:none !important;
+    min-width:0 !important;
+    height:470px !important;
+    min-height:470px !important;
+    grid-column:auto !important;
+    grid-row:auto !important;
+    scroll-snap-align:start;
+    overflow:hidden;
+    border-radius:10px;
+    background:#f7f8f8;
+  }
+  #edc-next .edcs-card .edcs-content {
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    padding:23px 21px !important;
+  }
+  #edc-next .edcs-card .edcs-link {margin-top:auto !important;}
+  #edc-next .edcs-card--gnat .edcs-image {
+    position:absolute !important;
+    top:0 !important;left:0 !important;right:0 !important;bottom:auto !important;
+    width:100% !important;height:172px !important;
+    object-fit:contain !important;object-position:center center !important;
+    filter:none !important;background:#eef2f3;
+  }
+  #edc-next .edcs-card--gnat::after {content:none !important;display:none !important;}
+  #edc-next .edcs-card--gnat .edcs-content {
+    padding:184px 21px 22px !important;
+    justify-content:flex-start !important;
+    background:transparent !important;
+  }
+  #edc-next .edcs-card--gnat h3 {font-size:30px !important;line-height:1.09 !important;color:#1b2225 !important;margin-bottom:9px !important;}
+  #edc-next .edcs-card--gnat p {font-size:18px !important;line-height:1.38 !important;color:#424d52 !important;}
+  #edc-next .edcs-card--gnat .edcs-index {color:#96752e !important;}
+  #edc-next .edcs-card--gnat .edcs-link {border-color:#d3d9da !important;color:#956e28 !important;}
+  #edc-next .edcs-card h3 {font-size:28px !important;line-height:1.14 !important;}
+  #edc-next .edcs-card p {font-size:18px !important;line-height:1.43 !important;}
+
+  /* Braces: prominent product visual remains static; supporting cards swipe. */
+  #edc-gnathology-next .edgn-braces-side > .edgn-mini {
+    flex:0 0 min(81vw,330px) !important;
+    width:min(81vw,330px) !important;
+    max-width:none !important;
+    min-width:0 !important;
+    min-height:255px !important;
+    height:auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:space-between !important;
+    align-items:flex-start !important;
+    gap:15px;
+    border:1px solid #dfe3e3 !important;
+    border-radius:10px !important;
+    padding:23px 20px !important;
+    background:#fff !important;
+    scroll-snap-align:start;
+  }
+  #edc-gnathology-next .edgn-braces-side > .edgn-mini h3 {font-size:23px !important;line-height:1.2 !important;}
+  #edc-gnathology-next .edgn-braces-side > .edgn-mini p {font-size:18px !important;line-height:1.46 !important;}
+  #edc-gnathology-next .edgn-braces-side > .edgn-mini.cta {background:#1f2528 !important;border-color:#1f2528 !important;}
+  #edc-gnathology-next .edgn-braces-side > .edgn-mini.cta h3 {color:#fff !important;}
+  #edc-gnathology-next .edgn-braces-side > .edgn-mini.cta p {color:#e0e4e5 !important;}
+  #edc-gnathology-next .edgn-braces-side > .edgn-mini.cta .edgn-cta {
+    width:100% !important;max-width:100% !important;align-self:stretch !important;
+    margin-top:0 !important;min-height:47px !important;
+    padding:12px 13px !important;font-size:14px !important;
+    text-align:center;white-space:normal;
+  }
+
+  /* Implant options: one compact horizontal carousel, not a long 1-col list. */
+  #edc-gnathology-next .edgn-implant-list > .edgn-implant-item {
+    flex:0 0 min(83vw,344px) !important;
+    width:min(83vw,344px) !important;
+    max-width:none !important;
+    min-width:0 !important;
+    min-height:262px !important;
+    height:auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    border:1px solid #dce2e3 !important;
+    border-radius:9px !important;
+    padding:24px 38px 22px 20px !important;
+    background:#fff !important;
+    scroll-snap-align:start;
+  }
+  #edc-gnathology-next .edgn-implant-item h3 {font-size:23px !important;line-height:1.24 !important;}
+  #edc-gnathology-next .edgn-implant-item p {font-size:18px !important;line-height:1.5 !important;}
+  #edc-gnathology-next .edgn-implant-item .edgn-implant-diagram {position:absolute;top:22px;right:16px;}
+
+  /* Treatment: real photos atop text cards. No cropped heads. */
+  #edc-gnathology-next .edgn-treat-grid > .edgn-treat-card {
+    flex:0 0 min(83vw,346px) !important;
+    width:min(83vw,346px) !important;
+    max-width:none !important;
+    min-width:0 !important;
+    min-height:355px !important;
+    height:auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    gap:16px !important;
+    padding:15px 15px 23px !important;
+    border:1px solid #dce2e3 !important;
+    border-radius:11px !important;
+    background:#fff !important;
+    scroll-snap-align:start;
+  }
+  #edc-gnathology-next .edgn-treat-grid .edgn-treat-photo {
+    width:100% !important;
+    height:155px !important;
+    min-height:155px !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    border-radius:5px;
+    background:#e9edef;
+  }
+  #edc-gnathology-next .edgn-treat-grid .edgn-treat-body {display:flex;flex-direction:column;gap:6px;min-width:0;}
+  #edc-gnathology-next .edgn-treat-grid .edgn-treat-body h3 {font-size:23px !important;}
+  #edc-gnathology-next .edgn-treat-grid .edgn-treat-body p {font-size:18px !important;line-height:1.43 !important;}
+
+  /* Surgery timeline: preserve ordered semantics and swipe step by step. */
+  #edc-implant-process .edip-steps > .edip-step {
+    flex:0 0 min(83vw,346px) !important;
+    width:min(83vw,346px) !important;
+    min-width:0 !important;
+    max-width:none !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+    min-height:350px !important;
+    height:auto !important;
+    border-top:1px solid #bfcacb;
+    padding:17px 0 9px !important;
+    text-align:left;
+    scroll-snap-align:start;
+  }
+  #edc-implant-process .edip-steps > .edip-step::before,
+  #edc-implant-process .edip-steps::before {content:none !important;display:none !important;}
+  #edc-implant-process .edip-visual {
+    width:100% !important;
+    height:188px !important;
+    min-height:188px !important;
+    padding:0 !important;
+    margin:0 0 16px !important;
+    border:0 !important;
+    border-radius:5px !important;
+    background:#e4e9e9;
+  }
+  #edc-implant-process .edip-illustration {border-radius:5px !important;background:#e4e9e9;}
+  #edc-implant-process .edip-illustration img {object-fit:contain !important;object-position:center !important;border-radius:5px !important;}
+  #edc-implant-process .edip-number {border-radius:3px !important;right:9px !important;bottom:9px !important;}
+  #edc-implant-process .edip-step-text {padding:0 !important;}
+  #edc-implant-process .edip-step h3 {font-size:22px !important;line-height:1.22 !important;}
+  #edc-implant-process .edip-step p {font-size:18px !important;line-height:1.47 !important;}
+
+  /* Swipe UI is unobtrusive and uses the brand color only for progress. */
+  .ed-swipe-ui {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:14px;
+    padding:11px 1px 18px;
+    min-width:0;
+  }
+  .ed-swipe-info{display:flex;align-items:center;gap:10px;min-width:0;flex:1;}
+  .ed-swipe-label {font-size:12px;letter-spacing:.02em;color:#6a7477;white-space:nowrap;}
+  .ed-swipe-track {width:min(130px,34vw);height:2px;background:#dfe4e5;overflow:hidden;position:relative;}
+  .ed-swipe-progress {display:block;background:#a47d34;height:100%;width:100%;transform:scaleX(var(--ed-progress,0));transform-origin:left;transition:transform .2s ease;}
+  .ed-swipe-actions {display:flex;gap:7px;flex-shrink:0;}
+  .ed-swipe-actions button {
+    appearance:none;
+    width:36px;height:36px;
+    display:inline-grid;place-items:center;
+    border:1px solid #c5cbcc;
+    background:#fff;color:#1c2427;
+    border-radius:50%;cursor:pointer;
+    font-size:23px;line-height:1;
+  }
+  .ed-swipe-actions button:disabled{opacity:.3;cursor:default;}
+  .ed-swipe-actions button:focus-visible{outline:2px solid #a47d34;outline-offset:3px;}
+  .ed-swipe-actions button:not(:disabled):active{background:#f4f0e8;}
+}
+@media(max-width:380px) {
+  #edc-next .edcs-grid > .edcs-card {height:490px !important;min-height:490px !important;}
+  #edc-next .edcs-card--gnat .edcs-image {height:170px !important;}
+  #edc-next .edcs-card--gnat .edcs-content {padding-top:182px !important;}
+  .ed-swipe-track{width:62px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  html.ed-motion-ready .ed-reveal{opacity:1!important;transform:none!important;transition:none!important;}
+  #edc-next .edcs-card,#edc-gnathology-next .edgn-mini,
+  #edc-gnathology-next .edgn-implant-item,#edc-gnathology-next .edgn-treat-card,
+  #edc-next .edcs-link svg {transition:none!important;transform:none!important;}
+  #edc-gnathology-next .edgn-braces-title .edgn-braces-price::after {transition:none!important;transform:none!important;}
+  .ed-swipe-progress{transition:none!important;}
+  html {scroll-behavior:auto!important;}
+}
+</style>
+<script id="edc-editorial-motion-js-v8">
+/* Elite Dental Clinic: native swipe affordances + progressive scroll reveals.
+   Scoped, dependency-free. This script never intercepts form/CTA clicks. */
+(function () {
+  'use strict';
+  if (window.__edcMotionV8) return;
+  window.__edcMotionV8 = true;
+
+  var carousels = [
+    ['#edc-next .edcs-grid', 'Направления стоматологии'],
+    ['#edc-gnathology-next .edgn-braces-side', 'Брекеты — ответы на вопросы'],
+    ['#edc-gnathology-next .edgn-implant-list', 'Варианты имплантации'],
+    ['#edc-implant-process .edip-steps', 'Этапы имплантации'],
+    ['#edc-gnathology-next .edgn-treat-grid', 'Что лечит гнатолог']
+  ];
+
+  function setupScrollers () {
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    carousels.forEach(function (spec) {
+      var strip = document.querySelector(spec[0]);
+      if (!strip || strip.dataset.edcSwipe) return;
+      strip.dataset.edcSwipe = '1';
+      if (strip.tagName !== 'OL') strip.setAttribute('role', 'region');
+      strip.setAttribute('aria-label', spec[1] + '. Листайте горизонтально');
+      strip.setAttribute('tabindex', '0');
+
+      var controls = document.createElement('div');
+      controls.className = 'ed-swipe-ui';
+      controls.innerHTML = '<div class="ed-swipe-info"><span class="ed-swipe-label">Листайте карточки</span><span class="ed-swipe-track" aria-hidden="true"><i class="ed-swipe-progress"></i></span></div>' +
+        '<div class="ed-swipe-actions"><button type="button" class="ed-swipe-prev" aria-label="' + spec[1] + ': предыдущая карточка">&#8249;</button>' +
+        '<button type="button" class="ed-swipe-next" aria-label="' + spec[1] + ': следующая карточка">&#8250;</button></div>';
+      strip.insertAdjacentElement('afterend', controls);
+      var prev = controls.querySelector('.ed-swipe-prev');
+      var next = controls.querySelector('.ed-swipe-next');
+      var bar = controls.querySelector('.ed-swipe-progress');
+      var rafPending = false;
+      function update () {
+        rafPending = false;
+        var max = Math.max(0, strip.scrollWidth - strip.clientWidth);
+        var left = Math.max(0, strip.scrollLeft);
+        var progress = max > 0 ? Math.min(1, left / max) : 1;
+        bar.style.setProperty('--ed-progress', String(progress));
+        prev.disabled = left <= 3;
+        next.disabled = left >= max - 3 || max <= 3;
+      }
+      function scheduleUpdate () {
+        if (rafPending) return;
+        rafPending = true;
+        window.requestAnimationFrame(update);
+      }
+      function step (direction) {
+        var card = strip.firstElementChild;
+        var width = card ? card.getBoundingClientRect().width : strip.clientWidth * 0.84;
+        var gap = parseFloat(window.getComputedStyle(strip).gap) || 12;
+        strip.scrollBy({left: direction * (width + gap), behavior: reduced ? 'auto' : 'smooth'});
+      }
+      prev.addEventListener('click', function () {step(-1);});
+      next.addEventListener('click', function () {step(1);});
+      strip.addEventListener('scroll', scheduleUpdate, {passive:true});
+      window.addEventListener('resize', scheduleUpdate, {passive:true});
+      scheduleUpdate();
+    });
+  }
+
+  function setupReveals () {
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || !('IntersectionObserver' in window)) return;
+    var selectors = [
+      '#edc-gnathology-hero .edch-copy',
+      '#edc-gnathology-hero .edch-photo',
+      '#edc-next .edcn-why .edcn-title',
+      '#edc-next .edcs-heading',
+      '#edc-next .edcs-card',
+      '#edc-gnathology-next .edgn-braces-title',
+      '#edc-gnathology-next .edgn-braces-side .edgn-mini',
+      '#edc-gnathology-next .edgn-implant-headline',
+      '#edc-gnathology-next .edgn-implant-item',
+      '#edc-implant-process .edip-heading',
+      '#edc-implant-process .edip-step',
+      '#edc-gnathology-next .edgn-treat-head',
+      '#edc-gnathology-next .edgn-treat-card',
+      '#edc-about-editorial .eda-main',
+      '#edc-about-editorial .eda-founder',
+      '#edc-contacts .edcc-wrap'
+    ];
+    var elements = [];
+    selectors.forEach(function (selector) {
+      document.querySelectorAll(selector).forEach(function (el, i) {
+        el.classList.add('ed-reveal');
+        el.style.setProperty('--ed-reveal-delay', (Math.min(i,3) * 45) + 'ms');
+        elements.push(el);
+      });
+    });
+    if (!elements.length) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, {threshold:0.08,rootMargin:'0px 0px -5% 0px'});
+    elements.forEach(function (el) {observer.observe(el);});
+    document.documentElement.classList.add('ed-motion-ready');
+    // Failsafe: reveal any remaining elements if observers are interrupted.
+    window.addEventListener('pageshow', function () {
+      if (document.visibilityState === 'visible') {
+        elements.forEach(function (el) {
+          var box = el.getBoundingClientRect();
+          if (box.top < window.innerHeight && box.bottom > 0) el.classList.add('is-visible');
+        });
+      }
+    });
+  }
+
+  function init () {setupScrollers();setupReveals();}
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
+  else init();
+}());
+</script>
 </body></html>
