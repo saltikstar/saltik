@@ -5,9 +5,6 @@
 #edc-site-header a{font-family:inherit;text-decoration:none}
 #edc-site-header .edh-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;min-width:0;color:var(--edh-ink)}
 #edc-site-header .edh-logo-img{display:block;width:82px;height:82px;object-fit:contain;mix-blend-mode:multiply;flex-shrink:0}
-#edc-site-header .edh-logo-type{display:flex;flex-direction:column;gap:1px;line-height:1.25}
-#edc-site-header .edh-logo-type strong{font-size:18px;letter-spacing:-.045em;font-weight:740;white-space:nowrap}
-#edc-site-header .edh-logo-type small{font-size:10px;line-height:1.25;color:#7e8284;letter-spacing:.035em;white-space:nowrap}
 #edc-site-header .edh-nav{display:flex;align-items:center;gap:clamp(12px,1.65vw,30px);justify-content:center;min-width:0}
 #edc-site-header .edh-nav a{font-size:14px;font-weight:560;color:#4d5559;line-height:1.35;white-space:nowrap;padding:10px 0;transition:color .2s ease}
 #edc-site-header .edh-nav a:hover{color:#9c722b}
@@ -21,14 +18,12 @@
 #edc-site-header :where(a,summary):focus-visible{outline:3px solid #cda04e;outline-offset:3px}
 #edcn-why-title,#edcn-services-title,#edgn-implant-title,#edgn-treat-title,#edc-contacts,#edch-h1{scroll-margin-top:120px}
 @media(max-width:1500px){
-#edc-site-header .edh-logo-type small{display:none}
 #edc-site-header .edh-logo-img{width:69px;height:69px}
 #edc-site-header .edh-wrap{min-height:86px;gap:16px}
 #edc-site-header .edh-actions{gap:12px}
 #edc-site-header .edh-nav{gap:14px}
 }
 @media(max-width:1250px){
-#edc-site-header .edh-logo-type{display:none}
 #edc-site-header .edh-phone small{display:none}
 #edc-site-header .edh-nav{gap:17px}
 #edc-site-header .edh-cta{padding:12px 15px}
@@ -36,7 +31,6 @@
 @media(max-width:1070px){
 #edc-site-header .edh-wrap{width:calc(100% - 56px);min-height:82px}
 #edc-site-header .edh-logo-img{width:70px;height:70px}
-#edc-site-header .edh-logo-type{display:flex}
 #edc-site-header .edh-nav,#edc-site-header .edh-phone{display:none}
 #edc-site-header .edh-actions{margin-left:auto}
 #edc-site-header .edh-mobile{display:block;position:relative;flex-shrink:0}
@@ -56,8 +50,6 @@
 @media(max-width:600px){
 #edc-site-header .edh-wrap{width:calc(100% - 36px);min-height:73px;gap:9px}
 #edc-site-header .edh-logo-img{width:60px;height:60px}
-#edc-site-header .edh-logo-type strong{font-size:14px}
-#edc-site-header .edh-logo-type small{display:none}
 #edc-site-header .edh-cta{min-height:40px;font-size:12px;padding:9px 10px}
 #edc-site-header .edh-cta svg{display:none}
 #edc-site-header .edh-actions{gap:8px}
@@ -66,7 +58,6 @@
 #edc-site-header .edh-menu-list{right:0;top:calc(100% + 11px)}
 }
 @media(max-width:390px){
-#edc-site-header .edh-logo-type{display:none}
 #edc-site-header .edh-wrap{gap:6px}
 }
 @media(prefers-reduced-motion:reduce){#edc-site-header .edh-nav a,#edc-site-header .edh-cta{transition:none}}

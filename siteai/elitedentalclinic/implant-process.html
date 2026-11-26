@@ -54,6 +54,119 @@
 #edc-implant-process .edip-cta{width:100%}
 }
 @media(prefers-reduced-motion:reduce){#edc-implant-process .edip-cta{transition:none}}
+
+
+/* Compact mobile swipe demonstration (pure CSS, safe inside Tilda T123). */
+.edc-swipe-cue{display:none}
+@media(max-width:720px){
+ .edc-swipe-cue{position:relative;display:block;width:96px;height:24px;margin:2px 0 12px;pointer-events:none}
+ .edc-swipe-cue::before{content:"";position:absolute;left:7px;right:7px;top:11px;height:2px;background:#d7dfdf;border-radius:2px}
+ .edc-swipe-cue::after{content:"";position:absolute;left:2px;top:3px;width:16px;height:16px;box-sizing:border-box;border:2px solid #a47d34;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(164,125,52,.1);animation:edc-swipe-glide 2.6s ease-in-out infinite}
+ .edc-swipe-cue + .edgn-implant-list{margin-top:0!important}
+}
+@keyframes edc-swipe-glide{0%,100%{transform:translateX(0)}50%{transform:translateX(75px)}}
+@media(prefers-reduced-motion:reduce){.edc-swipe-cue::after{animation:none;transform:translateX(36px)}}
+
+/* Mobile scroll-snap layout for this standalone Tilda T123 block. */
+@media(max-width:720px){
+#edc-implant-process .edip-steps{
+    display:flex !important;
+    flex-flow:row nowrap !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:12px !important;
+    width:100%;
+    max-width:100%;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    padding:4px 2px 13px !important;
+    margin-left:0;
+    margin-right:0;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:2px;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#ba9758 transparent;
+  }
+#edc-implant-process .edip-steps::-webkit-scrollbar{height:3px;}
+#edc-implant-process .edip-steps::-webkit-scrollbar-thumb{background:#ba9758;border-radius:5px;}
+#edc-implant-process .edip-steps:focus-visible{outline:2px solid #b18939;outline-offset:2px;}
+#edc-implant-process .edip-steps > .edip-step{
+    flex:0 0 min(83vw,346px) !important;
+    width:min(83vw,346px) !important;
+    min-width:0 !important;
+    max-width:none !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+    min-height:350px !important;
+    height:auto !important;
+    border-top:1px solid #bfcacb;
+    padding:17px 0 9px !important;
+    text-align:left;
+    scroll-snap-align:start;
+  }
+#edc-implant-process .edip-steps > .edip-step::before,
+#edc-implant-process .edip-steps::before{content:none !important;display:none !important;}
+#edc-implant-process .edip-visual{
+    width:100% !important;
+    height:188px !important;
+    min-height:188px !important;
+    padding:0 !important;
+    margin:0 0 16px !important;
+    border:0 !important;
+    border-radius:5px !important;
+    background:#e4e9e9;
+  }
+#edc-implant-process .edip-illustration{border-radius:5px !important;background:#e4e9e9;}
+#edc-implant-process .edip-illustration img{object-fit:contain !important;object-position:center !important;border-radius:5px !important;}
+#edc-implant-process .edip-number{border-radius:3px !important;right:9px !important;bottom:9px !important;}
+#edc-implant-process .edip-step-text{padding:0 !important;}
+#edc-implant-process .edip-step h3{font-size:22px !important;line-height:1.22 !important;}
+#edc-implant-process .edip-step p{font-size:18px !important;line-height:1.47 !important;}
+}
+
+/* Canonical mobile / typography fixes */
+
+/* Unified section heading system (preview + independent Tilda T123 blocks). */
+#edc-next #edcn-why-title,
+#edc-next #edcn-services-title,
+#edc-gnathology-next #edgn-braces-title,
+#edc-gnathology-next #edgn-implant-title,
+#edc-gnathology-next #edgn-treat-title,
+#edc-implant-process #edip-heading,
+#edc-about-editorial #eda-title,
+#edc-contacts #edcc-title {
+ font-family:"TildaSans",Arial,Helvetica,sans-serif;
+ font-size:clamp(48px,5vw,76px)!important;
+ font-weight:500!important;
+ line-height:1.08!important;
+ letter-spacing:-.052em!important;
+ text-wrap:balance;
+}
+@media(max-width:720px){
+ #edc-next #edcn-why-title,
+ #edc-next #edcn-services-title,
+ #edc-gnathology-next #edgn-braces-title,
+ #edc-gnathology-next #edgn-implant-title,
+ #edc-gnathology-next #edgn-treat-title,
+ #edc-implant-process #edip-heading,
+ #edc-about-editorial #eda-title,
+ #edc-contacts #edcc-title {
+   font-size:clamp(36px,9.5vw,48px)!important;
+   line-height:1.1!important;letter-spacing:-.048em!important
+ }
+ #edc-next .edcs-card h3,
+ #edc-gnathology-next .edgn-mini h3,
+ #edc-gnathology-next .edgn-implant-item h3,
+ #edc-gnathology-next .edgn-treat-card h3,
+ #edc-implant-process .edip-step h3 {
+   font-size:clamp(22px,6.6vw,27px)!important;
+   font-weight:500!important;line-height:1.2!important
+ }
+}
 </style>
 <section id="edc-implant-process" aria-labelledby="edip-heading">
 <div class="edip-container">
@@ -62,7 +175,8 @@
 <h2 id="edip-heading">Имплант за 1 день: <em>как это проходит</em></h2>
 <p class="edip-lead">Первый этап лечения иногда можно провести за одно посещение. Полное восстановление обычно занимает больше времени.</p>
 </div>
-<ol class="edip-steps">
+<div class="edc-swipe-cue" aria-hidden="true"></div>
+<ol class="edip-steps" aria-label="Этапы имплантации" tabindex="0">
 <li class="edip-step">
   <div class="edip-visual"><div class="edip-illustration"><img class="edip-photo-mark" src="data:image/webp;base64,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" alt="Иллюстрация: врач обсуждает снимок челюсти с пациенткой" width="270" height="270" loading="lazy" decoding="async"></div><span class="edip-number">01</span></div>
   <div class="edip-step-text"><h3>Консультация и диагностика</h3><p>Осмотр и КТ помогают оценить состояние костной ткани и определить показания.</p></div>
