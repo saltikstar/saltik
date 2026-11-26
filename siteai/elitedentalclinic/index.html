@@ -1526,7 +1526,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 #edc-gnathology-next #edc-implant-process{
   --edip-gutter:80px;
   position:relative;
-  width:calc(100% + 2 * var(--edip-gutter));
+  width:calc(100% + var(--edip-gutter) + var(--edip-gutter));
   max-width:none;
   margin-left:calc(-1 * var(--edip-gutter));
   margin-right:0;
@@ -1536,7 +1536,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
   overflow:visible;
 }
 #edc-gnathology-next #edc-implant-process .edip-container{
-  width:calc(100% - 2 * var(--edip-gutter));
+  width:calc(100% - var(--edip-gutter) - var(--edip-gutter));
   max-width:none;
   margin:0 auto;
   padding:clamp(64px,5vw,85px) 0;
