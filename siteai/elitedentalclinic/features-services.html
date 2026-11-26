@@ -235,26 +235,12 @@
  #edc-next .edcn-services .edcn-title{font-size:clamp(40px,9.7vw,55px)}
  #edc-next .edcs-grid{grid-template-columns:1fr;gap:10px}
  #edc-next .edcs-card{min-height:0;border-radius:10px}
- #edc-next .edcs-card--gnat{grid-column:1;grid-row:auto;min-height:0}
- #edc-next .edcs-card--gnat .edcs-image{
-  top:0;bottom:auto;left:0;right:0;width:100%;height:235px;
-  object-fit:contain;object-position:center center;
- }
- #edc-next .edcs-card--gnat .edcs-content{
-  display:flex;flex-direction:column;justify-content:flex-start;
-  width:100%;min-height:0;height:auto;
-  padding:253px 21px 24px;
- }
- #edc-next .edcs-card--gnat h3{font-size:37px;margin-bottom:10px}
- #edc-next .edcs-card--gnat p{font-size:18px;line-height:1.46;margin-bottom:20px}
  #edc-next .edcs-card--therapy,#edc-next .edcs-card--ortho,
  #edc-next .edcs-card--surgery,#edc-next .edcs-card--perio{min-height:0;grid-column:1;grid-row:auto}
  #edc-next .edcs-card .edcs-content{padding:21px}
- #edc-next .edcs-card--gnat .edcs-content{padding:253px 21px 24px}
  #edc-next .edcs-card h3{font-size:29px}
  #edc-next .edcs-card p{font-size:18px;line-height:1.45}
  #edc-next .edcs-card .edcs-link{margin-top:12px;font-size:17px}
- #edc-next .edcs-card--gnat .edcs-link{margin-top:0}
 }
 
 
@@ -262,6 +248,13 @@
 /* Compact mobile swipe demonstration (pure CSS, safe inside Tilda T123). */
 .edc-swipe-cue{display:none}
 @media(max-width:720px){
+ /* Mobile headings follow the left content gutter. */
+ #edc-next .edcs-heading{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left}
+ #edc-next .edcs-heading > div{width:100%;text-align:left}
+ #edc-next .edcs-heading .edcn-eyebrow{justify-content:flex-start;text-align:left}
+ #edc-next #edcn-services-title{width:100%;margin-left:0;margin-right:0;text-align:left}
+ #edc-next .edcs-heading .edcn-intro{margin-left:0;margin-right:0;text-align:left;max-width:100%}
+
  .edc-swipe-cue{position:relative;display:block;width:96px;height:24px;margin:2px 0 12px;pointer-events:none}
  .edc-swipe-cue::before{content:"";position:absolute;left:7px;right:7px;top:11px;height:2px;background:#d7dfdf;border-radius:2px}
  .edc-swipe-cue::after{content:"";position:absolute;left:2px;top:3px;width:16px;height:16px;box-sizing:border-box;border:2px solid #a47d34;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(164,125,52,.1);animation:edc-swipe-glide 2.6s ease-in-out infinite}
@@ -439,12 +432,11 @@
    border-radius:10px!important;overflow:hidden!important;
  }
  #edc-next .edcs-grid > .edcs-card--gnat > .edcs-image {
-   display:block!important;position:relative!important;
-   inset:auto!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
-   z-index:0!important;flex:0 0 auto!important;
-   width:100%!important;height:clamp(160px,47vw,195px)!important;
-   min-height:0!important;max-height:none!important;
-   object-fit:cover!important;object-position:center 35%!important;margin:0!important;
+   position:static!important;display:block!important;
+   flex:0 0 auto!important;width:100%!important;height:auto!important;
+   aspect-ratio:1 / 1!important;object-fit:contain!important;
+   object-position:center center!important;margin:0!important;
+   background:#eef2f3;
  }
  #edc-next .edcs-grid > .edcs-card--gnat > .edcs-content {
    position:relative!important;z-index:1!important;display:flex!important;
