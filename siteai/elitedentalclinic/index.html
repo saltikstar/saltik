@@ -1390,4 +1390,134 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 #eda-title{scroll-margin-top:110px}
 </style>
 <script>(function(){var m=document.querySelector("#edc-site-header .edh-mobile");if(m){m.querySelectorAll(".edh-menu-list a").forEach(function(a){a.addEventListener("click",function(){m.open=false})})}})();</script>
+<style id="edc-services-compact-v7">
+
+/* Elite Dental Clinic — compact editorial services, 2026-11 */
+#edc-next .edcn-services{padding:clamp(54px,5.2vw,80px) 0 69px;background:#fff}
+#edc-next .edcs-heading{align-items:end;gap:38px;margin-bottom:25px}
+#edc-next .edcn-services .edcn-title{font-size:clamp(45px,4.4vw,71px);line-height:1.06}
+#edc-next .edcn-services .edcn-intro{max-width:440px;font-size:18px;line-height:1.5}
+#edc-next .edcs-grid{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ grid-template-rows:repeat(2,minmax(270px,auto));
+ gap:12px;
+ align-items:stretch;
+}
+#edc-next .edcs-card{
+ display:flex;flex-direction:column;
+ min-width:0;min-height:0;height:auto;
+ border:1px solid #e2e5e6;border-radius:11px;overflow:hidden;
+ background:#fff;color:#191d20;isolation:isolate;
+}
+#edc-next .edcs-card .edcs-content{
+ position:relative;z-index:2;display:flex;flex-direction:column;
+ width:100%;min-height:0;height:100%;
+ padding:23px 24px;
+}
+#edc-next .edcs-card .edcs-index{
+ color:#9b752e;font-size:11px;font-weight:700;letter-spacing:.1em;line-height:1.35;
+ margin-bottom:10px;padding:0;border:0;
+}
+#edc-next .edcs-card h3{
+ color:#181c20;font-size:clamp(25px,2vw,32px);font-weight:650;
+ line-height:1.14;letter-spacing:-.034em;margin-bottom:9px
+}
+#edc-next .edcs-card p{
+ color:#495156;font-size:18px;line-height:1.41;
+ margin:0 0 14px;max-width:none;
+}
+#edc-next .edcs-card .edcs-link{
+ display:flex;align-items:center;justify-content:space-between;align-self:stretch;
+ width:100%;margin-top:auto;padding:9px 0 0;border:0;
+ color:#906921;font-size:17px;font-weight:720;gap:12px
+}
+#edc-next .edcs-card .edcs-link svg{flex-shrink:0}
+#edc-next .edcs-card--gnat{
+ grid-column:1 / span 2;grid-row:1 / span 2;
+ border:1px solid #e0e4e6;background:#eff2f3;
+}
+#edc-next .edcs-card--gnat .edcs-image{
+ display:block;position:absolute;z-index:0;top:0;right:0;bottom:0;left:auto;
+ width:47%;height:100%;
+ object-fit:contain;object-position:center center;filter:none;
+ background:#eff2f3;
+}
+#edc-next .edcs-card--gnat:after{display:none;content:none}
+#edc-next .edcs-card--gnat .edcs-content{
+ display:flex;flex-direction:column;justify-content:center;
+ min-height:0;height:100%;width:55%;
+ padding:34px 30px;background:transparent;color:#191d20;
+}
+#edc-next .edcs-card--gnat .edcs-index{color:#97712d;font-size:12px}
+#edc-next .edcs-card--gnat h3{
+ color:#171c1f;font-size:clamp(35px,3.35vw,54px);
+ line-height:1.07;margin-bottom:15px
+}
+#edc-next .edcs-card--gnat p{
+ font-size:18px;line-height:1.49;color:#3c474c;
+ max-width:440px;margin-bottom:22px;
+}
+#edc-next .edcs-card--gnat .edcs-link{
+ margin-top:0;color:#967027;font-size:18px;border-top:1px solid #cfd7d9;
+ padding-top:15px
+}
+#edc-next .edcs-card--therapy{grid-column:3;grid-row:1;background:#f5f6f6}
+#edc-next .edcs-card--ortho{grid-column:4;grid-row:1;background:#fff}
+#edc-next .edcs-card--surgery{grid-column:3;grid-row:2;background:#fff;color:#171c1f;border:1px solid #e2e5e6}
+#edc-next .edcs-card--perio{grid-column:4;grid-row:2;background:#f5f6f6;border:1px solid #e2e5e6}
+#edc-next .edcs-card--ortho .edcs-image{display:none}
+#edc-next .edcs-card--therapy:after,#edc-next .edcs-card--surgery:before,#edc-next .edcs-card--ortho:after{content:none;display:none}
+#edc-next .edcs-card--surgery .edcs-index{color:#9b752e}
+#edc-next .edcs-card--surgery h3{color:#181c20}
+#edc-next .edcs-card--surgery p{color:#495156}
+#edc-next .edcs-card--surgery .edcs-link{color:#906921}
+#edc-next .edcs-card--perio .edcs-content:before{content:none;display:none}
+#edc-next .edcn-footer-note{margin-top:20px;padding-top:17px;font-size:15px}
+@media(max-width:1420px) and (min-width:1081px){
+ #edc-next .edcs-grid{grid-template-rows:repeat(2,minmax(292px,auto))}
+ #edc-next .edcs-card .edcs-content{padding:21px 19px}
+ #edc-next .edcs-card--gnat .edcs-content{padding:28px 25px}
+ #edc-next .edcs-card h3{font-size:27px}
+ #edc-next .edcs-card p{font-size:18px;line-height:1.38}
+}
+@media(max-width:1080px){
+ #edc-next .edcs-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto;gap:11px}
+ #edc-next .edcs-card--gnat{grid-column:1 / -1;grid-row:auto;min-height:390px}
+ #edc-next .edcs-card--gnat .edcs-content{width:54%;min-height:390px}
+ #edc-next .edcs-card--gnat .edcs-image{width:42%;height:100%;object-fit:contain}
+ #edc-next .edcs-card--therapy,#edc-next .edcs-card--ortho,
+ #edc-next .edcs-card--surgery,#edc-next .edcs-card--perio{grid-column:auto;grid-row:auto;min-height:245px}
+ #edc-next .edcs-card .edcs-content{min-height:0;padding:23px}
+ #edc-next .edcs-card--gnat .edcs-content{min-height:390px;padding:30px}
+}
+@media(max-width:640px){
+ #edc-next .edcn-services{padding:55px 0 59px}
+ #edc-next .edcs-heading{margin-bottom:22px;gap:12px}
+ #edc-next .edcn-services .edcn-title{font-size:clamp(40px,9.7vw,55px)}
+ #edc-next .edcs-grid{grid-template-columns:1fr;gap:10px}
+ #edc-next .edcs-card{min-height:0;border-radius:10px}
+ #edc-next .edcs-card--gnat{grid-column:1;grid-row:auto;min-height:0}
+ #edc-next .edcs-card--gnat .edcs-image{
+  top:0;bottom:auto;left:0;right:0;width:100%;height:235px;
+  object-fit:contain;object-position:center center;
+ }
+ #edc-next .edcs-card--gnat .edcs-content{
+  display:flex;flex-direction:column;justify-content:flex-start;
+  width:100%;min-height:0;height:auto;
+  padding:253px 21px 24px;
+ }
+ #edc-next .edcs-card--gnat h3{font-size:37px;margin-bottom:10px}
+ #edc-next .edcs-card--gnat p{font-size:18px;line-height:1.46;margin-bottom:20px}
+ #edc-next .edcs-card--therapy,#edc-next .edcs-card--ortho,
+ #edc-next .edcs-card--surgery,#edc-next .edcs-card--perio{min-height:0;grid-column:1;grid-row:auto}
+ #edc-next .edcs-card .edcs-content{padding:21px}
+ #edc-next .edcs-card--gnat .edcs-content{padding:253px 21px 24px}
+ #edc-next .edcs-card h3{font-size:29px}
+ #edc-next .edcs-card p{font-size:18px;line-height:1.45}
+ #edc-next .edcs-card .edcs-link{margin-top:12px;font-size:17px}
+ #edc-next .edcs-card--gnat .edcs-link{margin-top:0}
+}
+
+</style>
 </body></html>
