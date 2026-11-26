@@ -21,7 +21,6 @@
 #edc-next .edcs-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:36px}
 #edc-next .edcs-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
 #edc-next .edcs-card{position:relative;display:block;overflow:hidden;isolation:isolate;border:1px solid #e3e6e7;border-radius:18px;min-height:390px;grid-column:span 4;background:#f5f6f6}
-#edc-next .edcs-card--gnat{grid-column:span 8;min-height:475px;color:#fff;background:#202529;border-color:#202529}
 #edc-next .edcs-card--therapy{grid-column:span 4;min-height:475px;background:#eef1f2}
 #edc-next .edcs-content{position:relative;z-index:2;display:flex;flex-direction:column;height:100%;min-height:inherit;padding:31px}
 #edc-next .edcs-index{border-bottom:1px solid rgba(45,55,59,.2);padding-bottom:20px;margin-bottom:24px;letter-spacing:.11em;font-size:12px;font-weight:750;color:#896d2f;text-transform:uppercase}
@@ -32,13 +31,6 @@
 #edc-next .edcs-link:hover svg{transform:translateX(4px)}
 #edc-next .edcs-link:focus-visible{outline:3px solid #b18b40;outline-offset:4px}
 #edc-next .edcs-image{position:absolute;display:block;width:100%;height:100%;object-fit:cover;inset:0;z-index:0}
-#edc-next .edcs-card--gnat .edcs-image{width:55%;left:auto;right:0;object-position:55% center}
-#edc-next .edcs-card--gnat:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#202529 0%,#202529 40%,rgba(32,37,41,.97) 45%,rgba(32,37,41,.32) 69%,rgba(32,37,41,0) 100%);pointer-events:none}
-#edc-next .edcs-card--gnat .edcs-content{width:61%;min-height:475px;padding:39px}
-#edc-next .edcs-card--gnat .edcs-index{color:#e7c584;border-color:rgba(255,255,255,.3)}
-#edc-next .edcs-card--gnat h3{font-size:clamp(42px,3.35vw,59px)}
-#edc-next .edcs-card--gnat p{color:#e3e6e7}
-#edc-next .edcs-card--gnat .edcs-link{color:#f1d195;border-color:rgba(255,255,255,.27)}
 #edc-next .edcs-card--therapy:after{content:"02";position:absolute;right:-13px;top:80px;font-size:210px;line-height:1;color:rgba(117,126,131,.09);letter-spacing:-.13em;pointer-events:none}
 #edc-next .edcs-card--ortho{background:#eff1f1}
 #edc-next .edcs-card--ortho .edcs-image{inset:auto 0 0 auto;width:70%;height:60%;object-fit:contain;object-position:right bottom;opacity:.73}
@@ -55,13 +47,10 @@
 #edc-next .edcn-footer-note{margin-top:25px;border-top:1px solid #e3e5e6;padding-top:18px;color:#60686b;font-size:16px}
 @media(max-width:1250px){
 #edc-next .edcn-bgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
-#edc-next .edcs-card--gnat .edcs-content{width:68%}
 }
 @media(max-width:1000px){
 #edc-next .edcs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 #edc-next .edcs-card{grid-column:span 1}
-#edc-next .edcs-card--gnat{grid-column:span 2}
-#edc-next .edcs-card--gnat .edcs-content{width:65%}
 #edc-next .edcn-head,#edc-next .edcs-heading{align-items:flex-start;flex-direction:column;gap:16px}
 #edc-next .edcn-bgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -81,14 +70,8 @@
 #edc-next .edcn-icon svg{width:36px;height:36px}
 #edc-next .edcn-benefit h3{margin-bottom:0;font-size:19px}
 #edc-next .edcn-benefit p{font-size:18px}
-#edc-next .edcs-grid{grid-template-columns:1fr;gap:12px}
-#edc-next .edcs-card,#edc-next .edcs-card--gnat{grid-column:span 1;min-height:0;border-radius:14px}
-#edc-next .edcs-card--gnat{padding-top:225px}
-#edc-next .edcs-card--gnat .edcs-image{width:100%;height:235px;left:0;right:0;top:0;object-position:center 39%}
-#edc-next .edcs-card--gnat:after{background:linear-gradient(180deg,rgba(32,37,41,0) 12%,#202529 215px,#202529 100%)}
+#edc-next .edcs-grid{grid-template-columns:1fr;gap:12px}#edc-next .edcs-card{grid-column:span 1;min-height:0;border-radius:14px}
 #edc-next .edcs-content{padding:24px;min-height:332px}
-#edc-next .edcs-card--gnat .edcs-content{width:100%;min-height:325px;padding:22px 24px 25px}
-#edc-next .edcs-card--gnat h3{font-size:37px}
 #edc-next .edcs-card p{font-size:18px}
 #edc-next .edcs-card--ortho .edcs-image{width:75%;height:60%;opacity:.55}
 #edc-next .edcs-card--ortho .edcs-content{min-height:342px}
