@@ -1663,6 +1663,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
    No overflow hacks on html/body; only the intended strip scrolls. */
 .ed-swipe-ui {display:none;}
 @media (max-width:720px) {
+  #edc-next .edcn-bgrid,
   #edc-next .edcs-grid,
   #edc-gnathology-next .edgn-braces-side,
   #edc-gnathology-next .edgn-implant-list,
@@ -1687,21 +1688,66 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
     scrollbar-width:thin;
     scrollbar-color:#ba9758 transparent;
   }
+  #edc-next .edcn-bgrid::-webkit-scrollbar,
   #edc-next .edcs-grid::-webkit-scrollbar,
   #edc-gnathology-next .edgn-braces-side::-webkit-scrollbar,
   #edc-gnathology-next .edgn-implant-list::-webkit-scrollbar,
   #edc-implant-process .edip-steps::-webkit-scrollbar,
   #edc-gnathology-next .edgn-treat-grid::-webkit-scrollbar {height:3px;}
+  #edc-next .edcn-bgrid::-webkit-scrollbar-thumb,
   #edc-next .edcs-grid::-webkit-scrollbar-thumb,
   #edc-gnathology-next .edgn-braces-side::-webkit-scrollbar-thumb,
   #edc-gnathology-next .edgn-implant-list::-webkit-scrollbar-thumb,
   #edc-implant-process .edip-steps::-webkit-scrollbar-thumb,
   #edc-gnathology-next .edgn-treat-grid::-webkit-scrollbar-thumb {background:#ba9758;border-radius:5px;}
+  #edc-next .edcn-bgrid:focus-visible,
   #edc-next .edcs-grid:focus-visible,
   #edc-gnathology-next .edgn-braces-side:focus-visible,
   #edc-gnathology-next .edgn-implant-list:focus-visible,
   #edc-implant-process .edip-steps:focus-visible,
   #edc-gnathology-next .edgn-treat-grid:focus-visible {outline:2px solid #b18939;outline-offset:2px;}
+
+  /* Benefits are real editorial cards on touch screens, not a tall 5-item stack. */
+  #edc-next .edcn-bgrid > .edcn-benefit {
+    flex:0 0 min(82vw,340px) !important;
+    width:min(82vw,340px) !important;
+    max-width:none !important;
+    min-width:0 !important;
+    min-height:215px !important;
+    height:auto !important;
+    display:grid !important;
+    grid-template-columns:40px minmax(0,1fr) !important;
+    align-content:start !important;
+    align-items:start !important;
+    gap:10px 12px !important;
+    border:1px solid #dce3e5 !important;
+    border-radius:10px !important;
+    background:#f6f8f8 !important;
+    padding:28px 20px 20px !important;
+    scroll-snap-align:start;
+  }
+  #edc-next .edcn-bgrid > .edcn-benefit::before {
+    left:auto !important;right:18px !important;top:11px !important;
+    font-size:11px !important;
+  }
+  #edc-next .edcn-bgrid > .edcn-benefit .edcn-icon {
+    display:block !important;
+    width:38px !important;height:38px !important;
+    grid-column:1 !important;grid-row:1 / span 2 !important;
+    margin:0 !important;
+  }
+  #edc-next .edcn-bgrid > .edcn-benefit h3 {
+    grid-column:2 !important;
+    font-weight:500 !important;
+    font-size:22px !important;
+    line-height:1.2 !important;
+    margin:0 !important;
+  }
+  #edc-next .edcn-bgrid > .edcn-benefit p {
+    grid-column:2 !important;
+    font-size:18px !important;
+    line-height:1.45 !important;
+  }
 
   /* Services: all five cards in one discoverable strip; complete clinical image. */
   #edc-next .edcs-grid > .edcs-card {
@@ -1918,6 +1964,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
   window.__edcMotionV8 = true;
 
   var carousels = [
+    ['#edc-next .edcn-bgrid', 'Преимущества клиники'],
     ['#edc-next .edcs-grid', 'Направления стоматологии'],
     ['#edc-gnathology-next .edgn-braces-side', 'Брекеты — ответы на вопросы'],
     ['#edc-gnathology-next .edgn-implant-list', 'Варианты имплантации'],
@@ -1980,6 +2027,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
       '#edc-gnathology-hero .edch-copy',
       '#edc-gnathology-hero .edch-photo',
       '#edc-next .edcn-why .edcn-title',
+      '#edc-next .edcn-benefit',
       '#edc-next .edcs-heading',
       '#edc-next .edcs-card',
       '#edc-gnathology-next .edgn-braces-title',
