@@ -987,7 +987,8 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 #edc-next .edcs-card .edcs-content{padding:23px 0}
 #edc-next .edcs-card--gnat .edcs-content{padding:25px}
 #edc-next .edcs-card h3{font-size:30px}
-#edc-gnathology-next .edgn-section[aria-labelledby="edgn-braces-title"],#edc-gnathology-next .edgn-section--implant,#edc-gnathology-next .edgn-section--treat{padding:64px 0}
+#edc-gnathology-next .edgn-section[aria-labelledby="edgn-braces-title"]{padding:34px 0 54px}
+#edc-gnathology-next .edgn-section--implant,#edc-gnathology-next .edgn-section--treat{padding:64px 0}
 #edc-gnathology-next .edgn-braces-visual{min-height:420px;padding:24px 22px;border-radius:0 0 0 49px}
 #edc-gnathology-next .edgn-braces-title h2{font-size:clamp(42px,10vw,58px)}
 #edc-gnathology-next .edgn-braces-price{font-size:37px}
@@ -1148,7 +1149,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
  #edc-next .edcs-card--gnat .edcs-content{min-height:390px;padding:30px}
 }
 @media(max-width:640px){
- #edc-next .edcn-services{padding:55px 0 59px}
+ #edc-next .edcn-services{padding:55px 0 30px}
  #edc-next .edcs-heading{margin-bottom:22px;gap:12px}
  #edc-next .edcn-services .edcn-title{font-size:clamp(40px,9.7vw,55px)}
  #edc-next .edcs-grid{grid-template-columns:1fr;gap:10px}
@@ -1305,13 +1306,13 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 /* Compact mobile swipe demonstration (pure CSS, safe inside Tilda T123). */
 .edc-swipe-cue{display:none}
 @media(max-width:720px){
- .edc-swipe-cue{position:relative;display:block;width:96px;height:24px;margin:2px 0 12px;pointer-events:none}
- .edc-swipe-cue::before{content:"";position:absolute;left:7px;right:7px;top:11px;height:2px;background:#d7dfdf;border-radius:2px}
- .edc-swipe-cue::after{content:"";position:absolute;left:2px;top:3px;width:16px;height:16px;box-sizing:border-box;border:2px solid #a47d34;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(164,125,52,.1);animation:edc-swipe-glide 2.6s ease-in-out infinite}
+ .edc-swipe-cue{position:relative;display:block;width:86px;height:20px;margin:4px 0 12px;pointer-events:none}
+ .edc-swipe-cue::before{content:"";position:absolute;left:6px;right:6px;top:10px;height:2px;background:#e2e5e7;border-radius:2px}
+ .edc-swipe-cue::after{content:"";position:absolute;left:3px;top:4px;width:12px;height:12px;box-sizing:border-box;border:2px solid #a5adb1;border-radius:50%;background:#f7f8f8;animation:edc-swipe-glide 6s ease-in-out infinite}
  .edc-swipe-cue + .edgn-implant-list{margin-top:0!important}
 }
-@keyframes edc-swipe-glide{0%,100%{transform:translateX(0)}50%{transform:translateX(75px)}}
-@media(prefers-reduced-motion:reduce){.edc-swipe-cue::after{animation:none;transform:translateX(36px)}}
+@keyframes edc-swipe-glide{0%,55%,100%{transform:translateX(0)}17%{transform:translateX(66px)}34%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.edc-swipe-cue::after{animation:none;transform:translateX(32px)}}
 
 /* Native, keyboard-accessible horizontal swiping on phones.
    No overflow hacks on html/body; only the intended strip scrolls. */
@@ -1416,7 +1417,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
     width:min(82vw,340px) !important;
     max-width:none !important;
     min-width:0 !important;
-    height:470px !important;
+    height:auto !important;
     min-height:470px !important;
     grid-column:auto !important;
     grid-row:auto !important;
@@ -1571,9 +1572,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 
 }
 @media(max-width:380px) {
-  #edc-next .edcs-grid > .edcs-card {height:490px !important;min-height:490px !important;}
-  #edc-next .edcs-card--gnat .edcs-image {height:170px !important;}
-  #edc-next .edcs-card--gnat .edcs-content {padding-top:182px !important;}
+  #edc-next .edcs-grid > .edcs-card {height:auto !important;min-height:490px !important;}
 
 }
 @media(prefers-reduced-motion:reduce) {
@@ -1721,8 +1720,9 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
  }
  #edc-next .edcs-grid > .edcs-card--gnat > .edcs-image {
    position:static!important;display:block!important;
-   flex:0 0 auto!important;width:100%!important;height:auto!important;
-   aspect-ratio:1 / 1!important;object-fit:contain!important;
+   flex:0 0 auto!important;width:100%!important;
+   height:clamp(165px,52vw,195px)!important;aspect-ratio:auto!important;
+   object-fit:contain!important;
    object-position:center center!important;margin:0!important;
    background:#eef2f3;
  }
