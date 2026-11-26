@@ -102,3 +102,24 @@
   </div>
  </div>
 </section>
+<style id="edc-motion-v16">
+/* Progressive enhancement: content always remains readable; no scroll hijacking. */
+@media(prefers-reduced-motion:no-preference){
+ @keyframes edc-v16-enter{from{opacity:.35;transform:translate3d(0,20px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+ @keyframes edc-v16-photo{from{opacity:.45;clip-path:inset(0 0 9% 0);transform:translate3d(0,10px,0)}to{opacity:1;clip-path:inset(0);transform:none}}
+ :is(#edc-next,#edc-gnathology-next,#edc-implant-process,#edc-about-editorial,#edc-team-editorial,#edc-contacts) .edc-v16-enter{animation:edc-v16-enter .68s cubic-bezier(.2,.65,.22,1) both}
+ :is(#edc-next,#edc-gnathology-next,#edc-about-editorial,#edc-team-editorial) .edc-v16-photo{animation:edc-v16-photo .85s cubic-bezier(.2,.65,.22,1) both}
+}
+@media(prefers-reduced-motion:reduce){.edc-v16-enter,.edc-v16-photo{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important}}
+</style>
+<script id="edc-motion-js-v16">
+(function(){'use strict';
+ var selectors=["#edc-next .edv-header","#edc-next .edv-tech","#edc-next .edv-benefit","#edc-next .edv-feature","#edc-next .edv-service-row","#edc-gnathology-next .edo-heading","#edc-gnathology-next .edo-photo","#edc-gnathology-next .edo-questions-title","#edc-gnathology-next .edx-top > div","#edc-gnathology-next .edx-visual","#edc-gnathology-next .edx-case","#edc-implant-process .edip-heading","#edc-gnathology-next .edgn-treat-head","#edc-gnathology-next .edg-art","#edc-gnathology-next .edg-copy","#edc-about-editorial .eda-copy","#edc-about-editorial .eda-photos","#edc-about-editorial .eda-founder","#edc-team-editorial .edt-wrap > div","#edc-team-editorial figure","#edc-contacts .edcc-wrap"];
+ function init(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;var el=entry.target;var photo=el.matches('.edo-photo,.eda-photos,.edg-art,#edc-team-editorial figure');el.classList.add(photo?'edc-v16-photo':'edc-v16-enter');observer.unobserve(el);el.addEventListener('animationend',function(){el.classList.remove('edc-v16-enter','edc-v16-photo');},{once:true});});},{threshold:0,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll(selectors.join(',')).forEach(function(el){if(el.dataset.edcMotion16)return;el.dataset.edcMotion16='1';var r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)return;observer.observe(el);});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
