@@ -1520,4 +1520,52 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 }
 
 </style>
+<style id="edc-implant-typography-fullbleed">
+/* Implantation stages: full-bleed surface, aligned editorial typography.
+   Content continues to follow the site's 80px (desktop) responsive gutters. */
+#edc-gnathology-next #edc-implant-process{
+  --edip-gutter:80px;
+  position:relative;
+  width:calc(100% + 2 * var(--edip-gutter));
+  max-width:none;
+  margin-left:calc(-1 * var(--edip-gutter));
+  margin-right:0;
+  background:#f1f4f4;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+}
+#edc-gnathology-next #edc-implant-process .edip-container{
+  width:calc(100% - 2 * var(--edip-gutter));
+  max-width:none;
+  margin:0 auto;
+  padding:clamp(64px,5vw,85px) 0;
+}
+#edc-gnathology-next #edc-implant-process .edip-heading h2{
+  font-family:inherit;
+  font-weight:500;
+  letter-spacing:-.052em;
+  line-height:1.09;
+}
+#edc-gnathology-next #edc-implant-process .edip-step h3{
+  font-family:inherit;
+  font-weight:560;
+  font-size:clamp(20px,1.38vw,24px);
+  line-height:1.26;
+  letter-spacing:-.025em;
+}
+#edc-gnathology-next #edc-implant-process .edip-step p{
+  font-size:18px;
+  line-height:1.5;
+}
+@media(max-width:900px){
+  #edc-gnathology-next #edc-implant-process{--edip-gutter:28px}
+}
+@media(max-width:600px){
+  #edc-gnathology-next #edc-implant-process{--edip-gutter:18px}
+  #edc-gnathology-next #edc-implant-process .edip-container{padding:56px 0 60px}
+  #edc-gnathology-next #edc-implant-process .edip-heading h2{font-size:clamp(36px,9vw,48px)}
+  #edc-gnathology-next #edc-implant-process .edip-step h3{font-size:20px}
+}
+</style>
 </body></html>
