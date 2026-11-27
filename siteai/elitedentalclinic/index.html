@@ -2451,6 +2451,25 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 #edc-site-header .edh-menu-list>a:hover,#edc-site-header .edh-menu-list>a:focus-visible{background:#f6f6f4;color:#946c21}
 #edc-site-header .edh-menu-list .edh-menu-arrow{display:block;width:18px;height:18px;max-width:18px;max-height:18px;flex:0 0 18px;color:#98712f}
 </style>
+<style id="edc-responsive-audit">
+/* Keep all header controls usable at intermediate and fractional viewport widths. */
+@media (width < 1600px){
+#edc-site-header .edh-nav{display:none}
+#edc-site-header .edh-mobile{display:block}
+}
+@media(max-width:720px){
+#edc-site-header .edh-mobile>summary{width:44px;height:44px}
+#edc-site-header .edh-cta{min-height:44px}
+#edc-next .edv-services .edv-service-row a.edv-link{display:inline-flex;align-items:center;min-height:44px;justify-self:start}
+#edc-booking .edbk-send{width:100%;justify-content:space-between}
+#edc-booking .edbk-direct{min-height:44px;display:inline-flex;align-items:center}
+}
+@media(max-width:360px){
+#edc-site-header .edh-actions{gap:6px}
+#edc-site-header .edh-logo{flex-shrink:1;min-width:0}
+#edc-site-header .edh-descriptor{overflow-wrap:normal}
+}
+</style>
 </head><body><!-- ELITE DENTAL CLINIC / GNATHOLOGY HERO / Tilda T123. Standalone, scoped HTML and CSS. -->
 
 <a class="edc-skip-link" href="#edc-main">Перейти к содержанию</a>
@@ -2685,7 +2704,7 @@ body{background:#fff!important;color:var(--el-ink);font-family:"TildaSans",Arial
 </section>
 </main>
 
-<script>(function(){var m=document.querySelector("#edc-site-header .edh-mobile");if(!m)return;var s=m.querySelector("summary");m.addEventListener("toggle",function(){s.setAttribute("aria-label",m.open?"Закрыть меню сайта":"Открыть меню сайта")});m.querySelectorAll(".edh-menu-list a").forEach(function(a){a.addEventListener("click",function(){m.open=false})});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&m.open){m.open=false;s.focus()}});document.addEventListener("click",function(e){if(m.open&&!m.contains(e.target))m.open=false})})();</script>
+<script>(function(){var m=document.querySelector("#edc-site-header .edh-mobile");if(!m)return;var s=m.querySelector("summary");m.addEventListener("toggle",function(){s.setAttribute("aria-label",m.open?"Закрыть меню сайта":"Открыть меню сайта")});var wide=window.matchMedia("(min-width:1600px)");function resetMenu(){if(wide.matches&&m.open)m.open=false}if(wide.addEventListener)wide.addEventListener("change",resetMenu);else if(wide.addListener)wide.addListener(resetMenu);resetMenu();m.querySelectorAll(".edh-menu-list a").forEach(function(a){a.addEventListener("click",function(){m.open=false})});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&m.open){m.open=false;s.focus()}});document.addEventListener("click",function(e){if(m.open&&!m.contains(e.target))m.open=false})})();</script>
 
 
 
