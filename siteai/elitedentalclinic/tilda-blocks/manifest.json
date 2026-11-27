@@ -1,0 +1,88 @@
+{
+  "source": "6a7de21f6e8da40fda18cda010f51d875afc14f8",
+  "sourceBlob": "70027309b8180a38440a9c7ef70637ecb8dca9cc",
+  "status": "draft; browser and Tilda verification required",
+  "strategy": "preserve ancestor groups first; split nested sections only after parity tests",
+  "blocks": [
+    {
+      "file": "01-header.html",
+      "tag": "header",
+      "id": "edc-site-header"
+    },
+    {
+      "file": "02-hero.html",
+      "tag": "section",
+      "id": "edc-gnathology-hero"
+    },
+    {
+      "file": "03-promos.html",
+      "tag": "section",
+      "id": "edc-promos"
+    },
+    {
+      "file": "04-services-benefits.html",
+      "tag": "div",
+      "id": "edc-next"
+    },
+    {
+      "file": "05-gnathology-complex.html",
+      "tag": "section",
+      "id": "edc-gnathology-next"
+    },
+    {
+      "file": "06-quiz.html",
+      "tag": "section",
+      "id": "edc-quiz"
+    },
+    {
+      "file": "07-cases.html",
+      "tag": "section",
+      "id": "edc-cases"
+    },
+    {
+      "file": "08-about.html",
+      "tag": "section",
+      "id": "edc-about-editorial"
+    },
+    {
+      "file": "09-team.html",
+      "tag": "section",
+      "id": "edc-team-editorial"
+    },
+    {
+      "file": "10-doctors.html",
+      "tag": "section",
+      "id": "edc-doctors"
+    },
+    {
+      "file": "11-reviews.html",
+      "tag": "section",
+      "id": "edc-reviews"
+    },
+    {
+      "file": "12-contacts.html",
+      "tag": "section",
+      "id": "edc-contacts"
+    }
+  ],
+  "required": [
+    "00-global.html",
+    "13-booking.html",
+    "14-scripts.html",
+    "head-seo.html"
+  ],
+  "nestedGroups": {
+    "edc-next": [
+      "edcn-why-title",
+      "edcn-services-title"
+    ],
+    "edc-gnathology-next": [
+      "edgn-treat-title",
+      "edgn-braces-title",
+      "edc-before-after",
+      "edgn-implant-title",
+      "edc-implant-process",
+      "edc-surgery"
+    ]
+  }
+}
